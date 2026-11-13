@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 396" role="img" aria-labelledby="title">
+<title id="title">Applicability domain: macro AUROC</title>
+<text x="8" y="20">Applicability domain: macro AUROC</text>
+<text x="8" y="50">Tanimoto 0.000000 to &lt; 0.300000, all_labels, n=7: 0.797059</text>
+<path d="M8 64 H780" stroke="currentColor"/>
+<circle cx="623.329412" cy="64" r="3" fill="currentColor"/>
+<text x="8" y="106">Tanimoto 0.000000 to &lt; 0.300000, stable_labels, n=7: 1.000000</text>
+<path d="M8 120 H780" stroke="currentColor"/>
+<circle cx="780.000000" cy="120" r="3" fill="currentColor"/>
+<text x="8" y="162">Tanimoto 0.300000 to &lt; 0.500000, all_labels, n=106: 0.879703</text>
+<path d="M8 176 H780" stroke="currentColor"/>
+<circle cx="687.130523" cy="176" r="3" fill="currentColor"/>
+<text x="8" y="218">Tanimoto 0.300000 to &lt; 0.500000, stable_labels, n=106: 0.872310</text>
+<path d="M8 232 H780" stroke="currentColor"/>
+<circle cx="681.423419" cy="232" r="3" fill="currentColor"/>
+<text x="8" y="274">Tanimoto 0.500000 to &lt;= 1.000000, all_labels, n=657: 0.866483</text>
+<path d="M8 288 H780" stroke="currentColor"/>
+<circle cx="676.925042" cy="288" r="3" fill="currentColor"/>
+<text x="8" y="330">Tanimoto 0.500000 to &lt;= 1.000000, stable_labels, n=657: 0.850284</text>
+<path d="M8 344 H780" stroke="currentColor"/>
+<circle cx="664.419045" cy="344" r="3" fill="currentColor"/>
+</svg>

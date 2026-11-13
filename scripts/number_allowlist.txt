@@ -1,0 +1,19 @@
+# Non-claim identifiers and configuration values in public copy.
+3.13  # CPython interpreter series required by the README.
+0.13  # uv version prefix in the README toolchain pin.
+8.30  # gitleaks version prefix in the README toolchain pin.
+27.2  # macOS version in recorded platform.platform() machine metadata.
+2026.9  # RDKit version prefix in recorded environment metadata.
+2.15  # PyTorch version prefix in recorded environment metadata.
+5315892  # Keller source CID identifying the duplicate cinnamyl alcohol row.
+8038  # Keller source CID identifying the excluded isobutyl acetate row.
+1549778  # Keller source CID identifying the excluded dimethyl-undecadienone row.
+61005  # Keller source CID identifying the missing-rating regression case.
+0.6  # Tanimoto distance cutoff for the Butina clustering split.
+95  # Bootstrap confidence level used for the reported intervals.
+2.5  # NumPy version prefix in recorded environment metadata.
+1.9  # scikit-learn version prefix in recorded environment metadata.
+2.3  # Chemprop version prefix in the submitted model name and environment.
+2026.3  # RDKit version prefix in the isolated Chemprop environment.
+4.0  # Creative Commons licence version in the model card metadata.
+2016  # Publication year of the Keller and Vosshall ratings cited in the model card.

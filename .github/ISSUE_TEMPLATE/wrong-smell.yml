@@ -1,0 +1,21 @@
+name: Wrong smell
+description: Report a catalogue descriptor disagreement
+body:
+  - type: textarea
+    id: molecule
+    attributes:
+      label: Catalogue name or CAS number
+    validations:
+      required: true
+  - type: textarea
+    id: descriptor
+    attributes:
+      label: Descriptor and whether measured or predicted
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source supporting the correction
+    validations:
+      required: true

@@ -1,0 +1,52 @@
+green:
+  colour: '#8DB255'
+  labels:
+  - grass
+floral:
+  colour: '#E58FA0'
+  labels:
+  - flower
+fruity:
+  colour: '#F08A4B'
+  labels:
+  - fruit
+sweet:
+  colour: '#EAD9B0'
+  labels:
+  - sweet
+  - bakery
+woody:
+  colour: '#B98250'
+  labels:
+  - wood
+musky:
+  colour: '#B9A3C9'
+  labels:
+  - musky
+  - sweaty
+spicy:
+  colour: '#E0644A'
+  labels:
+  - spices
+  - warm
+fresh:
+  colour: '#A9DCC9'
+  labels:
+  - cold
+roasted:
+  colour: '#A8714C'
+  labels:
+  - burnt
+savory:
+  colour: '#B5B84A'
+  labels:
+  - garlic
+  - fish
+  - ammonia/urinous
+  - decayed
+waxy:
+  colour: '#9AA3AD'
+  labels:
+  - sour
+  - acid
+  - chemical

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 172" role="img" aria-labelledby="title">
+<title id="title">Applicability domain: macro AUROC</title>
+<text x="8" y="20">Applicability domain: macro AUROC</text>
+<text x="8" y="50">Tanimoto 0.000000 to &lt; 0.300000, all_labels, n=7: 0.800000</text>
+<path d="M8 64 H780" stroke="currentColor"/>
+<circle cx="625.600000" cy="64" r="3" fill="currentColor"/>
+<text x="8" y="106">Tanimoto 0.000000 to &lt; 0.300000, stable_labels, n=7: not available</text>
+</svg>

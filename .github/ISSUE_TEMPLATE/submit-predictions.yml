@@ -1,0 +1,30 @@
+name: Submit predictions
+description: Prepare catalogue-keyed prediction data for scoring
+body:
+  - type: markdown
+    attributes:
+      value: "Submit catalogue-keyed probabilities and attribution metadata. Change only submissions/<slug>/predictions.csv and meta.toml. See docs/submitting-predictions.md for split exports, validation and scoring."
+  - type: textarea
+    id: name
+    attributes:
+      label: Model name and slug
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source URL and SPDX licence
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: CSV and meta.toml paths
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation results
+    validations:
+      required: true

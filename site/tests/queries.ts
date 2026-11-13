@@ -1,0 +1,287 @@
+/** Hand-written search expectations. */
+
+export interface QueryCase {
+  readonly query: string;
+  readonly kind: "molecule" | "note" | "phrase";
+  readonly label: string;
+  readonly moleculeId?: string;
+  readonly badge?: string;
+}
+
+/**
+ * Each entry names the first result a person should get on the fixture bundle, not the scoring
+ * details behind it, so the table survives ranking changes.
+ */
+export const QUERY_CASES: readonly QueryCase[] = [
+  {
+    query: "smells like rain",
+    kind: "phrase",
+    label: "Rain",
+    moleculeId: "1066",
+    badge: "Rain",
+  },
+  {
+    query: "petrichor",
+    kind: "phrase",
+    label: "Rain",
+    moleculeId: "1066",
+    badge: "Rain",
+  },
+  {
+    query: "after rain",
+    kind: "phrase",
+    label: "Rain",
+    moleculeId: "1066",
+    badge: "Rain",
+  },
+  {
+    query: "coffee shop",
+    kind: "phrase",
+    label: "Coffee Shop",
+    moleculeId: "1044",
+    badge: "Coffee Shop",
+  },
+  {
+    query: "white musk",
+    kind: "note",
+    label: "Musk",
+    moleculeId: "133",
+    badge: "Musk",
+  },
+  {
+    query: "Geosmin",
+    kind: "molecule",
+    label: "Geosmin",
+    moleculeId: "1066",
+  },
+  {
+    query: "geosmn",
+    kind: "molecule",
+    label: "Geosmin",
+    moleculeId: "1066",
+  },
+  {
+    query: "acetate benzyl",
+    kind: "molecule",
+    label: "Benzyl acetate",
+    moleculeId: "206",
+  },
+  {
+    query: "earthy",
+    kind: "molecule",
+    label: "Geosmin",
+    moleculeId: "1066",
+    badge: "Earthy",
+  },
+];
+
+/** A smell a stranger might type, and the families a sensible first result belongs to. */
+export interface EverydayQuery {
+  readonly query: string;
+  readonly families: readonly string[];
+}
+
+/**
+ * Written before the phrase table grew past its first entries, and only ever added to: a query
+ * that misses is fixed with a phrase, never by editing or dropping the query. Most are not a
+ * descriptor, phrase or alias, so the list measures how search copes with everyday words.
+ */
+export const EVERYDAY_QUERIES: readonly EverydayQuery[] = [
+  { query: "smells like rain", families: ["earthy"] },
+  { query: "coffee shop", families: ["roasted"] },
+  { query: "campfire", families: ["roasted"] },
+  { query: "vanilla", families: ["sweet"] },
+  { query: "christmas", families: ["spicy", "woody", "citrus"] },
+  { query: "bakery", families: ["roasted", "sweet"] },
+  { query: "ice cream", families: ["sweet"] },
+  { query: "toothpaste", families: ["fresh"] },
+  { query: "popcorn", families: ["roasted"] },
+  { query: "lavender", families: ["floral", "green"] },
+  { query: "lemon zest", families: ["citrus"] },
+  { query: "orange peel", families: ["citrus"] },
+  { query: "lemonade", families: ["citrus", "sweet"] },
+  { query: "lime", families: ["citrus"] },
+  { query: "freshly cut lawn", families: ["green"] },
+  { query: "green pepper", families: ["green"] },
+  { query: "chamomile tea", families: ["green"] },
+  { query: "bouquet of flowers", families: ["floral"] },
+  { query: "grandma's perfume", families: ["floral", "musky", "sweet"] },
+  { query: "lilac", families: ["floral"] },
+  { query: "orange blossom", families: ["floral", "citrus"] },
+  { query: "ripe bananas", families: ["fruity"] },
+  { query: "pear drops", families: ["fruity", "sweet"] },
+  { query: "bubblegum", families: ["fruity", "sweet"] },
+  { query: "nail polish remover", families: ["waxy", "fruity"] },
+  { query: "sunscreen", families: ["fruity", "floral"] },
+  { query: "cotton candy", families: ["sweet"] },
+  { query: "maple syrup", families: ["sweet"] },
+  { query: "butterscotch", families: ["sweet"] },
+  { query: "marzipan", families: ["sweet"] },
+  { query: "hot chocolate", families: ["sweet"] },
+  { query: "pencil shavings", families: ["woody"] },
+  { query: "old books", families: ["woody", "sweet", "earthy"] },
+  { query: "leather jacket", families: ["woody"] },
+  { query: "sawdust", families: ["woody"] },
+  { query: "wet dog", families: ["musky", "earthy", "savory"] },
+  { query: "barnyard", families: ["musky", "earthy"] },
+  { query: "damp basement", families: ["earthy"] },
+  { query: "potting soil", families: ["earthy"] },
+  { query: "baked potato", families: ["earthy", "roasted"] },
+  { query: "gingerbread", families: ["spicy", "sweet"] },
+  { query: "black pepper", families: ["spicy"] },
+  { query: "mulled wine", families: ["spicy", "fruity", "waxy"] },
+  { query: "liquorice", families: ["spicy"] },
+  { query: "sea air", families: ["fresh", "fruity"] },
+  { query: "menthol", families: ["fresh"] },
+  { query: "cough drops", families: ["fresh", "waxy"] },
+  { query: "burnt toast", families: ["roasted"] },
+  { query: "fresh bread", families: ["roasted"] },
+  { query: "toasted marshmallow", families: ["roasted", "sweet"] },
+  { query: "espresso", families: ["roasted"] },
+  { query: "rotten eggs", families: ["savory"] },
+  { query: "garlic bread", families: ["savory", "roasted"] },
+  { query: "fish market", families: ["savory"] },
+  { query: "fried onions", families: ["savory", "roasted"] },
+  { query: "parmesan", families: ["savory"] },
+  { query: "new car", families: ["waxy", "woody"] },
+  { query: "hospital", families: ["waxy"] },
+  { query: "vinegar", families: ["waxy"] },
+  { query: "beer", families: ["waxy", "roasted"] },
+];
+
+/**
+ * A second sixty, written after the list above but before the phrase table grew past its first
+ * twenty-five entries, using none of its words where avoidable. No phrase is ever written to
+ * answer one of these: they measure whether the phrase table generalises, so their gate only
+ * reports a score.
+ */
+export const HELD_OUT_QUERIES: readonly EverydayQuery[] = [
+  { query: "strawberry jam", families: ["fruity", "sweet"] },
+  { query: "apple pie", families: ["fruity", "sweet", "spicy"] },
+  { query: "pineapple juice", families: ["fruity"] },
+  { query: "coconut oil", families: ["fruity", "waxy"] },
+  { query: "shampoo", families: ["fruity", "floral"] },
+  { query: "compost heap", families: ["earthy", "savory"] },
+  { query: "watermelon", families: ["fruity"] },
+  { query: "cherry pie", families: ["fruity", "sweet"] },
+  { query: "blackcurrant cordial", families: ["fruity"] },
+  { query: "honeycomb", families: ["sweet"] },
+  { query: "caramel sauce", families: ["sweet"] },
+  { query: "warm milk", families: ["sweet"] },
+  { query: "melted butter", families: ["sweet"] },
+  { query: "thunderstorm", families: ["fresh"] },
+  { query: "roasted peanuts", families: ["roasted"] },
+  { query: "hazelnut spread", families: ["roasted", "sweet"] },
+  { query: "malt whisky", families: ["roasted", "waxy"] },
+  { query: "garbage bin", families: ["savory", "waxy"] },
+  { query: "swimming pool", families: ["fresh"] },
+  { query: "cider", families: ["fruity", "waxy"] },
+  { query: "sourdough starter", families: ["waxy", "roasted"] },
+  { query: "pickles", families: ["waxy", "green"] },
+  { query: "sauerkraut", families: ["savory", "waxy"] },
+  { query: "boiled cabbage", families: ["savory"] },
+  { query: "chicken soup", families: ["savory"] },
+  { query: "beef stew", families: ["savory"] },
+  { query: "horseradish sauce", families: ["savory", "spicy"] },
+  { query: "tomato vine", families: ["savory", "green"] },
+  { query: "blue cheese", families: ["savory"] },
+  { query: "smelly feet", families: ["savory", "waxy"] },
+  { query: "cat litter", families: ["musky"] },
+  { query: "skunk", families: ["savory", "musky"] },
+  { query: "zoo", families: ["musky", "earthy"] },
+  { query: "forest floor", families: ["earthy", "woody"] },
+  { query: "truffle", families: ["earthy", "savory"] },
+  { query: "cellar", families: ["earthy"] },
+  { query: "moss", families: ["earthy", "green"] },
+  { query: "hay bales", families: ["green"] },
+  { query: "herb garden", families: ["green"] },
+  { query: "violets", families: ["floral"] },
+  { query: "rose garden", families: ["floral"] },
+  { query: "face powder", families: ["floral", "sweet"] },
+  { query: "eucalyptus", families: ["fresh"] },
+  { query: "peppermint gum", families: ["fresh"] },
+  { query: "vapor rub", families: ["fresh"] },
+  { query: "pine needles", families: ["woody"] },
+  { query: "cedar chest", families: ["woody"] },
+  { query: "pipe tobacco", families: ["woody"] },
+  { query: "saddle", families: ["woody"] },
+  { query: "bonfire smoke", families: ["roasted"] },
+  { query: "grilled steak", families: ["savory", "roasted"] },
+  { query: "diesel", families: ["waxy"] },
+  { query: "paint thinner", families: ["waxy"] },
+  { query: "pennies", families: ["waxy"] },
+  { query: "rubbing alcohol", families: ["waxy", "fresh"] },
+  { query: "disinfectant", families: ["waxy", "roasted"] },
+  { query: "candle wax", families: ["waxy"] },
+  { query: "deep fryer", families: ["waxy"] },
+  { query: "grapefruit juice", families: ["citrus"] },
+  { query: "tangerines", families: ["citrus"] },
+];
+
+/**
+ * A third sixty, written from everyday experience alone, before reading the search code, the
+ * phrase table or the two lists above. Queries it shares with them are kept as written, so its
+ * score is reported both whole and without them. Like the second list, it only reports.
+ */
+export const THIRD_QUERIES: readonly EverydayQuery[] = [
+  { query: "lemon zest", families: ["citrus"] },
+  { query: "squeezed limes", families: ["citrus"] },
+  { query: "orange peel", families: ["citrus"] },
+  { query: "grapefruit", families: ["citrus"] },
+  { query: "ripe bananas", families: ["fruity"] },
+  { query: "green apples", families: ["fruity", "green"] },
+  { query: "fresh strawberries", families: ["fruity"] },
+  { query: "pineapple chunks", families: ["fruity"] },
+  { query: "coconut milk", families: ["fruity", "sweet"] },
+  { query: "peach", families: ["fruity"] },
+  { query: "pear drops", families: ["fruity", "sweet"] },
+  { query: "grape juice", families: ["fruity"] },
+  { query: "cherry", families: ["fruity"] },
+  { query: "vanilla ice cream", families: ["sweet"] },
+  { query: "caramel sauce", families: ["sweet"] },
+  { query: "toffee", families: ["sweet"] },
+  { query: "maple syrup", families: ["sweet"] },
+  { query: "dark chocolate", families: ["sweet", "roasted"] },
+  { query: "fresh coffee", families: ["roasted"] },
+  { query: "toasted nuts", families: ["roasted"] },
+  { query: "almond", families: ["sweet", "roasted"] },
+  { query: "popcorn", families: ["roasted", "sweet"] },
+  { query: "fresh bread", families: ["roasted"] },
+  { query: "butter on toast", families: ["sweet", "roasted"] },
+  { query: "cream cheese", families: ["sweet"] },
+  { query: "sour milk", families: ["waxy", "sweet"] },
+  { query: "blue cheese", families: ["savory"] },
+  { query: "sweaty socks", families: ["savory"] },
+  { query: "rotten eggs", families: ["savory"] },
+  { query: "fried onions", families: ["savory"] },
+  { query: "garlic", families: ["savory"] },
+  { query: "cabbage cooking", families: ["savory", "green"] },
+  { query: "cut grass", families: ["green"] },
+  { query: "tomato leaves", families: ["green"] },
+  { query: "cucumber", families: ["green"] },
+  { query: "green peppers", families: ["green"] },
+  { query: "mushrooms", families: ["earthy"] },
+  { query: "damp earth", families: ["earthy"] },
+  { query: "pine needles", families: ["woody"] },
+  { query: "sandalwood", families: ["woody"] },
+  { query: "campfire smoke", families: ["roasted"] },
+  { query: "smoked bacon", families: ["roasted", "savory"] },
+  { query: "roast chicken", families: ["savory", "roasted"] },
+  { query: "fish market", families: ["savory"] },
+  { query: "rose petals", families: ["floral"] },
+  { query: "jasmine", families: ["floral"] },
+  { query: "lavender", families: ["floral", "green"] },
+  { query: "violets", families: ["floral"] },
+  { query: "orange blossom", families: ["floral", "citrus"] },
+  { query: "cinnamon", families: ["spicy"] },
+  { query: "cloves", families: ["spicy"] },
+  { query: "black pepper", families: ["spicy"] },
+  { query: "aniseed", families: ["spicy"] },
+  { query: "licorice candy", families: ["spicy", "sweet"] },
+  { query: "fresh mint", families: ["fresh"] },
+  { query: "eucalyptus", families: ["fresh"] },
+  { query: "honey", families: ["sweet"] },
+  { query: "wine", families: ["waxy", "fruity"] },
+  { query: "nail polish remover", families: ["waxy", "fresh"] },
+  { query: "new plastic", families: ["waxy"] },
+];

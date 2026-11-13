@@ -1,0 +1,44 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: echo "SMELLCULE_CATALOGUE=$(cat config/catalogue)" >> "$GITHUB_ENV"
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with: {version: 0.13.7, enable-cache: true}
+      - run: uv sync --all-groups --all-extras --locked
+      - run: uv run ruff format --check && uv run ruff check && uv run pyright
+      - run: uv run pytest -m "not data"
+      - if: env.SMELLCULE_CATALOGUE == 'leffingwell'
+        run: uv run smellcule export --fixtures --out site/public/fixture-data --check
+      - name: Verify Keller fixture bundle
+        run: uv run smellcule export --catalogue keller --fixtures --out site/public/keller-fixture-data --check
+      - run: uv run smellcule fetch leffingwell && uv run pytest -m data -k "notes or phrases"
+      - run: uv run python scripts/check_numbers.py
+  site:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.65.0-noble
+      options: --user 1001
+    defaults:
+      run: {working-directory: site}
+    steps:
+      - uses: actions/checkout@v7
+      - run: echo "SMELLCULE_CATALOGUE=$(cat ../config/catalogue)" >> "$GITHUB_ENV"
+      - uses: actions/setup-node@v7
+        with: {node-version: 26, cache: npm, cache-dependency-path: site/package-lock.json}
+      - run: npm ci && npm run check && npm test
+      - run: npm run e2e
+      - run: npm run budget
+      - name: Keller fallback e2e
+        if: env.SMELLCULE_CATALOGUE == 'leffingwell'
+        run: SMELLCULE_CATALOGUE=keller npm run e2e

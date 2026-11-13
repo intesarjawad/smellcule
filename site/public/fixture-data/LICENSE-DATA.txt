@@ -1,0 +1,2 @@
+Synthetic test data, seed 20261113: CC BY 4.0. Not measured odours or model predictions.
+Molecule identity/structure provenance: tests/fixtures/README.md.

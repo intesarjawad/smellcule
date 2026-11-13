@@ -1,0 +1,372 @@
+notes:
+  bergamot:
+    aliases: []
+    evidence:
+    - pungent
+    molecules:
+    - Linalyl acetate
+    - Linalool
+    - Limonene
+  lemon:
+    aliases: []
+    evidence:
+    - animal
+    molecules:
+    - Citral
+  orange:
+    aliases:
+    - sweet orange
+    - mandarin
+    evidence:
+    - orange
+    molecules:
+    - Limonene
+    - Decanal
+  grapefruit:
+    aliases: []
+    evidence:
+    - fatty
+    molecules:
+    - Nootkatone
+  lavender:
+    aliases: []
+    evidence:
+    - orange
+    molecules:
+    - Linalool
+    - Linalyl acetate
+    - Camphor
+  rose:
+    aliases: []
+    evidence:
+    - odorless
+    molecules:
+    - Geraniol
+    - Citronellol
+    - Phenethyl alcohol
+    - Rose oxide
+    - Damascone
+    - Nerol
+  jasmine:
+    aliases: []
+    evidence:
+    - cocoa
+    molecules:
+    - Benzyl acetate
+    - Methyl dihydrojasmonate
+    - Jasmone
+  violet:
+    aliases: []
+    evidence:
+    - pineapple
+    molecules:
+    - Ionone
+  iris:
+    aliases:
+    - orris
+    evidence:
+    - alliaceous
+    molecules:
+    - Irone
+  lily of the valley:
+    aliases:
+    - muguet
+    evidence:
+    - herbal
+    molecules:
+    - Hydroxycitronellal
+    - "Lilial\xAE"
+  heliotrope:
+    aliases: []
+    evidence:
+    - citrus
+    molecules:
+    - Piperonal
+  vanilla:
+    aliases: []
+    evidence:
+    - nutty
+    molecules:
+    - Vanillin
+    - Ethyl vanillin
+  caramel:
+    aliases: []
+    evidence:
+    - solvent
+    molecules:
+    - Ethyl maltol
+    - Maltol
+    - Sotolon
+  honey:
+    aliases: []
+    evidence:
+    - alcoholic
+    molecules:
+    - Phenylacetaldehyde
+  almond:
+    aliases:
+    - bitter almond
+    evidence:
+    - radish
+    molecules:
+    - Benzaldehyde
+  coconut:
+    aliases: []
+    evidence:
+    - berry
+    molecules:
+    - Decalactone
+  peach:
+    aliases: []
+    evidence:
+    - chamomile
+    molecules:
+    - Undecalactone
+  strawberry:
+    aliases: []
+    evidence:
+    - fruity
+    molecules:
+    - Strawberry furanone
+    - Maltol
+  raspberry:
+    aliases: []
+    evidence:
+    - almond
+    molecules:
+    - Raspberry Ketone
+  pear:
+    aliases: []
+    evidence:
+    - vanilla
+    molecules:
+    - Isoamyl acetate
+    - Hexyl acetate
+  apple:
+    aliases:
+    - green apple
+    evidence:
+    - oily
+    molecules:
+    - Hexyl acetate
+  banana:
+    aliases: []
+    evidence:
+    - garlic
+    molecules:
+    - Isoamyl acetate
+  pineapple:
+    aliases: []
+    evidence:
+    - honey
+    molecules:
+    - Ethyl butyrate
+  grape:
+    aliases: []
+    evidence:
+    - animal
+    molecules:
+    - Methyl anthranilate
+  melon:
+    aliases:
+    - marine
+    - sea breeze
+    - aquatic
+    evidence:
+    - jasmine
+    molecules:
+    - "Calone\xAE"
+    - "Helional\xAE"
+  cut grass:
+    aliases:
+    - green leaves
+    evidence:
+    - chicken
+    molecules:
+    - Hexanal
+  butter:
+    aliases: []
+    evidence:
+    - orris
+    molecules:
+    - Diacetyl
+  coffee:
+    aliases: []
+    evidence:
+    - cheesy
+    molecules:
+    - Furfuryl mercaptan
+  patchouli:
+    aliases: []
+    evidence:
+    - radish
+    molecules:
+    - Patchouli alcohol
+  vetiver:
+    aliases: []
+    evidence:
+    - leathery
+    molecules:
+    - Vetiverol
+    - Vetiveryl acetate
+  sandalwood:
+    aliases: []
+    evidence:
+    - coumarinic
+    molecules:
+    - Santalol
+  cedar:
+    aliases:
+    - cedarwood
+    evidence:
+    - catty
+    molecules:
+    - Cedrol
+  pine:
+    aliases:
+    - fir
+    evidence:
+    - buttery
+    molecules:
+    - Pinene
+    - Bornyl acetate
+  musk:
+    aliases:
+    - white musk
+    evidence:
+    - alcoholic
+    molecules:
+    - Muscone
+    - Ambrettolide
+  civet:
+    aliases:
+    - animalic
+    evidence:
+    - floral
+    molecules:
+    - Civetone
+  clove:
+    aliases: []
+    evidence:
+    - fresh
+    molecules:
+    - Eugenol
+  cinnamon:
+    aliases: []
+    evidence:
+    - cucumber
+    molecules:
+    - Cinnamaldehyde
+  anise:
+    aliases:
+    - star anise
+    evidence:
+    - tobacco
+    molecules:
+    - Anethole
+  mint:
+    aliases:
+    - peppermint
+    evidence:
+    - hazelnut
+    molecules:
+    - Menthol
+  eucalyptus:
+    aliases: []
+    evidence:
+    - grape
+    molecules:
+    - Eucalyptol
+  smoke:
+    aliases:
+    - birch tar
+    evidence:
+    - floral
+    molecules:
+    - Guaiacol
+  leather:
+    aliases: []
+    evidence:
+    - tea
+    molecules:
+    - Isobutylquinoline
+archetypes:
+- name: citrus cologne
+  top:
+  - bergamot
+  - lemon
+  - orange
+  heart:
+  - lavender
+  - rose
+  base:
+  - musk
+- name: "foug\xE8re"
+  top:
+  - bergamot
+  - lavender
+  heart:
+  - rose
+  - clove
+  base:
+  - cedar
+  - musk
+  - vanilla
+- name: chypre-style
+  top:
+  - bergamot
+  heart:
+  - rose
+  - jasmine
+  base:
+  - patchouli
+  - musk
+- name: gourmand
+  top:
+  - bergamot
+  heart:
+  - caramel
+  - coconut
+  base:
+  - vanilla
+  - almond
+  - musk
+- name: green
+  top:
+  - cut grass
+  - lemon
+  heart:
+  - lily of the valley
+  - violet
+  base:
+  - vetiver
+  - cedar
+- name: woody
+  top:
+  - bergamot
+  heart:
+  - cedar
+  base:
+  - sandalwood
+  - vetiver
+  - patchouli
+- name: floral
+  top:
+  - pear
+  heart:
+  - rose
+  - jasmine
+  - lily of the valley
+  base:
+  - musk
+  - sandalwood
+- name: marine
+  top:
+  - lemon
+  - melon
+  heart:
+  - lavender
+  - mint
+  base:
+  - cedar
+  - musk

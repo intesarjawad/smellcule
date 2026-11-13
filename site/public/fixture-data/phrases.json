@@ -1,0 +1,1080 @@
+[
+  {
+    "aliases": [
+      "petrichor",
+      "after rain"
+    ],
+    "exemplar": "1066",
+    "name": "rain",
+    "source_url": "https://example.org/synthetic-fixture",
+    "weights": {
+      "fishy": 1.0
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "bakery",
+    "source_url": null,
+    "weights": {
+      "bread": 1.0,
+      "buttery": 0.5,
+      "caramellic": 0.6,
+      "vanilla": 0.4
+    }
+  },
+  {
+    "aliases": [
+      "espresso",
+      "coffee beans",
+      "roasting coffee"
+    ],
+    "exemplar": "1044",
+    "name": "coffee shop",
+    "source_url": "https://example.org/synthetic-fixture",
+    "weights": {
+      "solvent": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "xmas"
+    ],
+    "exemplar": null,
+    "name": "christmas",
+    "source_url": null,
+    "weights": {
+      "cinnamon": 1.0,
+      "orange": 0.6,
+      "pine": 0.8,
+      "spicy": 0.5
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "forest",
+    "source_url": null,
+    "weights": {
+      "earthy": 0.5,
+      "green": 0.4,
+      "pine": 1.0,
+      "woody": 0.8
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "beach",
+    "source_url": null,
+    "weights": {
+      "coconut": 1.0,
+      "fresh": 0.4,
+      "melon": 0.4
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "candy",
+    "source_url": null,
+    "weights": {
+      "berry": 0.5,
+      "fruity": 1.0,
+      "sweet": 1.0
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "cinema",
+    "source_url": null,
+    "weights": {
+      "buttery": 0.8,
+      "popcorn": 1.0
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "fresh laundry",
+    "source_url": null,
+    "weights": {
+      "aldehydic": 0.8,
+      "floral": 0.4,
+      "fresh": 1.0,
+      "musk": 0.6
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "garden",
+    "source_url": null,
+    "weights": {
+      "floral": 1.0,
+      "green": 0.6,
+      "rose": 0.5
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "citrus grove",
+    "source_url": null,
+    "weights": {
+      "citrus": 1.0,
+      "lemon": 0.7,
+      "orange": 0.7
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": "1106",
+    "name": "campfire",
+    "source_url": "https://example.org/synthetic-fixture",
+    "weights": {
+      "popcorn": 1.0
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "chocolate",
+    "source_url": null,
+    "weights": {
+      "chocolate": 1.0,
+      "cocoa": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "cheese",
+      "parmesan",
+      "aged cheese"
+    ],
+    "exemplar": null,
+    "name": "cheese shop",
+    "source_url": null,
+    "weights": {
+      "cheesy": 1.0,
+      "dairy": 0.5
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "barbecue",
+    "source_url": null,
+    "weights": {
+      "meaty": 0.8,
+      "roasted": 1.0,
+      "smoky": 0.6
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "dentist",
+    "source_url": null,
+    "weights": {
+      "medicinal": 1.0,
+      "mint": 0.3,
+      "phenolic": 0.5
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "wine",
+    "source_url": null,
+    "weights": {
+      "alcoholic": 0.3,
+      "fruity": 0.4,
+      "winey": 1.0
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "cucumber water",
+    "source_url": null,
+    "weights": {
+      "cucumber": 1.0,
+      "fresh": 0.4,
+      "green": 0.5
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "woodland mushrooms",
+    "source_url": null,
+    "weights": {
+      "earthy": 0.6,
+      "mushroom": 1.0
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "toothpaste",
+    "source_url": null,
+    "weights": {
+      "anisic": 0.3,
+      "fresh": 0.5,
+      "mint": 1.0
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": "2794",
+    "name": "ice cream",
+    "source_url": "https://example.org/synthetic-fixture",
+    "weights": {
+      "pear": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "perfume"
+    ],
+    "exemplar": null,
+    "name": "perfume counter",
+    "source_url": null,
+    "weights": {
+      "floral": 1.0,
+      "jasmine": 0.4,
+      "musk": 0.6,
+      "rose": 0.4
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "spice market",
+    "source_url": null,
+    "weights": {
+      "anisic": 0.4,
+      "cinnamon": 0.6,
+      "spicy": 1.0
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "tea",
+    "source_url": null,
+    "weights": {
+      "floral": 0.3,
+      "tea": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "lemon squash"
+    ],
+    "exemplar": null,
+    "name": "lemonade",
+    "source_url": null,
+    "weights": {
+      "citrus": 0.5,
+      "lemon": 1.0,
+      "sweet": 0.6
+    }
+  },
+  {
+    "aliases": [
+      "limes",
+      "key lime"
+    ],
+    "exemplar": null,
+    "name": "lime",
+    "source_url": null,
+    "weights": {
+      "citrus": 1.0,
+      "green": 0.2,
+      "lemon": 0.5
+    }
+  },
+  {
+    "aliases": [
+      "bubble gum"
+    ],
+    "exemplar": null,
+    "name": "bubblegum",
+    "source_url": null,
+    "weights": {
+      "banana": 0.4,
+      "fruity": 1.0,
+      "sweet": 0.8
+    }
+  },
+  {
+    "aliases": [
+      "maple"
+    ],
+    "exemplar": null,
+    "name": "maple syrup",
+    "source_url": null,
+    "weights": {
+      "caramellic": 1.0,
+      "sweet": 0.8
+    }
+  },
+  {
+    "aliases": [
+      "burnt sugar"
+    ],
+    "exemplar": null,
+    "name": "caramel",
+    "source_url": null,
+    "weights": {
+      "buttery": 0.3,
+      "caramellic": 1.0,
+      "sweet": 0.6
+    }
+  },
+  {
+    "aliases": [
+      "toffee",
+      "fudge"
+    ],
+    "exemplar": null,
+    "name": "butterscotch",
+    "source_url": null,
+    "weights": {
+      "buttery": 1.0,
+      "caramellic": 0.9,
+      "sweet": 0.6
+    }
+  },
+  {
+    "aliases": [
+      "almond paste",
+      "amaretto"
+    ],
+    "exemplar": null,
+    "name": "marzipan",
+    "source_url": null,
+    "weights": {
+      "almond": 1.0,
+      "sweet": 0.7
+    }
+  },
+  {
+    "aliases": [
+      "marshmallow",
+      "s'mores"
+    ],
+    "exemplar": null,
+    "name": "toasted marshmallow",
+    "source_url": null,
+    "weights": {
+      "burnt": 0.4,
+      "caramellic": 1.0,
+      "sweet": 0.8,
+      "vanilla": 0.3
+    }
+  },
+  {
+    "aliases": [
+      "jelly",
+      "preserves"
+    ],
+    "exemplar": null,
+    "name": "jam",
+    "source_url": null,
+    "weights": {
+      "berry": 0.4,
+      "fruity": 1.0,
+      "sweet": 0.9
+    }
+  },
+  {
+    "aliases": [
+      "raspberries",
+      "blackberries",
+      "summer berries"
+    ],
+    "exemplar": null,
+    "name": "berries",
+    "source_url": null,
+    "weights": {
+      "berry": 1.0,
+      "fruity": 0.6,
+      "sweet": 0.4
+    }
+  },
+  {
+    "aliases": [
+      "overripe fruit",
+      "fruit flies"
+    ],
+    "exemplar": null,
+    "name": "rotting fruit",
+    "source_url": null,
+    "weights": {
+      "fermented": 0.7,
+      "fruity": 0.5,
+      "ripe": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "coke",
+      "soda"
+    ],
+    "exemplar": null,
+    "name": "cola",
+    "source_url": null,
+    "weights": {
+      "caramellic": 0.5,
+      "cinnamon": 0.3,
+      "citrus": 0.3,
+      "sweet": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "ginger biscuits",
+      "spiced biscuits"
+    ],
+    "exemplar": null,
+    "name": "gingerbread",
+    "source_url": null,
+    "weights": {
+      "caramellic": 0.3,
+      "cinnamon": 0.6,
+      "spicy": 1.0,
+      "sweet": 0.6
+    }
+  },
+  {
+    "aliases": [
+      "pepper",
+      "peppercorns"
+    ],
+    "exemplar": null,
+    "name": "black pepper",
+    "source_url": null,
+    "weights": {
+      "pungent": 0.6,
+      "spicy": 1.0,
+      "woody": 0.3
+    }
+  },
+  {
+    "aliases": [
+      "clove"
+    ],
+    "exemplar": null,
+    "name": "cloves",
+    "source_url": null,
+    "weights": {
+      "phenolic": 0.5,
+      "spicy": 1.0,
+      "warm": 0.3
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "nutmeg",
+    "source_url": null,
+    "weights": {
+      "spicy": 1.0,
+      "warm": 0.5,
+      "woody": 0.3
+    }
+  },
+  {
+    "aliases": [
+      "licorice",
+      "aniseed",
+      "anise",
+      "fennel"
+    ],
+    "exemplar": null,
+    "name": "liquorice",
+    "source_url": null,
+    "weights": {
+      "anisic": 1.0,
+      "sweet": 0.5
+    }
+  },
+  {
+    "aliases": [
+      "peanuts",
+      "walnuts"
+    ],
+    "exemplar": null,
+    "name": "nuts",
+    "source_url": null,
+    "weights": {
+      "nutty": 1.0,
+      "roasted": 0.5
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "peanut butter",
+    "source_url": null,
+    "weights": {
+      "nutty": 1.0,
+      "roasted": 0.7,
+      "sweet": 0.3
+    }
+  },
+  {
+    "aliases": [
+      "frying bacon"
+    ],
+    "exemplar": null,
+    "name": "bacon",
+    "source_url": null,
+    "weights": {
+      "fatty": 0.4,
+      "meaty": 0.8,
+      "smoky": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "roasting chicken"
+    ],
+    "exemplar": null,
+    "name": "roast chicken",
+    "source_url": null,
+    "weights": {
+      "chicken": 1.0,
+      "fatty": 0.3,
+      "roasted": 0.7
+    }
+  },
+  {
+    "aliases": [
+      "broth",
+      "stock"
+    ],
+    "exemplar": null,
+    "name": "soup",
+    "source_url": null,
+    "weights": {
+      "brothy": 1.0,
+      "savory": 0.6,
+      "vegetable": 0.3
+    }
+  },
+  {
+    "aliases": [
+      "onion rings",
+      "frying onions"
+    ],
+    "exemplar": null,
+    "name": "fried onions",
+    "source_url": null,
+    "weights": {
+      "onion": 1.0,
+      "roasted": 0.6,
+      "sweet": 0.3
+    }
+  },
+  {
+    "aliases": [
+      "fish",
+      "fishmonger",
+      "seafood"
+    ],
+    "exemplar": null,
+    "name": "fish market",
+    "source_url": null,
+    "weights": {
+      "fishy": 1.0,
+      "savory": 0.3
+    }
+  },
+  {
+    "aliases": [
+      "rotten egg",
+      "bad eggs",
+      "sulfur",
+      "sulphur",
+      "stink bomb"
+    ],
+    "exemplar": null,
+    "name": "rotten eggs",
+    "source_url": null,
+    "weights": {
+      "sulfurous": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "chip shop",
+      "cooking oil"
+    ],
+    "exemplar": null,
+    "name": "frying oil",
+    "source_url": null,
+    "weights": {
+      "fatty": 0.8,
+      "oily": 1.0,
+      "roasted": 0.3
+    }
+  },
+  {
+    "aliases": [
+      "lager",
+      "ale",
+      "brewery"
+    ],
+    "exemplar": null,
+    "name": "beer",
+    "source_url": null,
+    "weights": {
+      "alcoholic": 0.4,
+      "fermented": 0.6,
+      "malty": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "whiskey",
+      "bourbon",
+      "scotch"
+    ],
+    "exemplar": null,
+    "name": "whisky",
+    "source_url": null,
+    "weights": {
+      "alcoholic": 1.0,
+      "malty": 0.4,
+      "smoky": 0.3,
+      "woody": 0.7
+    }
+  },
+  {
+    "aliases": [
+      "pickling vinegar"
+    ],
+    "exemplar": null,
+    "name": "vinegar",
+    "source_url": null,
+    "weights": {
+      "fermented": 0.3,
+      "pungent": 0.5,
+      "sour": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "rising dough",
+      "brewer's yeast"
+    ],
+    "exemplar": null,
+    "name": "yeast",
+    "source_url": null,
+    "weights": {
+      "bread": 0.6,
+      "fermented": 1.0,
+      "sour": 0.3
+    }
+  },
+  {
+    "aliases": [
+      "bar soap",
+      "soap bubbles"
+    ],
+    "exemplar": null,
+    "name": "soap",
+    "source_url": null,
+    "weights": {
+      "aldehydic": 1.0,
+      "floral": 0.6,
+      "fresh": 0.5
+    }
+  },
+  {
+    "aliases": [],
+    "exemplar": null,
+    "name": "mouthwash",
+    "source_url": null,
+    "weights": {
+      "fresh": 0.5,
+      "medicinal": 0.4,
+      "mint": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "throat lozenges",
+      "menthol sweets"
+    ],
+    "exemplar": null,
+    "name": "cough drops",
+    "source_url": null,
+    "weights": {
+      "camphoreous": 0.6,
+      "medicinal": 0.5,
+      "mint": 1.0,
+      "sweet": 0.3
+    }
+  },
+  {
+    "aliases": [
+      "acetone"
+    ],
+    "exemplar": null,
+    "name": "nail polish remover",
+    "source_url": null,
+    "weights": {
+      "ethereal": 0.5,
+      "ketonic": 0.8,
+      "solvent": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "suntan lotion",
+      "sun cream"
+    ],
+    "exemplar": null,
+    "name": "sunscreen",
+    "source_url": null,
+    "weights": {
+      "coconut": 1.0,
+      "floral": 0.5,
+      "sweet": 0.4
+    }
+  },
+  {
+    "aliases": [
+      "antiseptic",
+      "clinic"
+    ],
+    "exemplar": null,
+    "name": "hospital",
+    "source_url": null,
+    "weights": {
+      "alcoholic": 0.4,
+      "ethereal": 0.4,
+      "medicinal": 1.0,
+      "phenolic": 0.6
+    }
+  },
+  {
+    "aliases": [
+      "body odour",
+      "body odor",
+      "locker room",
+      "gym bag"
+    ],
+    "exemplar": null,
+    "name": "sweat",
+    "source_url": null,
+    "weights": {
+      "animal": 0.4,
+      "cheesy": 0.7,
+      "sour": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "old paper",
+      "library",
+      "second-hand bookshop"
+    ],
+    "exemplar": null,
+    "name": "old books",
+    "source_url": null,
+    "weights": {
+      "almond": 0.3,
+      "musty": 1.0,
+      "sweet": 0.5,
+      "woody": 0.3
+    }
+  },
+  {
+    "aliases": [
+      "pencils",
+      "sharpened pencil"
+    ],
+    "exemplar": null,
+    "name": "pencil shavings",
+    "source_url": null,
+    "weights": {
+      "balsamic": 0.3,
+      "dry": 0.5,
+      "woody": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "wood shavings",
+      "sawn wood",
+      "timber"
+    ],
+    "exemplar": null,
+    "name": "sawdust",
+    "source_url": null,
+    "weights": {
+      "balsamic": 0.3,
+      "dry": 0.6,
+      "woody": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "leather jacket",
+      "leather shoes",
+      "leather goods"
+    ],
+    "exemplar": null,
+    "name": "leather",
+    "source_url": null,
+    "weights": {
+      "animal": 0.3,
+      "leathery": 1.0,
+      "smoky": 0.3
+    }
+  },
+  {
+    "aliases": [
+      "new car smell",
+      "car interior"
+    ],
+    "exemplar": null,
+    "name": "new car",
+    "source_url": null,
+    "weights": {
+      "leathery": 0.5,
+      "solvent": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "fresh paint",
+      "paint"
+    ],
+    "exemplar": null,
+    "name": "wet paint",
+    "source_url": null,
+    "weights": {
+      "oily": 0.4,
+      "solvent": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "felt-tip pen",
+      "permanent marker",
+      "glue"
+    ],
+    "exemplar": null,
+    "name": "marker pen",
+    "source_url": null,
+    "weights": {
+      "alcoholic": 0.5,
+      "ketonic": 0.4,
+      "solvent": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "petrol",
+      "gas station",
+      "fuel"
+    ],
+    "exemplar": null,
+    "name": "petrol station",
+    "source_url": null,
+    "weights": {
+      "gasoline": 1.0,
+      "solvent": 0.4
+    }
+  },
+  {
+    "aliases": [
+      "church",
+      "temple",
+      "frankincense"
+    ],
+    "exemplar": null,
+    "name": "incense",
+    "source_url": null,
+    "weights": {
+      "balsamic": 1.0,
+      "smoky": 0.6,
+      "woody": 0.5
+    }
+  },
+  {
+    "aliases": [
+      "wood smoke",
+      "smoky air"
+    ],
+    "exemplar": null,
+    "name": "smoke",
+    "source_url": null,
+    "weights": {
+      "burnt": 0.6,
+      "smoky": 1.0,
+      "woody": 0.3
+    }
+  },
+  {
+    "aliases": [
+      "sea breeze",
+      "ocean breeze",
+      "seaside"
+    ],
+    "exemplar": null,
+    "name": "sea air",
+    "source_url": null,
+    "weights": {
+      "fresh": 1.0,
+      "melon": 0.5
+    }
+  },
+  {
+    "aliases": [
+      "soil",
+      "garden soil",
+      "dirt"
+    ],
+    "exemplar": null,
+    "name": "potting soil",
+    "source_url": null,
+    "weights": {
+      "earthy": 1.0,
+      "musty": 0.5
+    }
+  },
+  {
+    "aliases": [
+      "damp",
+      "mildew",
+      "mould",
+      "mold"
+    ],
+    "exemplar": null,
+    "name": "damp basement",
+    "source_url": null,
+    "weights": {
+      "earthy": 0.6,
+      "mushroom": 0.3,
+      "musty": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "fallen leaves",
+      "leaf pile"
+    ],
+    "exemplar": null,
+    "name": "autumn leaves",
+    "source_url": null,
+    "weights": {
+      "earthy": 1.0,
+      "hay": 0.6,
+      "musty": 0.5,
+      "woody": 0.3
+    }
+  },
+  {
+    "aliases": [
+      "damp dog",
+      "dog"
+    ],
+    "exemplar": null,
+    "name": "wet dog",
+    "source_url": null,
+    "weights": {
+      "animal": 1.0,
+      "earthy": 0.3,
+      "musty": 0.6
+    }
+  },
+  {
+    "aliases": [
+      "farmyard",
+      "stable",
+      "manure",
+      "farm"
+    ],
+    "exemplar": null,
+    "name": "barnyard",
+    "source_url": null,
+    "weights": {
+      "animal": 1.0,
+      "earthy": 0.6,
+      "hay": 0.5
+    }
+  },
+  {
+    "aliases": [
+      "cat urine",
+      "tomcat"
+    ],
+    "exemplar": null,
+    "name": "cat pee",
+    "source_url": null,
+    "weights": {
+      "animal": 0.5,
+      "catty": 1.0,
+      "sulfurous": 0.3
+    }
+  },
+  {
+    "aliases": [
+      "garbage",
+      "trash",
+      "landfill"
+    ],
+    "exemplar": null,
+    "name": "rubbish",
+    "source_url": null,
+    "weights": {
+      "cheesy": 0.4,
+      "fermented": 0.6,
+      "sour": 0.8,
+      "sulfurous": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "grandma's perfume",
+      "old-fashioned perfume",
+      "vintage perfume"
+    ],
+    "exemplar": null,
+    "name": "powdery perfume",
+    "source_url": null,
+    "weights": {
+      "musk": 0.5,
+      "orris": 0.9,
+      "rose": 0.6,
+      "sweet": 0.4,
+      "violet": 1.0
+    }
+  },
+  {
+    "aliases": [
+      "bouquet of flowers",
+      "bouquet",
+      "florist",
+      "flower shop"
+    ],
+    "exemplar": null,
+    "name": "flowers",
+    "source_url": null,
+    "weights": {
+      "floral": 1.0,
+      "green": 0.2,
+      "jasmine": 0.4,
+      "rose": 0.5
+    }
+  }
+]

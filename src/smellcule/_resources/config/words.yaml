@@ -1,0 +1,74 @@
+# Search reads a query word by word when no name, note or phrase matches it whole. Plurals and
+# simple inflections are folded first (tangerines, buttery, smoked), so a descriptor's own noun or
+# adjective needs no entry when folding reaches it: butter finds buttery, smoke finds smoky. A
+# word that is already a phrase or phrase alias (soil, toffee, petrol) keeps the phrase's weights.
+#
+# referents: each catalogue descriptor, with the everyday words that name it or name a thing that
+# smells of it. A word listed under two descriptors maps to both. Only measured catalogue
+# descriptors may be listed; a smell the catalogue has no descriptor for (chlorine, ozone) gets no
+# entry, so search says nothing in the catalogue names it instead of guessing a neighbour.
+#
+# carriers: words that name a container, form or object, never a smell (cedar chest, peppermint
+# gum). They are skipped rather than reported as unknown.
+#
+# qualifiers: descriptors that are also everyday words for age or temperature (fresh bread, warm
+# milk). They count only when no other word in the query names a descriptor.
+referents:
+  alcoholic: [alcohol, booze]
+  aldehydic: [aldehyde]
+  alliaceous: [allium, leek, chive]
+  animal: [animalic]
+  balsamic: [balsam, resin]
+  banana: [plantain]
+  beefy: [steak]
+  berry: [blueberry, cranberry, bramble]
+  black currant: [blackcurrant, cassis, currant]
+  bread: [loaf, toast]
+  burnt: [burn, charred, scorched]
+  camphoreous: [camphor, mothball, eucalyptus]
+  chamomile: [camomile]
+  cheesy: [cheddar, brie, camembert]
+  cinnamon: [cassia]
+  citrus: [bergamot, citron, yuzu]
+  cocoa: [cacao]
+  coffee: [latte, cappuccino]
+  coumarinic: [coumarin, tonka]
+  dairy: [yogurt, yoghurt]
+  earthy: [mud, moss]
+  ethereal: [ether]
+  fatty: [lard, tallow, grease]
+  fishy: [sardine, anchovy, tuna, mackerel]
+  floral: [blossom, bloom, petal]
+  grapefruit: [pomelo]
+  hazelnut: [filbert]
+  herbal: [herb, thyme, basil, rosemary, sage, oregano]
+  honey: [honeycomb, beeswax]
+  horseradish: [wasabi]
+  ketonic: [ketone]
+  leafy: [leaves]
+  meaty: [ham, pork, sausage, lamb]
+  medicinal: [medicine]
+  melon: [cantaloupe, honeydew, watermelon]
+  metallic: [metal, iron, copper]
+  mint: [peppermint, spearmint]
+  mushroom: [fungus, fungi]
+  musty: [dank]
+  nutty: [pecan, cashew, pistachio]
+  oily: [grease]
+  onion: [shallot, scallion]
+  orange: [tangerine, mandarin, clementine, satsuma]
+  orris: [iris]
+  peach: [nectarine]
+  phenolic: [phenol]
+  pine: [fir, spruce, conifer]
+  plum: [prune]
+  roasted: [toast]
+  savory: [savoury, umami]
+  spicy: [ginger, cardamom, allspice]
+  sulfurous: [sulphurous]
+  tobacco: [cigar, cigarette]
+  tropical: [mango, papaya, guava, passionfruit, lychee]
+  waxy: [beeswax]
+  woody: [wooden, cedar, cedarwood, oak, sandalwood]
+carriers: [chest, box, gum, shavings, jacket, juice, sauce, pie, peel, zest, rind, spread, jar, bottle]
+qualifiers: [fresh, warm]

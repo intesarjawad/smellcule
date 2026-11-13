@@ -1,0 +1,55 @@
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14"]
+build-backend = "uv_build"
+
+[project]
+name = "smellcule"
+version = "0.1.0"
+description = "A map of how molecules smell, with a daily guessing game."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Intesar Jawad" }]
+dependencies = ["numpy>=2.5.4,<3", "safetensors>=0.8.0,<0.9", "huggingface_hub>=2.4.0,<3"]
+
+[project.optional-dependencies]
+research = ["rdkit>=2026.9.1,<2027", "torch>=2.15.0,<3", "scikit-learn>=1.9.1,<2", "pyyaml>=6.0.3,<7", "threadpoolctl>=3.6.0,<4"]
+
+[project.scripts]
+smellcule = "smellcule.cli:main"
+
+[dependency-groups]
+dev = ["ruff==0.17.4", "pyright==1.1.414", "pytest==9.2.0", "hypothesis==6.170.15", "pre-commit==4.7.0", "types-PyYAML==6.0.12.20261103"]
+
+[tool.uv.build-backend]
+module-name = "smellcule"
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["D100", "D104", "D105", "D107", "D203", "D213", "COM812", "ISC001", "CPY001"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "D", "PLR2004", "INP001"]
+"src/smellcule/cli/**" = ["T201"]
+"scripts/**" = ["T201", "INP001"]
+
+[tool.pytest.ini_options]
+addopts = "-q --strict-markers"
+markers = ["data: needs downloaded data or released weights (make gate)", "leffingwell_fixture: reads a synthetic fixture in Leffingwell format; skipped when the catalogue switch is keller"]
+testpaths = ["tests"]
+
+[tool.ruff.lint.flake8-tidy-imports]
+banned-module-level-imports = ["smellcule.cli.research", "smellcule.cli.export", "smellcule.export.bundle_real"]

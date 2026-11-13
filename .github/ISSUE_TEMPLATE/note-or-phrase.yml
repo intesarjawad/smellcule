@@ -1,0 +1,21 @@
+name: Note or phrase
+description: Propose a sourced catalogue note or phrase
+body:
+  - type: textarea
+    id: text
+    attributes:
+      label: Proposed note or phrase
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Eligible catalogue source
+    validations:
+      required: true
+  - type: textarea
+    id: mapping
+    attributes:
+      label: Descriptors or catalogue names and reasoning
+    validations:
+      required: true

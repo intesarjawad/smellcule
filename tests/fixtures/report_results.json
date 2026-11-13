@@ -1,0 +1,16 @@
+{
+  "cluster": {
+    "ensemble_size": 10,
+    "mpnn": {"stable_labels": {"auroc": 0.84, "auprc": 0.24, "label_count": 1, "paired_auroc_difference_ci": {"lower": -0.02, "upper": 0.08}}},
+    "rf": {"stable_labels": {"auroc": 0.81, "label_count": 1}},
+    "labels": ["floral", "green"],
+    "train_positive_counts": [10, 3],
+    "test_positive_counts": [5, 0],
+    "test_prevalence": [0.5, 0.0],
+    "mean_prevalence": 0.25
+  },
+  "calibration": {"reliability_bins": [{"probability": 0.1, "frequency": 0.2, "count": 20}]},
+  "domain": {"bins": [{"lower": 0.0, "upper": 0.3, "molecule_count": 7, "metrics": {"all_labels": {"auroc": 0.8}, "stable_labels": {"auroc": null}}}]},
+  "stereo_pairs": {"all_groups": {"spearman": 0.2}, "held_out": {"spearman": null}},
+  "submissions": {"Example": {"name": "Example", "licence": "MIT", "source_url": "https://example.org/", "official": {"all_labels": {"auroc": 0.9}}}}
+}

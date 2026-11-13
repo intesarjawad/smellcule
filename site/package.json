@@ -1,0 +1,32 @@
+{
+  "name": "smellcule-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=26 <27"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "check": "biome ci . && tsc --noEmit && node scripts/check-tokens.mjs && ! grep -rnE \"innerHTML|outerHTML|insertAdjacentHTML|document\\.write\" src",
+    "test": "vitest run",
+    "e2e": "playwright test",
+    "budget": "node scripts/budget.mjs",
+    "gate": "SMELLCULE_GATE_DATA=public/data vitest run --dir tests/gate && SMELLCULE_E2E_DATA=real playwright test --grep @gate && SMELLCULE_BUDGET_DATA=public/data node scripts/budget.mjs",
+    "demo": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@biomejs/biome": "2.6.6",
+    "@playwright/test": "1.65.0",
+    "@types/node": "26.6.6",
+    "@types/three": "0.187.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.7",
+    "vitest": "5.1.0"
+  }
+}

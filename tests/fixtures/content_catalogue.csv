@@ -1,0 +1,122 @@
+database_id,chemical_name,cas,smiles,odor_labels_filtered,labels_train/test,labels_cv0
+0,Acetal,105-57-7,CCOC(C)OCC,"['alcoholic', 'camphoreous', 'potato', 'savory', 'sweet', 'winey']",0.0,-1.0
+1,Acetaldehyde amyl isoamyl acetal,13442-92-7,CCCCCOC(C)OCCC(C)C,"['aldehydic', 'chocolate', 'herbal', 'ketonic', 'mint', 'orris']",1.0,1.0
+7,Acetaldehyde di-isoamyl acetal,13002-09-0,CC(C)CCOC(C)OCCC(C)C,"['alliaceous', 'black currant', 'coumarinic', 'gasoline', 'roasted', 'sour']",1.0,1.0
+9,Acetaldehyde di-isopropyl acetal,4285-59-0,CC(C)OC(C)OC(C)C,"['almond', 'coconut', 'green', 'herbal', 'pineapple', 'smoky']",1.0,0.0
+11,Acetaldehyde diamyl acetal,13002-08-9,CCCCCOC(C)OCCCCC,"['animal', 'cognac', 'horseradish', 'jasmine', 'sour', 'violet']",1.0,1.0
+12,Acetaldehyde dibutyl acetal,871-22-7,CCCCOC(C)OCCCC,"['anisic', 'camphoreous', 'chocolate', 'grapefruit', 'herbal', 'vanilla']",0.0,-1.0
+14,Acetaldehyde diphenethyl acetal,122-71-4,CC(OCCc1ccccc1)OCCc1ccccc1,"['apple', 'coffee', 'ethereal', 'grassy', 'jasmine', 'leafy']",1.0,0.0
+19,Acetaldehyde ethyl cis-3-hexenyl acetal ,28069-74-1,CC/C=C/CCOC(C)OCC,"['animal', 'apricot', 'aromatic', 'cinnamon', 'fishy', 'gasoline']",1.0,1.0
+39,Acetone,67-64-1,CC(C)=O,"['anisic', 'aromatic', 'cheesy', 'cherry', 'coffee', 'ketonic']",1.0,1.0
+53,Acetylcyclopentanone,1670-46-8,CC(=O)C1CCCC1=O,"['balsamic', 'creamy', 'green', 'leafy', 'smoky', 'sour']",1.0,0.0
+54,Acetyldihydrothiazine,101417-25-8,CC(=O)N1CCC=CS1,"['aromatic', 'banana', 'catty', 'mushroom', 'musty', 'pine']",0.0,-1.0
+58,Acetyldimethylpyrazine,72797-17-2,CC(=O)[n+]1cc(C)nc(C)c1,"['beefy', 'bread', 'catty', 'dairy', 'fermented', 'hay']",1.0,1.0
+60,Acetyldimethylpyrazine,54300-10-6,CC(=O)c1cnc(C)c(C)n1,"['balsamic', 'berry', 'cabbage', 'honey', 'smoky', 'sour']",1.0,0.0
+61,Acetyldimethylthiophene,2530-10-1,CC(=O)c1cc(C)sc1C,"['anisic', 'black currant', 'chocolate', 'fermented', 'nutty', 'ripe']",1.0,1.0
+62,Acetylethylpyrazine,32974-92-8,CCc1nccnc1C(C)=O,"['brandy', 'earthy', 'musty', 'nutty', 'woody']",1.0,1.0
+416,Cedrol,77-53-2,C[C@@H]1CC[C@H]2C(C)(C)[C@H]3C[C@]21CC[C@@]3(C)O,"['banana', 'bread', 'camphoreous', 'catty', 'phenolic', 'rum', 'tea']",0.0,-1.0
+1007,Eugenol,97-53-0,C=CCc1ccc(O)c(OC)c1,"['banana', 'brothy', 'chicken', 'cinnamon', 'fresh', 'rose', 'warm']",1.0,1.0
+1044,Furfuryl mercaptan,98-02-2,SCc1ccco1,"['burnt', 'catty', 'chamomile', 'cheesy', 'floral', 'hazelnut', 'jasmine', 'solvent']",1.0,1.0
+1066,Geosmin,19700-21-1*,C[C@H]1CCC[C@@]2(C)CCCC[C@]12O,"['buttery', 'citrus', 'fishy', 'melon', 'mushroom', 'rum', 'violet']",1.0,0.0
+1557,Limonene,5989-27-5,C=C(C)[C@H]1CC=C(C)CC1,"['cabbage', 'cocoa', 'coumarinic', 'musk', 'onion', 'orange', 'pungent', 'violet']",1.0,1.0
+1558,Limonene,138-86-3,C=C(C)C1CC=C(C)CC1,"['beefy', 'camphoreous', 'grassy', 'orange', 'pungent', 'solvent', 'tropical', 'winey']",0.0,-1.0
+1559,Limonene,5989-54-8,C=C(C)[C@@H]1CC=C(C)CC1,"['balsamic', 'caramellic', 'coumarinic', 'green', 'orange', 'potato', 'pungent', 'solvent']",1.0,0.0
+1887,Muscone,541-91-3,CC1CCCCCCCCCCCCC(=O)C1,"['alcoholic', 'catty', 'dairy', 'lemon', 'nutty', 'tropical', 'violet']",1.0,1.0
+2794,Vanillin,121-33-5,COc1cc(C=O)ccc1O,"['chamomile', 'chicken', 'dry', 'honey', 'nutty', 'peach', 'pear', 'sharp']",1.0,1.0
+3556,Calone®,28940-11-6,Cc1ccc2c(c1)OCC(=O)CO2,"['cheesy', 'grape', 'grapefruit', 'jasmine', 'musty', 'potato', 'savory']",1.0,0.0
+133,Ambrettolide,7779-50-2,O=C1CCCCC=CCCCCCCCCCO1,"['alcoholic', 'balsamic', 'catty', 'cherry', 'ethereal', 'orange', 'rose']",0.0,-1.0
+172,Anethole,4180-23-8,C/C=C/c1ccc(OC)cc1,"['apricot', 'bread', 'chicken', 'grape', 'medicinal', 'sharp', 'tobacco']",1.0,1.0
+198,Benzaldehyde,100-52-7,O=Cc1ccccc1,"['alliaceous', 'camphoreous', 'chocolate', 'garlic', 'peach', 'radish', 'sweet']",1.0,0.0
+206,Benzyl acetate,140-11-4,CC(=O)OCc1ccccc1,"['catty', 'chamomile', 'chicken', 'cinnamon', 'cocoa', 'onion', 'pineapple']",1.0,1.0
+250,Bornyl acetate,76-49-3,CC(=O)OC1CC2CCC1(C)C2(C)C,"['bread', 'buttery', 'citrus', 'floral', 'grapefruit', 'hay', 'horseradish']",1.0,1.0
+251,Bornyl acetate,5655-61-8,CC(=O)O[C@@H]1C[C@@H]2CC[C@@]1(C)C2(C)C,"['buttery', 'cocoa', 'creamy', 'garlic', 'mushroom', 'smoky', 'solvent']",0.0,-1.0
+380,Camphor,464-49-3,CC1(C)[C@H]2CC[C@@]1(C)C(=O)C2,"['catty', 'coconut', 'milky', 'orange', 'popcorn', 'sulfurous']",1.0,1.0
+381,Camphor,76-22-2*,CC12CCC(CC1=O)C2(C)C,"['coffee', 'ethereal', 'fermented', 'grassy', 'medicinal', 'orange', 'tropical']",1.0,1.0
+422,Cinnamaldehyde,104-55-2,O=C/C=C/c1ccccc1,"['brothy', 'burnt', 'cognac', 'cucumber', 'lemon', 'orris', 'vanilla']",1.0,0.0
+439,Citral,5392-40-5,CC(C)=CCC/C(C)=C/C=O,"['animal', 'banana', 'cabbage', 'coumarinic', 'fatty', 'solvent', 'woody']",1.0,1.0
+443,Citronellol,106-22-9,CC(C)=CCC[C@@H](C)CCO,"['creamy', 'fresh', 'grapefruit', 'hay', 'malty', 'odorless', 'onion']",0.0,-1.0
+444,Citronellol,7540-51-4,CC(C)=CCC[C@H](C)CCO,"['almond', 'cheesy', 'cucumber', 'medicinal', 'odorless', 'oily', 'spicy']",1.0,0.0
+445,Citronellol,6812-78-8,C=C(C)CCC[C@H](C)CCO,"['dairy', 'meaty', 'metallic', 'odorless', 'sweet', 'tobacco', 'vanilla']",1.0,1.0
+471,Civetone,542-46-1,O=C1CCCCCCC/C=C\CCCCCCC1,"['aldehydic', 'bread', 'dry', 'floral', 'fruity', 'green', 'spicy']",1.0,1.0
+501,Damascone,43052-87-5,C/C=C/C(=O)C1C(C)=CCCC1(C)C,"['cocoa', 'cucumber', 'earthy', 'melon', 'odorless', 'onion', 'winey']",1.0,0.0
+504,Damascone,23726-92-3,C/C=C\C(=O)C1=C(C)CCCC1(C)C,"['citrus', 'ethereal', 'odorless', 'potato', 'savory', 'sour', 'tobacco']",0.0,-1.0
+505,Damascone,23726-91-2,C/C=C/C(=O)C1=C(C)CCCC1(C)C,"['creamy', 'fatty', 'jasmine', 'odorless', 'rose', 'tea', 'vegetable']",1.0,1.0
+506,Damascone,57378-68-4,C/C=C/C(=O)C1C(C)C=CCC1(C)C,"['anisic', 'catty', 'chamomile', 'coffee', 'fermented', 'floral', 'odorless']",1.0,0.0
+510,Decalactone,705-86-2,CCCCCC1CCCC(=O)O1,"['alcoholic', 'aromatic', 'berry', 'fishy', 'milky', 'musk', 'roasted']",1.0,1.0
+511,Decalactone,5579-78-2,CCCCC1CCCCC(=O)O1,"['berry', 'brandy', 'cheesy', 'coffee', 'floral', 'green', 'rum']",1.0,1.0
+512,Decalactone,706-14-9,CCCCCCC1CCC(=O)O1,"['berry', 'brandy', 'bread', 'caramellic', 'fresh', 'hazelnut', 'honey']",0.0,-1.0
+515,Decanal,112-31-2,CCCCCCCCCC=O,"['black currant', 'burnt', 'fruity', 'garlic', 'honey', 'leafy', 'orange']",1.0,1.0
+558,Diacetyl,431-03-8,CC(=O)C(C)=O,"['buttery', 'cherry', 'cucumber', 'garlic', 'hay', 'orris']",1.0,1.0
+831,Ethyl butyrate,105-54-4,CCCC(=O)OCC,"['banana', 'earthy', 'garlic', 'gasoline', 'honey', 'onion', 'savory']",1.0,0.0
+876,Ethyl maltol,4940-11-8,CCc1occc(=O)c1O,"['cocoa', 'floral', 'grape', 'lemon', 'nutty', 'solvent']",1.0,1.0
+942,Ethyl vanillin,121-32-4,CCOc1cc(C=O)ccc1O,"['black currant', 'cabbage', 'earthy', 'grapefruit', 'mint', 'nutty', 'onion']",0.0,-1.0
+1005,Eucalyptol,470-82-6,CC12CCC(CC1)C(C)(C)O2,"['earthy', 'fishy', 'grape', 'grassy', 'herbal', 'plum', 'tropical']",1.0,0.0
+1069,Geraniol,106-24-1,CC(C)=CCC/C(C)=C/CO,"['beefy', 'dry', 'green', 'leathery', 'odorless', 'oily', 'orange']",1.0,1.0
+1106,Guaiacol,90-05-1,COc1ccccc1O,"['berry', 'fishy', 'floral', 'hay', 'horseradish', 'popcorn', 'sharp', 'vegetable']",1.0,1.0
+1191,Hexanal,66-25-1,CCCCCC=O,"['beefy', 'buttery', 'chicken', 'hazelnut', 'milky', 'orange', 'smoky', 'vanilla']",1.0,0.0
+1271,Hexyl acetate,142-92-7,CCCCCCOC(C)=O,"['aromatic', 'burnt', 'herbal', 'medicinal', 'odorless', 'oily', 'vanilla']",0.0,-1.0
+1272,Hexyl acetate,5953-49-1,CCCCC(C)OC(C)=O,"['cognac', 'honey', 'oily', 'popcorn', 'rose', 'rum', 'smoky', 'vanilla']",1.0,1.0
+1319,Hydroxycitronellal,107-75-5,CC(CC=O)CCCC(C)(C)O,"['banana', 'earthy', 'floral', 'herbal', 'horseradish', 'peach', 'radish']",1.0,0.0
+1351,Ionone,127-41-3,CC(=O)/C=C/C1C(C)=CCCC1(C)C,"['cheesy', 'coconut', 'ethereal', 'jasmine', 'orange', 'pineapple', 'smoky']",1.0,1.0
+1352,Ionone,14901-07-6,CC(=O)/C=C/C1=C(C)CCCC1(C)C,"['apple', 'beefy', 'fatty', 'horseradish', 'ketonic', 'pineapple', 'vegetable']",1.0,1.0
+1353,Ionone,79-76-5,C=C1CCCC(C)(C)C1/C=C/C(C)=O,"['balsamic', 'cocoa', 'floral', 'leafy', 'metallic', 'pineapple', 'tropical']",0.0,-1.0
+1355,Irone,79-69-6,CC(=O)/C=C/[C@H]1C(C)=CC[C@@H](C)C1(C)C,"['alliaceous', 'cherry', 'chicken', 'cucumber', 'hay', 'leathery', 'ripe']",1.0,1.0
+1356,Irone,79-70-9,CC(=O)/C=C/C1=C(C)CCC(C)C1(C)C,"['alliaceous', 'cucumber', 'lemon', 'mushroom', 'musk', 'tobacco', 'violet']",1.0,1.0
+1358,Isoamyl acetate,123-92-2,CC(=O)OCCC(C)C,"['garlic', 'horseradish', 'leafy', 'malty', 'medicinal', 'melon', 'vanilla', 'woody']",1.0,0.0
+1444,Isobutylquinoline,93-19-6,CC(C)Cc1ccc2ccccc2n1,"['apple', 'banana', 'bread', 'meaty', 'sharp', 'tea', 'waxy']",1.0,1.0
+1548,Jasmone,488-10-8,CC/C=C\CC1=C(C)CCC1=O,"['almond', 'black currant', 'cocoa', 'grapefruit', 'leafy', 'medicinal', 'orris']",0.0,-1.0
+1549,Jasmone,6261-18-3,CC/C=C/CC1=C(C)CCC1=O,"['chicken', 'chocolate', 'cocoa', 'cucumber', 'melon', 'milky', 'sharp']",1.0,0.0
+1564,Linalool,78-70-6,C=CC(C)(O)CCC=C(C)C,"['floral', 'hazelnut', 'metallic', 'orange', 'peach', 'pungent', 'rum', 'winey']",1.0,1.0
+1565,Linalyl acetate,115-95-7,C=CC(C)(CCC=C(C)C)OC(C)=O,"['buttery', 'cinnamon', 'cocoa', 'milky', 'orange', 'pungent', 'spicy']",1.0,1.0
+1590,Maltol,118-71-8,Cc1occc(=O)c1O,"['citrus', 'dry', 'fruity', 'mint', 'odorless', 'radish', 'solvent', 'sweet']",1.0,0.0
+1610,Menthol,15356-60-2,CC(C)[C@@H]1CC[C@@H](C)C[C@@H]1O,"['fishy', 'hazelnut', 'horseradish', 'mushroom', 'nutty', 'popcorn', 'rum']",0.0,-1.0
+1611,Menthol,1490-04-6,CC1CCC(C(C)C)C(O)C1,"['alliaceous', 'hazelnut', 'horseradish', 'musk', 'phenolic', 'pine', 'warm']",1.0,1.0
+1612,Menthol,2216-51-5,CC(C)[C@@H]1CC[C@@H](C)C[C@H]1O,"['black currant', 'cabbage', 'cognac', 'hazelnut', 'musty', 'plum', 'strawberry']",1.0,0.0
+1701,Methyl anthranilate,134-20-3,COC(=O)c1ccccc1N,"['alliaceous', 'animal', 'fermented', 'fruity', 'nutty', 'rose', 'sweet']",1.0,1.0
+1720,Methyl dihydrojasmonate,24851-98-7,CCCCCC1C(=O)CCC1CC(=O)OC,"['alcoholic', 'almond', 'cocoa', 'gasoline', 'mushroom', 'odorless', 'warm']",1.0,1.0
+2123,Nerol,106-25-2,CC(C)=CCC/C(C)=C\CO,"['berry', 'black currant', 'coumarinic', 'fermented', 'odorless', 'oily', 'plum']",0.0,-1.0
+2190,Nootkatone,4674-50-4,C=C(C)C1CCC2=CC(=O)CC(C)C2(C)C1,"['citrus', 'fatty', 'hazelnut', 'leathery', 'onion', 'peach', 'pear']",1.0,1.0
+2279,Patchouli alcohol,5986-55-0,C[C@H]1CCC2(O)C(C)(C)C3CC[C@@]2(C)C1C3,"['buttery', 'catty', 'musty', 'odorless', 'orange', 'pungent', 'radish']",1.0,1.0
+2327,Phenethyl alcohol,60-12-8,OCCc1ccccc1,"['anisic', 'chocolate', 'jasmine', 'odorless', 'orris', 'phenolic', 'sour']",1.0,0.0
+2361,Phenylacetaldehyde,122-78-1,O=CCc1ccccc1,"['alcoholic', 'fishy', 'milky', 'peach', 'smoky', 'sweet', 'warm']",1.0,1.0
+2415,Pinene,80-56-8,CC1=CCC2CC1C2(C)C,"['anisic', 'buttery', 'dry', 'floral', 'fresh', 'hay', 'pear']",0.0,-1.0
+2416,Pinene,127-91-3,C=C1CCC2CC1C2(C)C,"['almond', 'buttery', 'hazelnut', 'phenolic', 'pine', 'winey', 'woody']",1.0,0.0
+2425,Piperonal,120-57-0,O=Cc1ccc2c(c1)OCO2,"['apple', 'balsamic', 'citrus', 'garlic', 'nutty', 'pine', 'plum']",1.0,1.0
+2546,Raspberry Ketone,5471-51-2,CC(=O)CCc1ccc(O)cc1,"['almond', 'apricot', 'beefy', 'cocoa', 'malty', 'pineapple', 'sour']",1.0,1.0
+2559,Rose oxide,16409-43-1,CC(C)=CC1CC(C)CCO1,"['cherry', 'chicken', 'dairy', 'earthy', 'milky', 'odorless', 'plum']",1.0,0.0
+2560,Rose oxide,3033-23-6,CC(C)=C[C@@H]1C[C@H](C)CCO1,"['chamomile', 'cocoa', 'hay', 'odorless', 'phenolic', 'popcorn', 'sour']",0.0,-1.0
+2570,Santalol,115-71-9,C/C(=C/CCC1(C)C2CC3C(C2)C31C)CO,"['alliaceous', 'apricot', 'cherry', 'coumarinic', 'grapefruit', 'melon', 'potato']",1.0,1.0
+2571,Santalol,77-42-9,C=C1C2CCC(C2)C1(C)CC/C=C(/C)CO,"['coconut', 'coumarinic', 'hay', 'pungent', 'radish', 'tea', 'vanilla']",1.0,0.0
+2598,Sotolon,28664-35-9,CC1=C(O)C(=O)OC1C,"['chamomile', 'creamy', 'malty', 'mushroom', 'radish', 'solvent', 'sweet']",1.0,1.0
+2602,Strawberry furanone,3658-77-3,CC1=C(O)C(=O)C(C)O1,"['fruity', 'hazelnut', 'nutty', 'pungent', 'radish', 'ripe', 'woody']",1.0,1.0
+2760,Undecalactone,710-04-3,CCCCCCC1CCCC(=O)O1,"['caramellic', 'chamomile', 'floral', 'milky', 'roasted', 'warm']",0.0,-1.0
+2761,Undecalactone,104-67-6,CCCCCCC[C@H]1CCC(=O)O1,"['burnt', 'chamomile', 'coffee', 'gasoline', 'meaty', 'melon', 'rose']",1.0,1.0
+2802,Vetiverol,89-88-3,CC1=CC(O)CC(C)C2CC(=C(C)C)CC12,"['cabbage', 'caramellic', 'fatty', 'leathery', 'pear', 'popcorn', 'rum']",1.0,1.0
+2803,Vetiveryl acetate,117-98-6,CC(=O)OC1C=C(C)C2CC(=C(C)C)CC2C(C)C1,"['banana', 'coconut', 'leathery', 'melon', 'savory', 'sulfurous', 'waxy']",1.0,0.0
+2912,Ambrettolide,123-69-3,O=C1CCCCC/C=C\CCCCCCCCO1,"['alcoholic', 'fruity', 'metallic', 'mint', 'odorless', 'sharp', 'sour']",1.0,1.0
+2986,Damascone,71048-82-3,C/C=C/C(=O)[C@@H]1[C@@H](C)C=CCC1(C)C,"['brothy', 'fresh', 'odorless', 'ripe', 'sharp', 'smoky', 'solvent']",0.0,-1.0
+3631,Lilial®,80-54-6,CC(C=O)Cc1ccc(C(C)(C)C)cc1,"['banana', 'brothy', 'chicken', 'fermented', 'herbal', 'solvent', 'tobacco']",1.0,0.0
+3689,Helional®,1205-17-0,CC(C=O)Cc1ccc2c(c1)OCO2,"['almond', 'beefy', 'jasmine', 'meaty', 'mushroom', 'sour', 'tomato']",1.0,1.0
+68,Acetylmethylfuran,1193-79-9,CC(=O)c1ccc(C)o1,"['berry', 'cabbage', 'melon', 'plum', 'solvent', 'spicy']",1.0,1.0
+76,Acetylpyrazine,22047-25-2,CC(=O)c1cnccn1,"['anisic', 'jasmine', 'lemon', 'odorless', 'onion', 'strawberry']",1.0,0.0
+80,Acetylpyrrole,1072-83-9,CC(=O)c1ccc[nH]1,"['horseradish', 'plum', 'popcorn', 'ripe', 'savory', 'sulfurous']",0.0,-1.0
+84,Acetylthiazolidine,67399-73-9,CC(=O)C1NCCS1,"['brothy', 'chocolate', 'gasoline', 'grassy', 'sweet', 'violet']",1.0,1.0
+85,Acetylthiazoline,29926-41-8,CC(=O)C1=NCCS1,"['alcoholic', 'fresh', 'garlic', 'meaty', 'sharp', 'tea']",1.0,0.0
+86,Acetylthiohexyl acetate,136954-25-1,CC(=O)OCCCCCCSC(C)=O,"['aldehydic', 'animal', 'cherry', 'smoky', 'tea', 'tobacco']",1.0,1.0
+88,Aconitic acid,499-12-7,O=C(O)/C=C(\CC(=O)O)C(=O)O,"['catty', 'herbal', 'meaty', 'sour', 'tea', 'tomato']",1.0,1.0
+107,Allyl ethylbutyrate,7493-69-8,C=CCOC(=O)C(CC)CC,"['black currant', 'cabbage', 'camphoreous', 'grassy', 'strawberry', 'tropical']",0.0,-1.0
+114,Allyl methyl disulfide,2179-58-0,C=CCSSC,"['alcoholic', 'burnt', 'malty', 'vanilla', 'warm', 'winey']",1.0,1.0
+128,Allyl sulfide,592-88-1,C=CCSCC=C,"['apple', 'buttery', 'ketonic', 'tomato', 'vegetable', 'waxy']",1.0,1.0
+146,Amyl angelate,7785-63-9,C/C=C(/C)C(=O)OCCCCC,"['animal', 'banana', 'fruity', 'orange', 'strawberry', 'violet']",1.0,0.0
+156,Amyl isovalerate: Pentyl isovalerate,25415-62-7,CCCCCOC(=O)CC(C)C,"['grassy', 'lemon', 'meaty', 'milky', 'odorless', 'warm']",1.0,1.0
+205,Benzothiazole,95-16-9,c1ccc2scnc2c1,"['buttery', 'cheesy', 'garlic', 'meaty', 'orange', 'waxy']",0.0,-1.0
+224,Benzyl lactate,2051-96-9,CC(O)C(=O)OCc1ccccc1,"['aldehydic', 'hay', 'melon', 'musty', 'pear', 'winey']",1.0,0.0
+234,Benzyl tiglate,37526-88-8,C/C=C(\C)C(=O)OCc1ccccc1,"['catty', 'floral', 'lemon', 'orris', 'pine', 'woody']",1.0,1.0
+269,Butanethiol,513-53-1,CCC(C)S,"['balsamic', 'cocoa', 'jasmine', 'tomato', 'vegetable']",1.0,1.0
+314,Butyl isothiocyanate,592-82-5,CCCCN=C=S,"['citrus', 'leathery', 'rose', 'sour', 'woody']",1.0,0.0
+361,Butylthiazole,37645-61-7,CCCCc1nccs1,"['ethereal', 'grapefruit', 'orange', 'pear', 'sulfurous']",0.0,-1.0
+365,Butyraldehyde,123-72-8,CCCC=O,"['black currant', 'fermented', 'fruity', 'grapefruit', 'savory']",1.0,1.0
+537,Decenol,13019-22-2,C=CCCCCCCCCO,"['beefy', 'dry', 'smoky', 'sour', 'warm']",1.0,0.0
+646,Dihydroxydithiane,40018-26-6,OC1CSC(O)CS1,"['apricot', 'chocolate', 'coffee', 'meaty', 'sulfurous']",1.0,1.0
+906,Ethyl nonynoate,10031-92-2,CCCCCCC#CC(=O)OCC,"['leafy', 'malty', 'orange', 'solvent', 'tobacco']",1.0,1.0
+1616,Menthone thioacetate,94293-57-9,CC(=S)OC(C)(C)[C@@H]1CCC(C)CC1=O,"['gasoline', 'grapefruit', 'potato', 'spicy', 'waxy']",0.0,-1.0

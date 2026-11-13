@@ -1,0 +1,30 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.6.5/schema.json",
+  "files": { "includes": ["**", "!dist", "!public/data", "!test-results", "!playwright-report"] },
+  "formatter": {
+    "indentStyle": "space",
+    "lineWidth": 100
+  },
+  "overrides": [
+    {
+      "includes": ["public/fixture-data/*.json", "public/keller-fixture-data/*.json"],
+      "json": {
+        "formatter": { "expand": "always" }
+      }
+    }
+  ],
+  "linter": {
+    "rules": {
+      "preset": "recommended",
+      "suspicious": {
+        "noExplicitAny": "error"
+      },
+      "style": {
+        "noNonNullAssertion": "error"
+      },
+      "a11y": {
+        "preset": "recommended"
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smellcule</title>
+    <meta
+      name="description"
+      content="A world receiver for how molecules smell: tune by a smell word, read what was measured and what a model predicts."
+    />
+    <meta name="theme-color" content="#c9cac7" />
+    <meta property="og:title" content="Smellcule" />
+    <meta
+      property="og:description"
+      content="Start with a smell you know. Find the molecules that smell like it."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="social-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <p class="brand"><a href="#/">Smellcule</a></p>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#/browse">Browse</a></li>
+          <li><a href="#/atlas">Map</a></li>
+          <li><a href="#/smellcule">Daily game</a></li>
+          <li><a href="#/decompile">Decompile</a></li>
+          <li><a href="#/how">How it works</a></li>
+        </ul>
+      </nav>
+      <div id="header-slot" class="header-slot"></div>
+    </header>
+    <main id="main" tabindex="-1"></main>
+    <footer id="site-footer" class="site-footer"></footer>
+    <p id="live" class="visually-hidden" aria-live="polite"></p>
+  </body>
+</html>

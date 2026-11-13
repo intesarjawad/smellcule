@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mapping.schema.json",
+  "title": "Synesthesia mapping preset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["v", "params"],
+  "properties": {
+    "v": { "const": 1 },
+    "params": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tempoBpm",
+        "brightness",
+        "warmth",
+        "roughness",
+        "notesPerBeat",
+        "registerMidi",
+        "attackMs",
+        "reverbMix"
+      ],
+      "properties": {
+        "tempoBpm": { "$ref": "#/$defs/coefficients" },
+        "brightness": { "$ref": "#/$defs/coefficients" },
+        "warmth": { "$ref": "#/$defs/coefficients" },
+        "roughness": { "$ref": "#/$defs/coefficients" },
+        "notesPerBeat": { "$ref": "#/$defs/coefficients" },
+        "registerMidi": { "$ref": "#/$defs/coefficients" },
+        "attackMs": { "$ref": "#/$defs/coefficients" },
+        "reverbMix": { "$ref": "#/$defs/coefficients" }
+      }
+    }
+  },
+  "$defs": {
+    "coefficients": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bias", "k"],
+      "properties": {
+        "bias": { "type": "number", "minimum": -2, "maximum": 2 },
+        "k": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "citrus": { "type": "number", "minimum": -4, "maximum": 4 },
+            "green": { "type": "number", "minimum": -4, "maximum": 4 },
+            "floral": { "type": "number", "minimum": -4, "maximum": 4 },
+            "fruity": { "type": "number", "minimum": -4, "maximum": 4 },
+            "sweet": { "type": "number", "minimum": -4, "maximum": 4 },
+            "woody": { "type": "number", "minimum": -4, "maximum": 4 },
+            "musky": { "type": "number", "minimum": -4, "maximum": 4 },
+            "earthy": { "type": "number", "minimum": -4, "maximum": 4 },
+            "spicy": { "type": "number", "minimum": -4, "maximum": 4 },
+            "fresh": { "type": "number", "minimum": -4, "maximum": 4 },
+            "roasted": { "type": "number", "minimum": -4, "maximum": 4 },
+            "savory": { "type": "number", "minimum": -4, "maximum": 4 },
+            "waxy": { "type": "number", "minimum": -4, "maximum": 4 }
+          }
+        }
+      }
+    }
+  }
+}

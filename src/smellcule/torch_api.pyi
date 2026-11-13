@@ -1,0 +1,16 @@
+# Narrow facade for entry points left unannotated in PyTorch 2.15.0.
+from collections.abc import Callable, Iterable
+from typing import overload
+
+from torch import Generator, Tensor
+from torch.optim import Optimizer
+
+def backward(tensor: Tensor) -> None: ...
+def manual_seed(seed: int) -> Generator: ...
+
+class AdamW(Optimizer):
+    def __init__(self, params: Iterable[Tensor], *, lr: float, weight_decay: float) -> None: ...
+    @overload
+    def step(self, closure: None = None) -> None: ...
+    @overload
+    def step(self, closure: Callable[[], float]) -> float: ...

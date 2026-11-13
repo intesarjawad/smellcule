@@ -1,0 +1,1178 @@
+/*
+ * The receiver faceplate. One milled plate: a perforated speaker panel, black glass with a printed
+ * scale and one orange needle, band keys set flush in a recessed channel, gauges on one strip and a
+ * printed station memory. Nothing casts a shadow; edges are hairlines, the way a machined part
+ * shows them.
+ */
+
+.receiver {
+  --fg: var(--ink);
+  --fg-soft: var(--ink-soft);
+  position: relative;
+  overflow-x: clip;
+  width: min(100%, 100rem);
+  margin: 0 auto;
+  padding: var(--space-2) var(--gutter) var(--space-8);
+  color: var(--ink);
+}
+
+.receiver > p {
+  max-width: none;
+}
+
+.rx-lede {
+  margin: 0 0 var(--space-4);
+  color: var(--ink-soft);
+  font-size: var(--text-small);
+}
+
+.rx-engrave {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--ink-soft);
+  font-family: var(--font-ui);
+  font-size: var(--text-micro);
+  font-weight: 500;
+  letter-spacing: var(--tracking-engraved);
+  line-height: var(--leading-snug);
+  text-transform: uppercase;
+}
+
+/* Section names on the plate are printed in sentence case; only Tuning and On air are engraved. */
+.rx-label {
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--font-ui);
+  font-size: var(--text-label);
+  font-weight: 600;
+  line-height: var(--leading-snug);
+}
+
+.rx-note,
+.rx-foot {
+  margin: 0 0 var(--space-4);
+  color: var(--ink-soft);
+  font-size: var(--text-label);
+  line-height: var(--leading-snug);
+}
+
+.rx-foot {
+  margin-top: var(--space-5);
+}
+
+/* Tuning slot, in the header row. */
+
+.rx-tune-block {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: end;
+  gap: var(--space-2) var(--space-5);
+}
+
+.rx-tune {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.rx-tune label {
+  color: var(--ink-soft);
+  font-size: var(--text-micro);
+  font-weight: 500;
+  letter-spacing: var(--tracking-engraved);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* The window and its key, flush in one recessed channel with a hairline between them. */
+.rx-tune-unit {
+  display: flex;
+  gap: var(--channel-rule);
+  padding: var(--channel-rule);
+  border-radius: var(--radius-plate);
+  background: var(--face-edge);
+}
+
+.rx-tune input[type="search"] {
+  width: var(--slot-width);
+  height: 2.25rem;
+  padding: 0 var(--space-4);
+  border: 0;
+  border-radius: var(--radius-key) 0 0 var(--radius-key);
+  background: var(--glass);
+  color: var(--glass-ink);
+  box-shadow: var(--shadow-slot);
+  font-family: var(--font-mono);
+  font-size: var(--text-slot);
+}
+
+.rx-tune input::placeholder {
+  color: var(--glass-dim);
+}
+
+.rx-tune input:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+/* Tune is a key like the band keys, its name engraved. */
+.rx-tune button {
+  height: 2.25rem;
+  padding: 0 var(--space-5);
+  border: 0;
+  border-radius: 0 var(--radius-key) var(--radius-key) 0;
+  background: var(--key);
+  color: var(--ink);
+  box-shadow: none;
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: var(--tracking-engraved);
+  text-transform: uppercase;
+}
+
+.rx-tune button:is(:hover, :active):not(:disabled) {
+  transform: none;
+  background: var(--key-down);
+  color: var(--ink);
+  box-shadow: none;
+}
+
+/* Preset keys: small numbered keys in their own channel, under an engraved name. */
+.rx-memories {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  counter-reset: preset;
+}
+
+.rx-preset-keys {
+  display: flex;
+  gap: var(--channel-rule);
+  padding: var(--channel-rule);
+  border-radius: var(--radius-plate);
+  background: var(--face-edge);
+}
+
+.rx-preset-keys button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 1.75rem;
+  padding: 0 var(--space-4);
+  border: 0;
+  border-radius: var(--radius-none);
+  background: var(--key);
+  color: var(--ink);
+  box-shadow: none;
+  font-size: var(--text-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-ui);
+  white-space: nowrap;
+}
+
+.rx-preset-keys button::before {
+  counter-increment: preset;
+  content: counter(preset);
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  font-weight: 400;
+}
+
+.rx-preset-keys button:first-child {
+  border-radius: var(--radius-key) 0 0 var(--radius-key);
+}
+
+.rx-preset-keys button:last-child {
+  border-radius: 0 var(--radius-key) var(--radius-key) 0;
+}
+
+.rx-preset-keys button:is(:hover, :active):not(:disabled) {
+  transform: none;
+  background: var(--key-down);
+  color: var(--ink);
+  box-shadow: none;
+}
+
+.rx-tune-status {
+  grid-column: 1 / -1;
+  justify-self: end;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: var(--text-label);
+}
+
+.rx-tune-status:empty {
+  display: none;
+}
+
+/* The faceplate. */
+
+.rx-face {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) var(--grille-width);
+  grid-template-areas:
+    "glass glass grille"
+    "bands bands grille"
+    "gauges gauges grille"
+    "station memory memory";
+  gap: var(--space-5) var(--space-6);
+  padding: var(--face-pad);
+  border: 1px solid var(--face-edge);
+  border-top-color: var(--shine);
+  border-radius: var(--radius-glass);
+  background-color: var(--face);
+}
+
+/* The glass: printed scale, readout, needle, and the knobs set into the same window. */
+
+.rx-glass {
+  position: relative;
+  grid-area: glass;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--knob-column);
+  height: var(--glass-height);
+  overflow: hidden;
+  border: 1px solid var(--face-edge);
+  border-radius: var(--radius-plate);
+  background: var(--glass);
+  color: var(--glass-ink);
+  user-select: none;
+}
+
+/* The gutter the embers run along, milled under the last band: shadowed wall above, lit lip below. */
+.rx-glass::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--gutter-top, -100px) - var(--channel-rule));
+  right: 0;
+  left: 0;
+  box-sizing: border-box;
+  height: calc(var(--gutter, 0px) + 2 * var(--channel-rule));
+  border-block: var(--channel-rule) solid var(--glass-rule);
+  border-bottom-color: var(--shine-soft);
+  /* A faint tint of each lane's colour on the floor: upper, middle, lower, 3 px with 2 px between. */
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 0.5px,
+      var(--lane-floor-up) 0.5px 3.5px,
+      transparent 3.5px 5.5px,
+      var(--lane-floor-mid) 5.5px 8.5px,
+      transparent 8.5px 10.5px,
+      var(--lane-floor-down) 10.5px 13.5px,
+      transparent 13.5px
+    ),
+    var(--glass-raised);
+  box-shadow: var(--shadow-slot);
+  pointer-events: none;
+  --lane-floor-up: color-mix(in srgb, var(--lane-up, transparent) 16%, transparent);
+  --lane-floor-mid: color-mix(in srgb, var(--lane-mid, transparent) 16%, transparent);
+  --lane-floor-down: color-mix(in srgb, var(--lane-down, transparent) 16%, transparent);
+}
+
+.rx-glass:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.rx-dial {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding-top: var(--space-5);
+}
+
+.rx-scale-head {
+  margin: 0 var(--space-6);
+  color: var(--glass-dim);
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  letter-spacing: var(--tracking-ui);
+  text-transform: uppercase;
+  white-space: pre;
+}
+
+.rx-readout {
+  margin: var(--space-3) var(--space-6) 0;
+  transition: opacity 600ms var(--ease-out);
+}
+
+.rx-readout.sent {
+  opacity: 0;
+  transition: none;
+}
+
+.rx-readout p {
+  margin: 0;
+}
+
+.rx-read-name {
+  white-space: nowrap;
+  color: var(--glass-ink);
+  font-size: var(--text-readout-max);
+  font-weight: 700;
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-hero);
+}
+
+.rx-read-words {
+  margin-top: var(--space-3);
+  color: var(--glass-dim);
+  font-family: var(--font-mono);
+  font-size: var(--text-readout-words);
+  white-space: pre;
+}
+
+.rx-scale-box {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  margin-top: var(--space-5);
+  overflow: hidden;
+  cursor: ew-resize;
+  touch-action: pan-y;
+}
+
+.rx-scale-box.sliding {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black var(--space-6),
+    black calc(100% - var(--space-6)),
+    transparent
+  );
+}
+
+.rx-scale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--font-mono);
+  will-change: transform;
+}
+
+.rx-ruler {
+  stroke: var(--glass-dim);
+  stroke-width: 0.8;
+}
+
+/* The band names beside the strips, each with its family's colour dot. They stay put while a
+   phone's scale slides under them. */
+.rx-row-key {
+  position: absolute;
+  left: 0;
+  display: grid;
+  width: var(--row-key-width);
+  padding-left: var(--space-4);
+  background: linear-gradient(to right, var(--glass) calc(100% - var(--space-5)), transparent);
+  color: var(--glass-dim);
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  letter-spacing: var(--tracking-ui);
+  pointer-events: none;
+}
+
+.rx-row-key p {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.rx-row-key i {
+  flex: none;
+  width: var(--space-3);
+  height: var(--space-3);
+  border-radius: var(--radius-round);
+  background: var(--family);
+}
+
+.rx-row-key span:last-child {
+  margin-left: auto;
+  padding-right: var(--space-5);
+  color: var(--glass-faint);
+}
+
+.rx-row-key .active {
+  color: var(--glass-ink);
+  font-weight: 700;
+}
+
+.rx-strip {
+  stroke: var(--family);
+  stroke-width: 1;
+  opacity: 0.6;
+}
+
+.rx-row.active .rx-strip {
+  opacity: 1;
+}
+
+/* Station names, printed only for the tuned band; the ones near the needle step down to the faint
+   ink (set inline, graded by distance). */
+.rx-print {
+  fill: var(--glass-dim);
+  font-family: var(--font-ui);
+  font-size: var(--text-micro);
+  font-weight: 500;
+}
+
+.rx-print.tuned {
+  fill: var(--glass-ink);
+  font-weight: 700;
+}
+
+.rx-lead {
+  stroke: var(--glass-rule);
+  stroke-width: 0.8;
+}
+
+.rx-needle,
+.rx-trail {
+  position: absolute;
+  top: var(--needle-top, 0);
+  bottom: var(--needle-bottom, 0);
+  left: calc(var(--needle-width) / -2);
+  width: var(--needle-width);
+  background: var(--signal);
+  pointer-events: none;
+}
+
+.rx-trail {
+  opacity: 0;
+}
+
+.rx-knobs {
+  margin-bottom: var(--gutter-clear, 0);
+  display: grid;
+  grid-auto-rows: min-content;
+  justify-items: center;
+  align-content: center;
+  gap: var(--space-3);
+  border-left: 1px solid var(--glass-rule);
+}
+
+.rx-knobs .rx-engrave {
+  margin-bottom: var(--space-6);
+  color: var(--glass-dim);
+}
+
+.rx-knob {
+  position: relative;
+  width: var(--knob-size);
+  height: var(--knob-size);
+  border: 1px solid var(--key-edge);
+  border-radius: var(--radius-round);
+  background: repeating-conic-gradient(var(--paper) 0 3deg, var(--key-down) 3deg 6deg);
+  cursor: grab;
+  touch-action: none;
+}
+
+.rx-knob::after {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border: 1px solid var(--key-edge);
+  border-radius: var(--radius-round);
+  background: var(--paper-lift);
+}
+
+.rx-knob i {
+  position: absolute;
+  top: 22%;
+  left: calc(50% - 0.25rem);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: var(--radius-round);
+  background: var(--signal);
+  z-index: 1;
+}
+
+.rx-lamp {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: 0;
+  color: var(--glass-dim);
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  letter-spacing: var(--tracking-engraved);
+  text-transform: uppercase;
+}
+
+.rx-lamp i {
+  width: var(--lamp-size);
+  height: var(--lamp-size);
+  border: 1px solid var(--glass-rule);
+  border-radius: var(--radius-round);
+  background: var(--lamp-off);
+  transition: background 300ms var(--ease-out);
+}
+
+.rx-lamp.on {
+  color: var(--glass-ink);
+}
+
+.rx-lamp.on i {
+  border-color: var(--signal);
+  background: var(--signal);
+  outline: 3px solid var(--signal-wash);
+}
+
+/* The speaker: a perforated panel the broadcast leaves through. */
+
+.rx-grille-box {
+  grid-area: grille;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: var(--space-3);
+  justify-items: center;
+}
+
+.rx-grille {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-plate);
+  --grille-plate: var(--ground-raised);
+  /* Only whole holes, spread to the edges; the port takes the place of one and its neighbours. */
+  --grille-holes:
+    linear-gradient(var(--grille-plate), var(--grille-plate)) var(--clear-x, 0) var(--clear-y, 0) /
+    var(--clear-width, 0) var(--clear-height, 0) no-repeat,
+    radial-gradient(
+      circle,
+      var(--grille-hole) var(--perf-hole),
+      transparent calc(var(--perf-hole) + 0.6px)
+    )
+    0 0 / var(--perf-pitch) var(--perf-pitch) space,
+    var(--grille-plate);
+  background: var(--grille-holes);
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.rx-grille:hover:not(:disabled),
+.rx-grille:active:not(:disabled) {
+  --grille-plate: var(--face);
+  transform: none;
+  background: var(--grille-holes);
+  box-shadow: none;
+}
+
+.rx-grille:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+/* Band keys. */
+
+/* Band keys: set flush in one recessed channel, hairlines between them, nothing raised. */
+.rx-bands {
+  grid-area: bands;
+  display: grid;
+  grid-template-columns: repeat(13, minmax(0, 1fr));
+  gap: var(--channel-rule);
+  padding: var(--channel-rule);
+  border-radius: var(--radius-plate);
+  background: var(--face-edge);
+}
+
+.rx-bands button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  height: var(--key-height);
+  padding: 0 0 var(--space-3);
+  border: 0;
+  border-radius: var(--radius-none);
+  background: var(--key);
+  color: var(--ink);
+  box-shadow: none;
+  font-size: var(--text-micro);
+  font-weight: 400;
+  letter-spacing: var(--tracking-ui);
+}
+
+.rx-bands button:is(:hover, :active):not(:disabled) {
+  transform: none;
+  background: var(--key-down);
+  color: var(--ink);
+  box-shadow: none;
+}
+
+.rx-bands button[aria-pressed="true"] {
+  transform: none;
+  background: var(--key-down);
+  box-shadow: none;
+  font-weight: 700;
+}
+
+.rx-key-swatch {
+  width: 1.125rem;
+  height: 0.25rem;
+  background: var(--family);
+  opacity: 0.7;
+}
+
+/* The pressed key's colour bar lights, the way a latched key shows its lamp. */
+.rx-bands button[aria-pressed="true"] .rx-key-swatch {
+  height: 0.375rem;
+  opacity: 1;
+}
+
+/* Gauges: six on one strip, hairlines between them. */
+
+.rx-gauges {
+  grid-area: gauges;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.rx-gauge-strip {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  border-top: 1px solid var(--face-rule);
+  border-bottom: 1px solid var(--face-rule);
+}
+
+.rx-meter {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-3) var(--space-4) var(--space-2);
+  border-left: 1px solid var(--face-rule);
+}
+
+.rx-meter:first-child {
+  border-left: 0;
+}
+
+.rx-meter[hidden] {
+  display: none;
+}
+
+.rx-meter svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.rx-meter figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: var(--space-3);
+  line-height: var(--leading-snug);
+}
+
+.rx-meter-label {
+  flex-basis: 100%;
+  font-size: var(--text-small);
+  font-weight: 700;
+}
+
+.rx-meter-value {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+}
+
+/* A word the measured ratings also list carries a filled tick, and the key under the strip shows
+   the same tick. Underline is kept for links. */
+.rx-meter.measured .rx-meter-label::before,
+.rx-meter-key::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 0.7em;
+  margin-right: var(--space-2);
+  background: var(--signal-ink);
+}
+
+.rx-meter-key {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: var(--text-label);
+}
+
+.rx-arc,
+.rx-tick {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1;
+}
+
+.rx-tick.major {
+  stroke-width: 1.4;
+}
+
+.rx-scale-figure {
+  fill: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  text-anchor: middle;
+}
+
+.rx-wedge {
+  fill: var(--signal-wash);
+}
+
+.rx-meter-needle {
+  stroke: var(--signal-ink);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.rx-pivot {
+  fill: var(--ink);
+}
+
+/* Station plate. */
+
+.rx-station {
+  grid-area: station;
+  display: grid;
+  grid-template-columns: minmax(0, 13rem) minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-6);
+  min-width: 0;
+}
+
+.rx-oled {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--face-edge);
+  border-radius: var(--radius-plate);
+  background: var(--glass);
+  color: var(--glass-ink);
+}
+
+.rx-oled img {
+  width: 100%;
+  height: auto;
+}
+
+.rx-oled-facts {
+  display: grid;
+  gap: var(--space-1);
+  min-width: 0;
+  color: var(--glass-dim);
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  line-height: var(--leading-snug);
+}
+
+.rx-formula {
+  margin-bottom: var(--space-2);
+  color: var(--glass-ink);
+  font-size: var(--text-lede);
+  line-height: var(--leading-snug);
+}
+
+.rx-formula sub {
+  font-size: var(--text-sub);
+  line-height: var(--leading-sub);
+}
+
+.rx-station-text {
+  display: grid;
+  align-content: start;
+  min-width: 0;
+}
+
+.rx-station-name {
+  margin: var(--space-2) 0 var(--space-3);
+  font-size: var(--text-station);
+  font-weight: 700;
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-tight);
+  overflow-wrap: anywhere;
+}
+
+.rx-isomers {
+  margin: 0 0 var(--space-4);
+  color: var(--ink-soft);
+  font-size: var(--text-label);
+}
+
+.rx-isomers:empty {
+  display: none;
+}
+
+.rx-engraved {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+  margin: var(--space-2) 0 var(--space-5);
+  padding: 0;
+  list-style: none;
+}
+
+.rx-engraved li {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  font-weight: 500;
+}
+
+.rx-engraved li:not(:last-child)::after {
+  content: ",";
+}
+
+.rx-engraved li.none {
+  color: var(--ink-soft);
+}
+
+.rx-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-6);
+  margin: 0;
+}
+
+.rx-links a {
+  color: var(--ink);
+  font-size: var(--text-small);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--face-edge);
+  text-underline-offset: 0.2em;
+}
+
+.rx-links a:hover {
+  color: var(--signal-ink);
+}
+
+.receiver.tuning .rx-oled img {
+  opacity: 0.35;
+  transition: opacity 200ms var(--ease-out);
+}
+
+/* Station memory, printed on the plate. */
+
+.rx-memory {
+  grid-area: memory;
+  min-width: 0;
+}
+
+.rx-memory .rx-note {
+  margin-top: var(--space-2);
+}
+
+.rx-memory-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rx-memory-list li {
+  border-top: 1px solid var(--face-rule);
+}
+
+.rx-memory-list :is(button, a) {
+  display: grid;
+  grid-template-columns: 1.75rem minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: var(--space-3);
+  width: 100%;
+  height: auto;
+  padding: var(--space-3) 0;
+  border: 0;
+  border-radius: var(--radius-none);
+  background: transparent;
+  color: var(--ink);
+  box-shadow: none;
+  font-size: var(--text-small);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: left;
+  text-decoration: none;
+}
+
+.rx-memory-list :is(button, a):is(:hover, :active):not(:disabled) {
+  transform: none;
+  background: transparent;
+  color: var(--signal-ink);
+  box-shadow: none;
+}
+
+.rx-memory-key,
+.rx-memory-score {
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+}
+
+.rx-memory-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.site-header :is(.brand, nav),
+.rx-tune label,
+.rx-memories > .rx-engrave,
+.rx-tune-status,
+.rx-tune button,
+.rx-preset-keys button,
+.rx-bands,
+.rx-gauges,
+.rx-row,
+.rx-row-key p,
+.rx-names {
+  transition: opacity 500ms var(--ease-out);
+}
+
+.rx-tune input[type="search"] {
+  transition: color 500ms var(--ease-out);
+}
+
+body:has(.receiver.burning) .rx-memories > .rx-engrave {
+  opacity: var(--dim-furniture);
+  transition-duration: 300ms;
+}
+
+/* The legend's own background stays, so the strips sliding under it on a phone stay hidden. */
+.receiver.burning :is(.rx-row, .rx-row-key p) {
+  opacity: var(--dim-data);
+  transition-duration: 300ms;
+}
+
+.receiver.burning .rx-names {
+  opacity: var(--dim-furniture);
+  transition-duration: 300ms;
+}
+
+.receiver.burning .rx-gauges {
+  opacity: var(--dim-gauges);
+  transition-duration: 300ms;
+}
+
+/* The port: the gutter milled on through the bezel into the grille, in place of the first hole.
+   Light falls from above, so the metal breaks into shadow over the cut and catches a lip under it. */
+.rx-slot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: var(--channel-rule) solid var(--glass);
+  border-left-width: 0;
+  border-radius: 0 var(--radius-key) var(--radius-key) 0;
+  background: var(--glass-raised);
+  box-shadow: var(--shadow-port);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* On a phone it drops through the gap under the glass: walls left and right, the lit lip on the right. */
+.rx-slot.down {
+  border-width: 0 var(--channel-rule) var(--channel-rule);
+  border-radius: 0 0 var(--radius-key) var(--radius-key);
+  box-shadow: var(--shadow-port-side);
+}
+
+.rx-embers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Medium widths: the station plate and memory stack under the gauges. */
+
+@media (max-width: 1180px) {
+  .rx-face {
+    grid-template-areas:
+      "glass glass grille"
+      "bands bands grille"
+      "gauges gauges grille"
+      "station station station"
+      "memory memory memory";
+  }
+
+  .rx-bands {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  .rx-gauge-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .rx-meter:nth-child(4) {
+    border-left: 0;
+  }
+
+  .rx-meter:nth-child(n + 4) {
+    border-top: 1px solid var(--face-rule);
+  }
+}
+
+/* Phones: one column; the scale slides under a fixed needle. */
+
+@media (max-width: 720px) {
+  .site-header {
+    align-items: center;
+  }
+
+  .header-slot {
+    width: 100%;
+  }
+
+  .rx-tune-block {
+    grid-template-columns: minmax(0, 1fr);
+    justify-content: stretch;
+  }
+
+  .rx-tune {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--space-3);
+  }
+
+  .rx-tune input[type="search"] {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+  }
+
+  .rx-memories {
+    gap: var(--space-3);
+  }
+
+  .rx-tune-status {
+    justify-self: start;
+  }
+
+  .receiver {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rx-foot {
+    order: 2;
+  }
+
+  .rx-face {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "glass"
+      "grille"
+      "bands"
+      "gauges"
+      "station"
+      "memory";
+    gap: var(--space-4);
+    padding: var(--space-3);
+  }
+
+  /* The knob row moves to the top of the glass, so the embers' river along the bottom is clear. */
+  .rx-glass {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto var(--glass-height-phone);
+    height: auto;
+  }
+
+  .rx-row-key {
+    width: var(--row-key-width-phone);
+  }
+
+  .rx-row-key span:last-child {
+    display: none;
+  }
+
+  .rx-scale-head,
+  .rx-readout {
+    margin-inline: var(--space-5);
+  }
+
+  .rx-read-name {
+    font-size: var(--text-readout-phone);
+  }
+
+  .rx-read-words {
+    font-size: var(--text-label);
+  }
+
+  .rx-knobs {
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    justify-content: space-between;
+    align-items: center;
+    order: -1;
+    margin-bottom: 0;
+    padding: var(--space-3) var(--space-5);
+    border-bottom: 1px solid var(--glass-rule);
+    border-left: 0;
+  }
+
+  .rx-knobs .rx-engrave {
+    margin: 0;
+  }
+
+  .rx-knob {
+    order: 3;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  /* The grille runs the full width; the panel itself is the button, so the caption goes. */
+  .rx-grille-box {
+    grid-template-rows: none;
+    height: var(--grille-height-phone);
+  }
+
+  .rx-grille-box > .rx-engrave {
+    display: none;
+  }
+
+  .rx-bands {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    /* Four whole keys and a peek of the fifth, so the row reads as one that scrolls. */
+    grid-auto-columns: calc((100% - var(--key-peek)) / 4);
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    /* The peeking key sits wholly inside the fade, so it reads as more to come, not a cut. */
+    mask-image: linear-gradient(to right, black calc(100% - var(--key-fade)), transparent);
+  }
+
+  .rx-bands.scrolled {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black var(--space-6),
+      black calc(100% - var(--key-fade)),
+      transparent
+    );
+  }
+
+  .rx-bands button {
+    scroll-snap-align: start;
+  }
+
+  /* The row scrolls and clips outside itself, so the focus ring sits inside the key. */
+  .rx-bands button:focus-visible {
+    outline-offset: calc(var(--space-1) * -2);
+  }
+
+  .rx-meter {
+    padding-inline: var(--space-3);
+  }
+
+  .rx-station {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .rx-oled {
+    grid-template-columns: minmax(0, 9rem) minmax(0, 1fr);
+    align-items: center;
+  }
+}

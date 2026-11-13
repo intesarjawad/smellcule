@@ -1,0 +1,1850 @@
+/* biome-ignore-all lint/style/noDescendingSpecificity: context rules (strips, atlas overlay) sit beside their component and override it on purpose */
+/* biome-ignore-all lint/complexity/noImportantStyles: the reduced-motion reset must beat every component animation */
+@import "./tokens.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--ground);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: repeating-linear-gradient(0deg, var(--brush) 0 1px, transparent 1px 3px), var(--bg);
+  color: var(--fg);
+  font-family: var(--font-ui);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  font-variant-numeric: tabular-nums;
+}
+
+#main {
+  position: relative;
+  flex: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+canvas:focus-visible {
+  outline-offset: -3px;
+}
+
+#main:focus {
+  outline: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  background: var(--paper);
+  color: var(--ink);
+  padding: var(--space-3) var(--space-5);
+  z-index: 10;
+}
+
+.skip-link:focus {
+  left: var(--space-5);
+  top: var(--space-5);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Header and footer */
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-6);
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-height);
+  padding: var(--space-3) var(--gutter);
+  color: var(--on-ground);
+}
+
+.brand {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-brand);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-engraved);
+  text-transform: uppercase;
+}
+
+.brand a {
+  text-decoration: none;
+}
+
+.site-header ul,
+.footer-links ul,
+.search-suggestions,
+.search-nearest {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header nav a {
+  white-space: nowrap;
+  display: inline-block;
+  padding: var(--space-2) 0;
+  font-size: var(--text-small);
+  letter-spacing: var(--tracking-ui);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.site-header nav a:hover {
+  border-bottom-color: var(--rule);
+}
+
+.site-header nav a[aria-current="page"] {
+  border-bottom-color: var(--signal);
+}
+
+.site-header nav {
+  margin-right: auto;
+}
+
+.header-slot:empty {
+  display: none;
+}
+
+.site-footer {
+  padding: var(--space-6) var(--gutter) var(--space-7);
+  border-top: 1px solid var(--rule);
+  color: var(--on-ground-soft);
+  font-size: var(--text-small);
+}
+
+.site-footer a {
+  color: var(--on-ground);
+  text-decoration: none;
+}
+
+.site-footer a:is(:hover, :focus-visible) {
+  text-decoration: underline;
+}
+
+/* Plates: every page except home and the map is one plate set into the faceplate. */
+
+main > :is(section, article):not(.atlas-scene):not(.receiver) {
+  --fg: var(--ink);
+  --fg-soft: var(--ink-soft);
+  --bg: var(--paper);
+  --rule: color-mix(in srgb, var(--ink) 28%, transparent);
+  --thread: var(--ink);
+  --focus: var(--ink);
+  width: min(var(--sheet-width), calc(100% - 2 * var(--gutter)));
+  margin: var(--space-7) auto var(--space-8);
+  padding: var(--sheet-pad);
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: var(--radius-glass);
+  box-shadow: var(--shadow-plate);
+}
+
+:is(main > h1, main > h2, main > p, main > div):not(.loading) {
+  width: min(var(--sheet-width), calc(100% - 2 * var(--gutter)));
+  margin-inline: auto;
+}
+
+main > h2 {
+  margin-top: var(--space-7);
+}
+
+main > :is(section, article) > :is(p, ul, ol, dl) {
+  max-width: var(--measure);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: var(--leading-tight);
+  font-optical-sizing: auto;
+}
+
+h1,
+h2 {
+  font-size: var(--text-title);
+}
+
+h3 {
+  margin-top: var(--space-6);
+  font-size: var(--text-lede);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--rule);
+}
+
+h4 {
+  font-family: var(--font-ui);
+  font-size: var(--text-body);
+  font-weight: 650;
+}
+
+p {
+  margin: 0 0 var(--space-4);
+}
+
+.mono,
+.share,
+.closest {
+  font-family: var(--font-ui);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: var(--tracking-ui);
+}
+
+.detail,
+.caption,
+.attribution,
+.source,
+.identity {
+  color: var(--fg-soft);
+  font-size: var(--text-small);
+}
+
+.identity sub {
+  font-size: var(--text-sub);
+  line-height: var(--leading-sub);
+}
+
+.identity {
+  margin: 0;
+  letter-spacing: var(--tracking-ui);
+}
+
+/* Controls */
+
+button,
+select,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  padding: var(--space-3) var(--space-5);
+  border: 0;
+  border-radius: var(--radius-key);
+  background: var(--key);
+  color: var(--ink);
+  box-shadow: var(--shadow-key);
+  font-size: var(--text-small);
+  font-weight: 600;
+  letter-spacing: var(--tracking-ui);
+  transition:
+    transform 90ms var(--ease-out),
+    box-shadow 90ms var(--ease-out),
+    background 120ms var(--ease-out);
+}
+
+button:hover:not(:disabled) {
+  background: var(--key-down);
+}
+
+button:active:not(:disabled),
+button[aria-pressed="true"] {
+  transform: translateY(3px);
+  background: var(--key-down);
+  color: var(--ink);
+  box-shadow: var(--shadow-key-down);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.options,
+.controls,
+.actions,
+.archetypes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+  max-width: none;
+}
+
+.archetypes p {
+  margin: 0;
+}
+
+.options button {
+  border-radius: var(--radius-pill);
+  font-size: var(--text-body);
+  font-weight: 500;
+  padding: var(--space-3) var(--space-5);
+}
+
+input[type="search"],
+input:not([type]),
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 0;
+  border-radius: var(--radius-plate);
+  background: var(--glass);
+  color: var(--glass-ink);
+  box-shadow: var(--shadow-glass);
+  font-family: var(--font-mono);
+}
+
+:is(input, textarea)::placeholder {
+  color: var(--glass-dim);
+}
+
+textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+/* Search: a strip of paper whichever ground it sits on. */
+
+.search label {
+  display: block;
+  margin-bottom: var(--space-3);
+  color: var(--fg-soft);
+  font-size: var(--text-small);
+  letter-spacing: var(--tracking-ui);
+}
+
+.search input {
+  max-width: 40rem;
+  padding: var(--space-3) var(--space-5);
+  font-family: var(--font-mono);
+  font-size: var(--text-search);
+  line-height: var(--leading-snug);
+  appearance: none;
+}
+
+/* Inside the map the slot sits on glass, so its ring is drawn inside the field. */
+.search input:focus-visible {
+  outline-color: var(--glass-ink);
+  outline-offset: -6px;
+}
+
+.search > div > p {
+  color: var(--fg);
+}
+
+.search > div > p:first-child {
+  margin: var(--space-3) 0 var(--space-2);
+  font-size: var(--text-small);
+  color: var(--fg-soft);
+}
+
+.search-suggestions button,
+.search-nearest button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  border-radius: var(--radius-none);
+  font-family: var(--font-display);
+  font-size: var(--text-lede);
+  font-weight: 500;
+  line-height: var(--leading-snug);
+  letter-spacing: 0;
+}
+
+.search-suggestions button:hover:not(:disabled),
+.search-nearest button:hover:not(:disabled) {
+  background: none;
+  color: inherit;
+  text-decoration-thickness: 2px;
+}
+
+.search-results {
+  list-style: none;
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  max-width: 40rem;
+  max-height: min(24rem, 52svh);
+  overflow-y: auto;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.search-results li {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-4);
+  padding: var(--space-3) var(--space-5);
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
+  border-left: 4px solid transparent;
+}
+
+.search-results li.active {
+  background: var(--paper-sunk);
+  border-left-color: var(--ink);
+}
+
+.search-results .result-link {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+  align-items: baseline;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.search-results li:hover strong {
+  text-decoration: underline;
+}
+
+.search-results strong {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--text-lede);
+  line-height: var(--leading-snug);
+}
+
+.search-results .detail {
+  color: var(--ink-soft);
+}
+
+.closest {
+  margin: var(--space-3) 0 0;
+  font-size: var(--text-small);
+  color: var(--fg-soft);
+}
+
+/* Badges, chips, swatches */
+
+.badge,
+.tag {
+  display: inline-block;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--fg);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-ui);
+  font-style: normal;
+  font-size: var(--text-badge);
+  font-weight: 500;
+  letter-spacing: var(--tracking-ui);
+  line-height: var(--leading-body);
+  vertical-align: middle;
+}
+
+.tag {
+  border-style: dashed;
+}
+
+p.badge {
+  border-radius: var(--radius-none);
+  padding: var(--space-2) var(--space-3);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  list-style: none;
+  margin: var(--space-3) 0;
+  padding: 0;
+  max-width: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-1) var(--space-4) var(--space-1) var(--space-3);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-small);
+}
+
+.swatch {
+  flex: none;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: var(--radius-round);
+  background: var(--rule);
+  box-shadow: 0 0 0 1px var(--fg);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Atlas */
+
+/* The map is the receiver's black glass: its tokens switch to glass for everything inside. */
+.atlas-scene {
+  --stage-height: max(var(--stage-min), calc(100svh - var(--header-height)));
+  --ground: var(--glass);
+  --ground-raised: var(--glass-raised);
+  --ground-deep: var(--glass);
+  --on-ground: var(--glass-ink);
+  --on-ground-soft: var(--glass-dim);
+  --fg: var(--glass-ink);
+  --fg-soft: var(--glass-dim);
+  --bg: var(--glass);
+  --rule: var(--glass-rule);
+  --focus: var(--glass-ink);
+  position: relative;
+  color: var(--glass-ink);
+}
+
+.atlas-scene > h1 {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--gutter);
+  z-index: 2;
+  margin: 0;
+  color: var(--on-ground-soft);
+  font-size: var(--text-lede);
+}
+
+.atlas-frame {
+  position: relative;
+  height: var(--stage-height);
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at 60% 45%,
+    var(--ground-raised),
+    var(--ground) 55%,
+    var(--ground-deep)
+  );
+}
+
+.atlas-stage {
+  position: absolute;
+  inset: 0;
+}
+
+.atlas-stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+.atlas-search {
+  position: absolute;
+  top: var(--space-5);
+  left: var(--gutter);
+  z-index: 2;
+  width: min(30rem, calc(100% - 2 * var(--gutter)));
+}
+
+.atlas-search .search > div > div:not(:has(.search-results)) {
+  margin-top: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: var(--veil);
+}
+
+.atlas-search .search > div > div > p:last-child {
+  margin-bottom: 0;
+}
+
+.atlas-search .search-suggestions {
+  margin-top: var(--space-2);
+}
+
+.atlas-search .search > div {
+  max-height: calc(var(--stage-height) - 9rem);
+  overflow: hidden auto;
+}
+
+.atlas-label {
+  position: absolute;
+  padding: var(--space-1) var(--space-3);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: var(--text-body);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.atlas-instructions {
+  max-width: none;
+  margin: 0;
+  padding: var(--space-3) var(--gutter);
+  background: var(--ground-deep);
+  border-top: 1px solid var(--rule);
+  color: var(--on-ground-soft);
+  font-size: var(--text-small);
+}
+
+.atlas-list {
+  background: var(--glass);
+  margin: 0;
+  padding: var(--space-4) var(--gutter) var(--space-6);
+}
+
+.atlas-list > summary {
+  cursor: pointer;
+  font-size: var(--text-small);
+  letter-spacing: var(--tracking-ui);
+}
+
+.atlas-scene > p {
+  max-width: none;
+  padding-inline: var(--gutter);
+}
+
+/* The flight: the typed word, a thread that draws itself, the molecule it lands on. */
+
+/* Loading and errors */
+
+.loading {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  width: min(var(--sheet-width), calc(100% - 2 * var(--gutter)));
+  margin: var(--space-8) auto;
+  font-family: var(--font-display);
+  font-size: var(--text-lede);
+}
+
+.loading-dots {
+  display: inline-flex;
+  gap: var(--space-2);
+}
+
+.loading-dots span {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: var(--radius-round);
+  background: var(--on-ground);
+  animation: breathe 1.2s ease-in-out infinite;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+main > section[role="alert"] {
+  border-left: 6px solid var(--ink);
+}
+
+main > section[role="alert"] h1 {
+  margin: 0 0 var(--space-3);
+}
+
+main > section[role="alert"] p {
+  margin: 0 0 var(--space-5);
+  font-weight: 400;
+}
+
+main > section[role="alert"] details {
+  margin-top: var(--space-5);
+  color: var(--fg-soft);
+  font-size: var(--text-small);
+  font-weight: 400;
+}
+
+.notice {
+  padding: var(--space-3) var(--space-4);
+  border: 1px dashed var(--fg);
+}
+
+/* Molecule card */
+
+.card-region {
+  animation: strip-in 220ms var(--ease-out) both;
+}
+
+@keyframes strip-in {
+  from {
+    opacity: 0;
+    transform: translateX(1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.card-region > p {
+  margin-bottom: var(--space-5);
+  font-size: var(--text-small);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6) var(--space-7);
+}
+
+.card > * {
+  min-width: 0;
+}
+
+.card header h1 {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-name);
+  font-weight: 500;
+  line-height: var(--leading-tight);
+  overflow-wrap: anywhere;
+}
+
+.card header .badge {
+  margin-left: var(--space-3);
+  font-size: var(--text-small);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card section > p,
+.card section > ul,
+.card section > ol {
+  max-width: none;
+}
+
+.card figure,
+.game figure {
+  margin: 0;
+}
+
+.card img,
+.game img {
+  display: block;
+  width: 100%;
+  max-width: 24rem;
+  height: auto;
+  background: var(--structure-ground);
+}
+
+.game figure {
+  padding: var(--space-4);
+  max-width: 24rem;
+  background: var(--structure-ground);
+}
+
+.game figcaption {
+  margin-top: var(--space-2);
+  color: var(--glass-ink);
+  font-size: var(--text-small);
+}
+
+.card figure {
+  background: var(--structure-ground);
+  padding: var(--space-3);
+}
+
+.predictions,
+.family-bars,
+.neighbours {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.predictions li,
+.family-bars li {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr) 3rem 5.5rem;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-1) 0;
+}
+
+.family-bars li {
+  grid-template-columns: minmax(5.5rem, 8rem) minmax(0, 1fr) auto;
+}
+
+.family-name {
+  overflow-wrap: anywhere;
+}
+
+.prediction-label {
+  overflow-wrap: normal;
+}
+
+.bar {
+  position: relative;
+  height: 0.75rem;
+  background: var(--paper-sunk);
+}
+
+.bar-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: var(--ink);
+}
+
+.family-bars .bar-fill {
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+
+.whisker {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border-top: 2px solid var(--paper);
+  mix-blend-mode: difference;
+}
+
+.neighbours {
+  counter-reset: neighbour;
+}
+
+.neighbours li {
+  counter-increment: neighbour;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.neighbours li::before {
+  content: counter(neighbour);
+  flex: none;
+  align-self: center;
+  display: inline-grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1.5px solid var(--fg);
+  border-radius: var(--radius-round);
+  font-size: var(--text-badge);
+  font-weight: 650;
+}
+
+.neighbours a {
+  font-family: var(--font-display);
+  font-size: var(--text-lede);
+  font-weight: 500;
+  line-height: var(--leading-snug);
+  overflow-wrap: anywhere;
+}
+
+.neighbours .mono {
+  color: var(--fg-soft);
+  font-size: var(--text-small);
+}
+
+/* Neighbour threads: the atlas seen from the molecule, drawn on a window of ground. */
+
+.threads {
+  margin: 0 0 var(--space-4);
+  padding: var(--space-3);
+  background: var(--glass);
+  color: var(--glass-ink);
+}
+
+.card .threads {
+  position: relative;
+  container-type: inline-size;
+  width: 100%;
+  max-width: 36rem;
+  margin: 0 0 var(--space-9);
+  padding: 0;
+  aspect-ratio: 1;
+  background: var(--glass);
+  color: var(--glass-ink);
+}
+
+.threads svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.thread {
+  fill: none;
+  stroke: var(--glass-ink);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 0;
+  animation: thread-draw 700ms var(--ease-out) calc(var(--i) * 70ms + 200ms) both;
+}
+
+.thread-hub,
+.thread-tile {
+  position: absolute;
+  background: var(--glass);
+  transform: translate(-50%, -50%);
+}
+
+.thread-hub {
+  top: 50%;
+  left: 50%;
+  width: 26%;
+  padding: var(--inset-hub);
+  border: 1px solid var(--glass-ink);
+}
+
+.thread-tile {
+  width: 19%;
+  padding: var(--inset-tile);
+  border: 1px solid var(--rule);
+  animation: thread-fade 400ms var(--ease-out) calc(var(--i) * 70ms + 500ms) both;
+}
+
+.thread-hub img,
+.thread-tile img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  padding: 0;
+  background: none;
+}
+
+.thread-number,
+.thread-score {
+  position: absolute;
+  font-size: var(--text-badge);
+  font-weight: 650;
+  line-height: var(--leading-none);
+}
+
+.thread-number {
+  top: 0;
+  left: 0;
+  padding: var(--space-1) var(--space-2);
+  background: var(--glass-ink);
+  color: var(--glass);
+}
+
+.thread-score {
+  right: 0;
+  bottom: 0;
+  padding: var(--space-1) var(--space-2);
+  background: var(--glass);
+  color: var(--glass-ink);
+}
+
+.threads .detail {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  margin: var(--space-4) 0 0;
+  color: var(--fg-soft);
+}
+
+@keyframes thread-draw {
+  from {
+    stroke-dashoffset: 100;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes thread-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.split p {
+  margin-bottom: var(--space-3);
+}
+
+@media (min-width: 62rem) {
+  .card {
+    grid-template-columns: minmax(0, 24rem) minmax(0, 1fr);
+    grid-template-areas:
+      "head head"
+      "left right";
+    align-items: start;
+  }
+
+  .card header {
+    grid-area: head;
+  }
+
+  .card-left {
+    grid-area: left;
+  }
+
+  .card-right {
+    grid-area: right;
+  }
+}
+
+.card-left,
+.card-right {
+  display: grid;
+  gap: var(--space-6);
+  align-content: start;
+  min-width: 0;
+}
+
+.card > p {
+  grid-column: 1 / -1;
+  max-width: none;
+  margin: 0;
+}
+
+.actions a {
+  display: inline-block;
+  padding: var(--space-3) var(--space-5);
+  border: 1.5px solid var(--fg);
+  font-size: var(--text-small);
+  font-weight: 600;
+  letter-spacing: var(--tracking-ui);
+  text-decoration: none;
+}
+
+.actions a:hover {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+/* Browse */
+
+.family {
+  border-bottom: 1px solid var(--rule);
+}
+
+.family summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) 0;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: var(--text-lede);
+  font-weight: 500;
+  list-style: none;
+}
+
+.family summary::-webkit-details-marker {
+  display: none;
+}
+
+.family summary::before {
+  content: "";
+  flex: none;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: var(--radius-round);
+  background: var(--family, var(--rule));
+  box-shadow: 0 0 0 1px var(--fg);
+}
+
+.family ul {
+  columns: 14rem;
+  column-gap: var(--space-6);
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  list-style: none;
+  max-width: none;
+}
+
+.family li {
+  break-inside: avoid;
+  padding: var(--space-1) 0;
+  overflow-wrap: anywhere;
+}
+
+.atlas-list .family {
+  border-color: var(--rule);
+}
+
+.atlas-list .family ul {
+  color: var(--on-ground);
+}
+
+/* Smellcule */
+
+main > :is(.game, .decompiler, .how) {
+  background: var(--face);
+  border: 1px solid var(--face-edge);
+  border-radius: var(--radius-plate);
+  box-shadow: none;
+}
+
+:is(.game, .decompiler, .how) > :is(h1, h2):first-child {
+  font-size: var(--text-name);
+  font-weight: 650;
+  letter-spacing: var(--tracking-display);
+}
+
+.game > h1 + p {
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+}
+
+.game figure {
+  width: 100%;
+  max-width: none;
+  margin-top: var(--space-6);
+  padding: var(--space-6);
+  border-radius: var(--radius-plate);
+}
+
+.game figure img {
+  margin-inline: auto;
+}
+
+.game figcaption {
+  max-width: 24rem;
+  margin-inline: auto;
+  font-family: var(--font-mono);
+}
+
+.game .options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--channel-rule);
+  padding: var(--channel-rule);
+  background: var(--face-edge);
+  border-radius: var(--radius-key);
+}
+
+.game .options button,
+.game .controls button,
+.game .reveal button,
+.decompiler .archetypes button {
+  min-height: var(--tap);
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+}
+
+.game .options button {
+  overflow-wrap: anywhere;
+  font-size: var(--text-small);
+  font-weight: 600;
+}
+
+.game .options button[aria-pressed="true"] {
+  background: var(--glass);
+  color: var(--glass-ink);
+}
+
+.game .options button:disabled {
+  opacity: 1;
+  color: var(--ink-soft);
+}
+
+.game .options button[aria-pressed="true"]:disabled {
+  color: var(--glass-ink);
+}
+
+.game .controls button,
+.game .reveal button,
+.decompiler .archetypes button {
+  border: 1px solid var(--face-edge);
+  background: var(--key);
+}
+
+.game .controls button:hover:not(:disabled),
+.game .reveal button:hover:not(:disabled),
+.decompiler .archetypes button:hover:not(:disabled) {
+  background: var(--key-down);
+}
+
+.game .reveal:not(:empty) {
+  margin-top: var(--space-7);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--face-edge);
+}
+
+.game .reveal h3 {
+  font-size: var(--text-title);
+  font-weight: 650;
+}
+
+@media (max-width: 40rem) {
+  .game .options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.game .reveal h3 {
+  border-top: 0;
+}
+
+.share {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  padding: var(--space-4);
+  border: 1.5px solid var(--fg);
+  background: var(--paper-lift);
+  font-size: var(--text-body);
+  line-height: var(--leading-snug);
+}
+
+.clue {
+  padding: var(--space-3) var(--space-4);
+  border-left: 4px solid var(--ink);
+  background: var(--paper-sunk);
+}
+
+.archive ol {
+  list-style: none;
+  padding: 0;
+}
+
+.archive li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-4);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* Decompiler */
+
+.decompiler > h1 {
+  margin-bottom: var(--space-7);
+}
+
+.decompiler label {
+  color: var(--ink-soft);
+  font-size: var(--text-micro);
+  letter-spacing: var(--tracking-engraved);
+  text-transform: uppercase;
+}
+
+.decompiler textarea {
+  border-radius: var(--radius-plate);
+  padding: var(--space-5);
+}
+
+.decompiler .archetypes {
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--face-edge);
+}
+
+.decompiler .archetypes p {
+  flex-basis: 100%;
+  color: var(--ink-soft);
+  font-size: var(--text-small);
+}
+
+.decompiler .tiers .detail {
+  margin-left: var(--space-2);
+}
+
+.decompiler .note-result h3 {
+  border-color: var(--face-edge);
+  font-weight: 650;
+}
+
+.decompiler label,
+.synesthesia label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-size: var(--text-small);
+  font-weight: 600;
+  letter-spacing: var(--tracking-ui);
+}
+
+.disclaimer {
+  margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-left: 4px solid var(--ink);
+  background: var(--paper-sunk);
+  font-size: var(--text-small);
+}
+
+.unrecognised {
+  color: var(--fg-soft);
+}
+
+.tiers {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  max-width: none;
+}
+
+.tiers ul {
+  list-style: none;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+}
+
+.tiers li {
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* Synesthesia */
+
+.molecule-pickers {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  max-width: none;
+  margin: var(--space-5) 0;
+}
+
+.synesthesia .search input {
+  font-size: var(--text-lede);
+}
+
+.synesthesia ul:not(.search-results) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  list-style: none;
+  padding: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-title);
+  line-height: var(--leading-tight);
+}
+
+.synesthesia p:has(> input[type="range"]) {
+  display: grid;
+  grid-template-columns: auto minmax(8rem, 1fr) auto auto;
+  align-items: center;
+  gap: var(--space-4);
+  max-width: none;
+}
+
+.synesthesia p:has(> input[type="range"]) label {
+  margin: 0;
+}
+
+input[type="range"] {
+  width: 100%;
+  height: 1.75rem;
+  background: transparent;
+  appearance: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 3px;
+  background: var(--ink);
+}
+
+input[type="range"]::-moz-range-track {
+  height: 3px;
+  background: var(--ink);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: calc(var(--space-3) * -1);
+  border: 3px solid var(--ink);
+  border-radius: var(--radius-round);
+  background: var(--paper);
+  appearance: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 3px solid var(--ink);
+  border-radius: var(--radius-round);
+  background: var(--paper);
+}
+
+output {
+  min-width: 4.5rem;
+  font-size: var(--text-small);
+  letter-spacing: var(--tracking-ui);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-small);
+}
+
+caption {
+  margin-bottom: var(--space-3);
+  color: var(--fg-soft);
+  text-align: left;
+}
+
+th,
+td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--rule);
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th {
+  border-bottom: 2px solid var(--fg);
+  font-weight: 650;
+}
+
+.sound-parameters {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.mapping-editor {
+  margin-top: var(--space-5);
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--rule);
+}
+
+.mapping-editor summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+fieldset {
+  min-width: 0;
+  margin: var(--space-4) 0;
+  padding: var(--space-4);
+  border: 1px solid var(--rule);
+}
+
+legend {
+  padding: 0 var(--space-2);
+  font-weight: 600;
+}
+
+/* How it works */
+
+.how h1 {
+  font-size: var(--text-name);
+  margin-bottom: var(--space-6);
+}
+
+.how h2 {
+  font-weight: 650;
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--face-edge);
+}
+
+.how p,
+.how li {
+  max-width: var(--measure);
+}
+
+.how dl {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0 var(--space-6);
+  max-width: var(--measure);
+  margin: 0 0 var(--space-5);
+}
+
+.how dt,
+.how dd {
+  overflow-wrap: anywhere;
+  margin: 0;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.how dd {
+  font-family: var(--font-mono);
+  text-align: right;
+  font-weight: 650;
+}
+
+@media (max-width: 40rem) {
+  :root {
+    --header-height: 5.5rem;
+  }
+
+  /* The brand and the links share one row; the links scroll under a fade at the right. */
+  .site-header {
+    column-gap: var(--space-4);
+    padding-block: 0 var(--space-2);
+  }
+
+  .site-header nav {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .site-header nav ul {
+    gap: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    mask-image: linear-gradient(to right, black calc(100% - var(--nav-fade)), transparent);
+  }
+
+  /* Each link is a full 44 px target, padded around 13 px type. */
+  .site-header nav a {
+    display: flex;
+    align-items: center;
+    min-height: var(--tap);
+    padding: 0 var(--space-3);
+    font-size: var(--text-badge);
+    letter-spacing: var(--tracking-ui);
+  }
+
+  /* The row scrolls, which clips anything outside it, so the ring sits inside the link. */
+  .site-header nav a:focus-visible {
+    outline-offset: calc(var(--space-1) * -2);
+  }
+
+  .predictions li {
+    grid-template-columns: 7rem minmax(0, 1fr) 2.75rem 4.75rem;
+    gap: var(--space-2);
+  }
+
+  .synesthesia p:has(> input[type="range"]) {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .synesthesia p:has(> input[type="range"]) input,
+  .synesthesia p:has(> input[type="range"]) button {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.search-group {
+  margin: var(--space-3) 0 var(--space-1);
+  font-family: var(--font-display);
+  font-size: var(--text-lede);
+  color: var(--fg);
+}
+
+/* The flight: the typed word becomes a line from the field into the map, and the camera follows it. */
+
+.flight-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.flight-overlay svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.flight-path {
+  fill: none;
+  stroke: var(--on-ground);
+  stroke-width: 2;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.flight-word {
+  position: absolute;
+  top: 0;
+  left: 0;
+  translate: -50% var(--space-2);
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-size: var(--text-search);
+  line-height: var(--leading-tight);
+  color: var(--on-ground);
+}
+
+/* The arrival: unframed structures on the ground, joined to the hub by radial threads. */
+
+.arrival {
+  position: absolute;
+  inset: 0;
+  color: var(--on-ground);
+}
+
+.is-arrived .flight-path,
+.is-arrived .flight-word {
+  display: none;
+}
+
+.arrival-threads {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.arrival-thread {
+  fill: none;
+  stroke: var(--on-ground);
+  stroke-width: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  vector-effect: non-scaling-stroke;
+  animation: line-draw 700ms var(--ease-out) calc(var(--i, 0) * 70ms + 300ms) both;
+}
+
+.arrival-spine {
+  stroke-width: 2;
+  animation-delay: 0ms;
+}
+
+.arrival-caption,
+.arrival-key {
+  position: absolute;
+  left: var(--space-7);
+  max-width: 26rem;
+  margin: 0;
+}
+
+.arrival-caption {
+  top: var(--arrival-top);
+  font-family: var(--font-display);
+  font-size: var(--text-title);
+  line-height: var(--leading-tight);
+  text-wrap: balance;
+}
+
+.arrival-key {
+  bottom: var(--space-6);
+  color: var(--on-ground-soft);
+  font-size: var(--text-small);
+}
+
+.arrival-word {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: var(--text-lede);
+  line-height: var(--leading-none);
+}
+
+.arrival-hub {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.arrival-hub-structure svg,
+.arrival-hub-structure img,
+.arrival-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.arrival-hub-name {
+  display: block;
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--text-title);
+  line-height: var(--leading-none);
+}
+
+.flight-overlay .arrival-hub-structure svg {
+  position: static;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 240 / 180;
+}
+
+.arrival-hub-structure .is-stroked {
+  stroke-dasharray: 1;
+}
+
+.arrival-hub-structure path[class^="bond-"] {
+  animation: bond-draw 500ms var(--ease-out) calc(var(--b, 0) * 45ms) both;
+}
+
+.arrival-item {
+  position: absolute;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation: item-in 500ms var(--ease-out) calc(var(--i) * 70ms + 400ms) both;
+}
+
+.arrival-item img {
+  width: 76%;
+  margin: 0 auto;
+}
+
+.arrival-item figcaption {
+  margin-top: var(--space-2);
+  font-family: var(--font-display);
+  font-size: var(--text-small);
+  line-height: var(--leading-snug);
+  hyphens: manual;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+
+.arrival-score {
+  display: block;
+  margin-top: var(--space-1);
+  color: var(--on-ground-soft);
+  font-size: var(--text-badge);
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes line-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes bond-draw {
+  from {
+    opacity: 0;
+    stroke-dashoffset: 1;
+  }
+
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes item-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + var(--space-4)));
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 40rem) {
+  .arrival-caption,
+  .arrival-key {
+    right: var(--space-5);
+    left: var(--space-5);
+    max-width: none;
+  }
+
+  .arrival-caption {
+    font-size: var(--text-lede);
+  }
+
+  .arrival-key {
+    font-size: var(--text-badge);
+  }
+
+  .arrival-hub-name {
+    font-size: var(--text-lede);
+  }
+
+  .arrival-item img {
+    width: 100%;
+  }
+
+  .arrival-item figcaption {
+    font-size: var(--text-badge);
+  }
+}
+
+.is-flying .atlas-search .search > div {
+  display: none;
+}
+
+.flight-word.is-above {
+  translate: -50% calc(-100% - var(--space-2));
+}
+
+.arrival-continue {
+  position: absolute;
+  z-index: 4;
+  bottom: var(--space-7);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--space-4) var(--space-6);
+  border: 1px solid var(--on-ground);
+  background: var(--on-ground);
+  color: var(--ground);
+  font: inherit;
+  font-weight: 650;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.decompiler .unrecognised {
+  overflow-wrap: anywhere;
+}

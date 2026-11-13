@@ -1,0 +1,59 @@
+name: submission
+on:
+  pull_request:
+    paths: ["submissions/**"]
+permissions: {contents: read}
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: base
+          persist-credentials: false
+      - uses: actions/checkout@v7
+        with:
+          path: pr
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Validate submission diff using the base script
+        id: diff
+        working-directory: pr
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          slug=$(bash ../base/scripts/check_submission_diff.sh "$BASE_SHA" "$HEAD_SHA")
+          echo "slug=$slug" >> "$GITHUB_OUTPUT"
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with: {version: 0.13.7, enable-cache: false}
+      - name: Install the base scorer and fetch the pinned catalogue
+        working-directory: base
+        run: uv sync --all-extras --locked && uv run smellcule fetch leffingwell
+      - name: Score data without running submission code
+        working-directory: base
+        env:
+          SLUG: ${{ steps.diff.outputs.slug }}
+        run: |
+          uv run smellcule evaluate \
+            --predictions "../pr/submissions/$SLUG/predictions.csv" \
+            --meta "../pr/submissions/$SLUG/meta.toml" \
+            --results "$RUNNER_TEMP/results.json"
+      - name: Write scored table
+        working-directory: base
+        run: |
+          uv run python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          import os
+          from pathlib import Path
+
+          document = json.loads((Path(os.environ["RUNNER_TEMP"]) / "results.json").read_text())
+          print("| Split | Labels | AUROC | AUPRC | Label count |")
+          print("| --- | --- | ---: | ---: | ---: |")
+          for entry in document["submissions"].values():
+              for split in ("official", "cluster"):
+                  for support in ("all_labels", "stable_labels"):
+                      row = entry[split][support]
+                      print(f"| {split} | {support} | {row['auroc']} | {row['auprc']} | {row['label_count']} |")
+          PY

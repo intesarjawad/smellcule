@@ -1,0 +1,718 @@
+rain:
+  aliases:
+  - petrichor
+  - after rain
+  weights:
+    earthy: 1.0
+    musty: 0.6
+    green: 0.3
+  exemplar: Geosmin
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11095540/
+bakery:
+  aliases: []
+  weights:
+    bread: 1.0
+    caramellic: 0.6
+    buttery: 0.5
+    vanilla: 0.4
+  exemplar: null
+coffee shop:
+  aliases:
+  - espresso
+  - coffee beans
+  - roasting coffee
+  weights:
+    coffee: 1.0
+    roasted: 0.8
+    caramellic: 0.3
+  exemplar: Furfuryl mercaptan
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10348841/
+christmas:
+  aliases:
+  - xmas
+  weights:
+    cinnamon: 1.0
+    pine: 0.8
+    orange: 0.6
+    spicy: 0.5
+  exemplar: null
+forest:
+  aliases: []
+  weights:
+    pine: 1.0
+    woody: 0.8
+    earthy: 0.5
+    green: 0.4
+  exemplar: null
+cut grass:
+  aliases:
+  - freshly cut lawn
+  - mown lawn
+  - lawn
+  weights:
+    grassy: 1.0
+    green: 0.8
+    leafy: 0.5
+  exemplar: Hexanal
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6270648/
+beach:
+  aliases: []
+  weights:
+    coconut: 1.0
+    melon: 0.4
+    fresh: 0.4
+  exemplar: null
+candy:
+  aliases: []
+  weights:
+    fruity: 1.0
+    sweet: 1.0
+    berry: 0.5
+  exemplar: null
+cinema:
+  aliases: []
+  weights:
+    popcorn: 1.0
+    buttery: 0.8
+  exemplar: null
+fresh laundry:
+  aliases: []
+  weights:
+    fresh: 1.0
+    aldehydic: 0.8
+    musk: 0.6
+    floral: 0.4
+  exemplar: null
+garden:
+  aliases: []
+  weights:
+    floral: 1.0
+    green: 0.6
+    rose: 0.5
+  exemplar: null
+citrus grove:
+  aliases: []
+  weights:
+    citrus: 1.0
+    orange: 0.7
+    lemon: 0.7
+  exemplar: null
+campfire:
+  aliases: []
+  weights:
+    smoky: 1.0
+    burnt: 0.7
+    woody: 0.5
+  exemplar: Guaiacol
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6017423/
+chocolate:
+  aliases: []
+  weights:
+    chocolate: 1.0
+    cocoa: 1.0
+  exemplar: null
+cheese shop:
+  aliases:
+  - cheese
+  - parmesan
+  - aged cheese
+  weights:
+    cheesy: 1.0
+    dairy: 0.5
+  exemplar: null
+barbecue:
+  aliases: []
+  weights:
+    roasted: 1.0
+    meaty: 0.8
+    smoky: 0.6
+  exemplar: null
+dentist:
+  aliases: []
+  weights:
+    medicinal: 1.0
+    phenolic: 0.5
+    mint: 0.3
+  exemplar: null
+wine:
+  aliases: []
+  weights:
+    winey: 1.0
+    fruity: 0.4
+    alcoholic: 0.3
+  exemplar: null
+cucumber water:
+  aliases: []
+  weights:
+    cucumber: 1.0
+    green: 0.5
+    fresh: 0.4
+  exemplar: null
+woodland mushrooms:
+  aliases: []
+  weights:
+    mushroom: 1.0
+    earthy: 0.6
+  exemplar: null
+toothpaste:
+  aliases: []
+  weights:
+    mint: 1.0
+    fresh: 0.5
+    anisic: 0.3
+  exemplar: null
+ice cream:
+  aliases: []
+  weights:
+    vanilla: 1.0
+    creamy: 0.8
+    milky: 0.5
+  exemplar: Vanillin
+  source_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9351765/
+perfume counter:
+  aliases:
+  - perfume
+  weights:
+    floral: 1.0
+    musk: 0.6
+    rose: 0.4
+    jasmine: 0.4
+  exemplar: null
+spice market:
+  aliases: []
+  weights:
+    spicy: 1.0
+    cinnamon: 0.6
+    anisic: 0.4
+  exemplar: null
+tea:
+  aliases: []
+  weights:
+    tea: 1.0
+    floral: 0.3
+  exemplar: null
+lemonade:
+  aliases:
+  - lemon squash
+  weights:
+    lemon: 1.0
+    sweet: 0.6
+    citrus: 0.5
+  exemplar: null
+lime:
+  aliases:
+  - limes
+  - key lime
+  weights:
+    citrus: 1.0
+    lemon: 0.5
+    green: 0.2
+  exemplar: null
+bubblegum:
+  aliases:
+  - bubble gum
+  weights:
+    fruity: 1.0
+    sweet: 0.8
+    banana: 0.4
+  exemplar: null
+maple syrup:
+  aliases:
+  - maple
+  weights:
+    caramellic: 1.0
+    sweet: 0.8
+  exemplar: null
+caramel:
+  aliases:
+  - burnt sugar
+  weights:
+    caramellic: 1.0
+    sweet: 0.6
+    buttery: 0.3
+  exemplar: null
+butterscotch:
+  aliases:
+  - toffee
+  - fudge
+  weights:
+    buttery: 1.0
+    caramellic: 0.9
+    sweet: 0.6
+  exemplar: null
+marzipan:
+  aliases:
+  - almond paste
+  - amaretto
+  weights:
+    almond: 1.0
+    sweet: 0.7
+  exemplar: null
+toasted marshmallow:
+  aliases:
+  - marshmallow
+  - "s'mores"
+  weights:
+    caramellic: 1.0
+    sweet: 0.8
+    burnt: 0.4
+    vanilla: 0.3
+  exemplar: null
+jam:
+  aliases:
+  - jelly
+  - preserves
+  weights:
+    fruity: 1.0
+    sweet: 0.9
+    berry: 0.4
+  exemplar: null
+berries:
+  aliases:
+  - raspberries
+  - blackberries
+  - summer berries
+  weights:
+    berry: 1.0
+    fruity: 0.6
+    sweet: 0.4
+  exemplar: null
+rotting fruit:
+  aliases:
+  - overripe fruit
+  - fruit flies
+  weights:
+    ripe: 1.0
+    fermented: 0.7
+    fruity: 0.5
+  exemplar: null
+cola:
+  aliases:
+  - coke
+  - soda
+  weights:
+    sweet: 1.0
+    caramellic: 0.5
+    citrus: 0.3
+    cinnamon: 0.3
+  exemplar: null
+gingerbread:
+  aliases:
+  - ginger biscuits
+  - spiced biscuits
+  weights:
+    spicy: 1.0
+    cinnamon: 0.6
+    sweet: 0.6
+    caramellic: 0.3
+  exemplar: null
+black pepper:
+  aliases:
+  - pepper
+  - peppercorns
+  weights:
+    spicy: 1.0
+    pungent: 0.6
+    woody: 0.3
+  exemplar: null
+cloves:
+  aliases:
+  - clove
+  weights:
+    spicy: 1.0
+    phenolic: 0.5
+    warm: 0.3
+  exemplar: null
+nutmeg:
+  aliases: []
+  weights:
+    spicy: 1.0
+    warm: 0.5
+    woody: 0.3
+  exemplar: null
+liquorice:
+  aliases:
+  - licorice
+  - aniseed
+  - anise
+  - fennel
+  weights:
+    anisic: 1.0
+    sweet: 0.5
+  exemplar: null
+nuts:
+  aliases:
+  - peanuts
+  - walnuts
+  weights:
+    nutty: 1.0
+    roasted: 0.5
+  exemplar: null
+peanut butter:
+  aliases: []
+  weights:
+    nutty: 1.0
+    roasted: 0.7
+    sweet: 0.3
+  exemplar: null
+bacon:
+  aliases:
+  - frying bacon
+  weights:
+    smoky: 1.0
+    meaty: 0.8
+    fatty: 0.4
+  exemplar: null
+roast chicken:
+  aliases:
+  - roasting chicken
+  weights:
+    chicken: 1.0
+    roasted: 0.7
+    fatty: 0.3
+  exemplar: null
+soup:
+  aliases:
+  - broth
+  - stock
+  weights:
+    brothy: 1.0
+    savory: 0.6
+    vegetable: 0.3
+  exemplar: null
+fried onions:
+  aliases:
+  - onion rings
+  - frying onions
+  weights:
+    onion: 1.0
+    roasted: 0.6
+    sweet: 0.3
+  exemplar: null
+fish market:
+  aliases:
+  - fish
+  - fishmonger
+  - seafood
+  weights:
+    fishy: 1.0
+    savory: 0.3
+  exemplar: null
+rotten eggs:
+  aliases:
+  - rotten egg
+  - bad eggs
+  - sulfur
+  - sulphur
+  - stink bomb
+  weights:
+    sulfurous: 1.0
+  exemplar: null
+frying oil:
+  aliases:
+  - chip shop
+  - cooking oil
+  weights:
+    oily: 1.0
+    fatty: 0.8
+    roasted: 0.3
+  exemplar: null
+beer:
+  aliases:
+  - lager
+  - ale
+  - brewery
+  weights:
+    malty: 1.0
+    fermented: 0.6
+    alcoholic: 0.4
+  exemplar: null
+whisky:
+  aliases:
+  - whiskey
+  - bourbon
+  - scotch
+  weights:
+    alcoholic: 1.0
+    woody: 0.7
+    malty: 0.4
+    smoky: 0.3
+  exemplar: null
+vinegar:
+  aliases:
+  - pickling vinegar
+  weights:
+    sour: 1.0
+    pungent: 0.5
+    fermented: 0.3
+  exemplar: null
+yeast:
+  aliases:
+  - rising dough
+  - "brewer's yeast"
+  weights:
+    fermented: 1.0
+    bread: 0.6
+    sour: 0.3
+  exemplar: null
+soap:
+  aliases:
+  - bar soap
+  - soap bubbles
+  weights:
+    aldehydic: 1.0
+    floral: 0.6
+    fresh: 0.5
+  exemplar: null
+mouthwash:
+  aliases: []
+  weights:
+    mint: 1.0
+    fresh: 0.5
+    medicinal: 0.4
+  exemplar: null
+cough drops:
+  aliases:
+  - throat lozenges
+  - menthol sweets
+  weights:
+    mint: 1.0
+    camphoreous: 0.6
+    medicinal: 0.5
+    sweet: 0.3
+  exemplar: null
+nail polish remover:
+  aliases:
+  - acetone
+  weights:
+    solvent: 1.0
+    ketonic: 0.8
+    ethereal: 0.5
+  exemplar: null
+sunscreen:
+  aliases:
+  - suntan lotion
+  - sun cream
+  weights:
+    coconut: 1.0
+    floral: 0.5
+    sweet: 0.4
+  exemplar: null
+hospital:
+  aliases:
+  - antiseptic
+  - clinic
+  weights:
+    medicinal: 1.0
+    phenolic: 0.6
+    alcoholic: 0.4
+    ethereal: 0.4
+  exemplar: null
+sweat:
+  aliases:
+  - body odour
+  - body odor
+  - locker room
+  - gym bag
+  weights:
+    sour: 1.0
+    cheesy: 0.7
+    animal: 0.4
+  exemplar: null
+old books:
+  aliases:
+  - old paper
+  - library
+  - second-hand bookshop
+  weights:
+    musty: 1.0
+    sweet: 0.5
+    almond: 0.3
+    woody: 0.3
+  exemplar: null
+pencil shavings:
+  aliases:
+  - pencils
+  - sharpened pencil
+  weights:
+    woody: 1.0
+    dry: 0.5
+    balsamic: 0.3
+  exemplar: null
+sawdust:
+  aliases:
+  - wood shavings
+  - sawn wood
+  - timber
+  weights:
+    woody: 1.0
+    dry: 0.6
+    balsamic: 0.3
+  exemplar: null
+leather:
+  aliases:
+  - leather jacket
+  - leather shoes
+  - leather goods
+  weights:
+    leathery: 1.0
+    animal: 0.3
+    smoky: 0.3
+  exemplar: null
+new car:
+  aliases:
+  - new car smell
+  - car interior
+  weights:
+    solvent: 1.0
+    leathery: 0.5
+  exemplar: null
+wet paint:
+  aliases:
+  - fresh paint
+  - paint
+  weights:
+    solvent: 1.0
+    oily: 0.4
+  exemplar: null
+marker pen:
+  aliases:
+  - felt-tip pen
+  - permanent marker
+  - glue
+  weights:
+    solvent: 1.0
+    alcoholic: 0.5
+    ketonic: 0.4
+  exemplar: null
+petrol station:
+  aliases:
+  - petrol
+  - gas station
+  - fuel
+  weights:
+    gasoline: 1.0
+    solvent: 0.4
+  exemplar: null
+incense:
+  aliases:
+  - church
+  - temple
+  - frankincense
+  weights:
+    balsamic: 1.0
+    smoky: 0.6
+    woody: 0.5
+  exemplar: null
+smoke:
+  aliases:
+  - wood smoke
+  - smoky air
+  weights:
+    smoky: 1.0
+    burnt: 0.6
+    woody: 0.3
+  exemplar: null
+sea air:
+  aliases:
+  - sea breeze
+  - ocean breeze
+  - seaside
+  weights:
+    fresh: 1.0
+    melon: 0.5
+  exemplar: null
+potting soil:
+  aliases:
+  - soil
+  - garden soil
+  - dirt
+  weights:
+    earthy: 1.0
+    musty: 0.5
+  exemplar: null
+damp basement:
+  aliases:
+  - damp
+  - mildew
+  - mould
+  - mold
+  weights:
+    musty: 1.0
+    earthy: 0.6
+    mushroom: 0.3
+  exemplar: null
+autumn leaves:
+  aliases:
+  - fallen leaves
+  - leaf pile
+  weights:
+    earthy: 1.0
+    hay: 0.6
+    musty: 0.5
+    woody: 0.3
+  exemplar: null
+wet dog:
+  aliases:
+  - damp dog
+  - dog
+  weights:
+    animal: 1.0
+    musty: 0.6
+    earthy: 0.3
+  exemplar: null
+barnyard:
+  aliases:
+  - farmyard
+  - stable
+  - manure
+  - farm
+  weights:
+    animal: 1.0
+    earthy: 0.6
+    hay: 0.5
+  exemplar: null
+cat pee:
+  aliases:
+  - cat urine
+  - tomcat
+  weights:
+    catty: 1.0
+    animal: 0.5
+    sulfurous: 0.3
+  exemplar: null
+rubbish:
+  aliases:
+  - garbage
+  - trash
+  - landfill
+  weights:
+    sulfurous: 1.0
+    sour: 0.8
+    fermented: 0.6
+    cheesy: 0.4
+  exemplar: null
+powdery perfume:
+  aliases:
+  - "grandma's perfume"
+  - old-fashioned perfume
+  - vintage perfume
+  weights:
+    violet: 1.0
+    orris: 0.9
+    rose: 0.6
+    musk: 0.5
+    sweet: 0.4
+  exemplar: null
+flowers:
+  aliases:
+  - bouquet of flowers
+  - bouquet
+  - florist
+  - flower shop
+  weights:
+    floral: 1.0
+    rose: 0.5
+    jasmine: 0.4
+    green: 0.2
+  exemplar: null

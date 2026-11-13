@@ -1,0 +1,13 @@
+citrus:  {colour: "#F2C53D", labels: [citrus, orange, lemon, grapefruit]}
+green:   {colour: "#8DB255", labels: [green, leafy, grassy, hay, vegetable, cucumber, tea, herbal, chamomile]}
+floral:  {colour: "#E58FA0", labels: [floral, rose, jasmine, violet, orris]}
+fruity:  {colour: "#F08A4B", labels: [fruity, apple, pear, pineapple, tropical, banana, berry, black currant, cherry, grape, peach, apricot, plum, strawberry, melon, ripe, coconut]}
+sweet:   {colour: "#EAD9B0", labels: [sweet, vanilla, caramellic, honey, creamy, cocoa, chocolate, milky, dairy, buttery, coumarinic, almond]}
+woody:   {colour: "#B98250", labels: [woody, balsamic, pine, dry, tobacco, leathery]}
+musky:   {colour: "#B9A3C9", labels: [musk, animal, catty]}
+earthy:  {colour: "#9C9372", labels: [earthy, musty, mushroom, potato]}
+spicy:   {colour: "#E0644A", labels: [spicy, cinnamon, anisic, pungent, sharp, warm, aromatic]}
+fresh:   {colour: "#A9DCC9", labels: [fresh, mint, camphoreous, ethereal]}
+roasted: {colour: "#A8714C", labels: [roasted, burnt, smoky, coffee, nutty, hazelnut, popcorn, bread, malty, phenolic]}
+savory:  {colour: "#B5B84A", labels: [sulfurous, meaty, onion, garlic, alliaceous, cheesy, fishy, savory, brothy, beefy, chicken, cabbage, horseradish, radish, tomato]}
+waxy:    {colour: "#9AA3AD", labels: [fatty, waxy, oily, aldehydic, gasoline, solvent, ketonic, metallic, medicinal, alcoholic, winey, cognac, brandy, rum, fermented, sour]}

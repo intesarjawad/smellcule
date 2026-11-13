@@ -1,0 +1,217 @@
+/*
+ * The palette, type scale, spacing and radii. Every other stylesheet reaches these values
+ * through var(--…); scripts/check-tokens.mjs enforces it. DESIGN.md says why each one exists.
+ */
+
+@font-face {
+  font-family: "Chivo";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("./fonts/chivo-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+    U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Chivo";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("./fonts/chivo-latin-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Chivo Mono";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("./fonts/chivo-mono-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+    U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Chivo Mono";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("./fonts/chivo-mono-latin-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+  color-scheme: light;
+
+  /* Brushed aluminium faceplate; ink is engraved into it. */
+  --ground: #c9cac7;
+  --ground-deep: #bebfbb;
+  --ground-raised: #d6d7d3;
+  --on-ground: #161616;
+  --on-ground-soft: #464744;
+
+  /* Plates set into the faceplate: the meter face and the station card. */
+  --paper: #e7e6e1;
+  --paper-lift: #f2f1ed;
+  --dim-furniture: 0.35;
+  --dim-gauges: 0.6;
+  --dim-keys: 0.5;
+  --dim-data: 0.25;
+  --paper-sunk: #d9d9d4;
+  --ink: #161616;
+  --ink-soft: #464744;
+
+  /* Black glass: the dial, the station window and the tuning slot. */
+  --glass: #0d0e0e;
+  --glass-raised: #1b1c1b;
+  --glass-ink: #ecebe6;
+  --glass-dim: #a3a29c;
+  --glass-faint: #7d7c75;
+  --glass-rule: #34352f;
+
+  /* The one hue on the set, as Braun used it: the needle and what the needle means. */
+  --signal: #f0501e;
+  --signal-ink: #962b08;
+  --signal-wash: color-mix(in srgb, var(--signal) 18%, transparent);
+
+  /* Key caps and their shadows. */
+  --key: #dcdcd8;
+  --key-down: #cfd0cc;
+  --key-edge: #9a9b97;
+  --knob: #2a2b2a;
+  --knob-cap: #3a3b3a;
+  --grille-hole: #1e1f1e;
+  --face: #d4d5d1;
+  --face-edge: #8e8f8b;
+  --face-rule: color-mix(in srgb, var(--on-ground) 18%, transparent);
+  --lamp-off: #2c2d2b;
+  --shade: color-mix(in srgb, #000 35%, transparent);
+  --shade-deep: color-mix(in srgb, #000 75%, transparent);
+  --shine: color-mix(in srgb, #fff 65%, transparent);
+  --shine-soft: color-mix(in srgb, #fff 12%, transparent);
+  --brush: color-mix(in srgb, #fff 8%, transparent);
+
+  /* Context colours; a plate redefines them for everything inside it. */
+  --fg: var(--on-ground);
+  --fg-soft: var(--on-ground-soft);
+  --bg: var(--ground);
+  --rule: color-mix(in srgb, var(--on-ground) 24%, transparent);
+  --thread: var(--glass-ink);
+  --focus: var(--ink);
+  --structure-ground: var(--glass);
+  --veil: color-mix(in srgb, var(--glass) 88%, transparent);
+
+  --shadow-glass: inset 0 0 0 1px var(--face-edge);
+  --shadow-slot: inset 0 2px 3px rgb(0 0 0 / 0.55);
+  --shadow-slot-side: inset 2px 0 3px rgb(0 0 0 / 0.55);
+  --shadow-wall: color-mix(in srgb, var(--face-edge) 55%, transparent);
+  --shadow-port:
+    0 -1px 0 var(--face-edge), 0 -2px 1px var(--shadow-wall), 0 1px 0 var(--paper-lift),
+    var(--shadow-slot);
+  --shadow-port-side:
+    -1px 0 0 var(--face-edge), -2px 0 1px var(--shadow-wall), 1px 0 0 var(--paper-lift),
+    var(--shadow-slot-side);
+  --shadow-plate: inset 0 0 0 1px var(--face-rule);
+  --shadow-key: 0 3px 0 var(--key-edge);
+  --shadow-key-down: 0 0 0 var(--key-edge);
+  --shadow-knob: none;
+
+  --font-display: "Chivo", "Helvetica Neue", Arial, sans-serif;
+  --font-ui: "Chivo", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Chivo Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --text-small: 0.875rem;
+  --text-sub: 0.7em;
+  --text-badge: 0.8125rem;
+  --text-body: 1rem;
+  --text-lede: 1.375rem;
+  --text-title: 2rem;
+  --text-name: clamp(2.25rem, 6vw, 3.75rem);
+  --text-hero: clamp(3.5rem, 13vw, 9rem);
+  --text-search: clamp(1.5rem, 5vw, 2.25rem);
+  --text-brand: 0.9375rem;
+  --text-micro: 0.6875rem;
+  --text-label: 0.75rem;
+  --text-readout: 2.5rem;
+  --text-readout-max: 7rem;
+  --text-readout-phone: 4.5rem;
+  --text-readout-long: 1.75rem;
+  --text-readout-longer: 1.3125rem;
+  --text-readout-words: 0.9375rem;
+  --text-station: 1.875rem;
+  --text-slot: 1.0625rem;
+
+  --leading-none: 1;
+  --leading-sub: 0;
+  --leading-hero: 0.95;
+  --leading-tight: 1.05;
+  --leading-snug: 1.25;
+  --leading-body: 1.55;
+  --tracking-ui: 0.02em;
+  --tracking-display: -0.02em;
+  --tracking-engraved: 0.14em;
+
+  --space-1: 0.125rem;
+  --space-2: 0.25rem;
+  --space-3: 0.5rem;
+  --space-4: 0.75rem;
+  --space-5: 1rem;
+  --space-6: 1.5rem;
+  --space-7: 2rem;
+  --space-8: 3rem;
+  --space-9: 4.5rem;
+  --inset-hub: 1%;
+  --inset-tile: 0.5%;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+
+  --radius-none: 0;
+  --radius-key: 4px;
+  --radius-glass: 8px;
+  --radius-plate: 5px;
+  --radius-pill: 999px;
+  --radius-round: 50%;
+
+  --measure: 44rem;
+  --sheet-width: 66rem;
+  --header-height: 3.75rem;
+  --tap: 2.75rem;
+  --strip-cut: 1.75rem;
+  --sheet-pad: clamp(1.25rem, 4vw, 3rem);
+  --stage-min: 30rem;
+
+  --glass-height: 30rem;
+  --glass-height-phone: 27rem;
+  --grille-width: clamp(11rem, 17vw, 17rem);
+  --grille-height-phone: 3.5rem;
+  --perf-pitch: 9px;
+  --perf-hole: 2.4px;
+  --knob-column: 8.5rem;
+  --lamp-size: 0.75rem;
+  --face-pad: 1.25rem;
+  --control-column: 8.5rem;
+  --knob-size: 5.25rem;
+  --grille-size: 7rem;
+  --station-column: 22.5rem;
+  --preset-column: 23.75rem;
+  --needle-width: 2px;
+  --oled-height: 7.75rem;
+  --key-height: 3.25rem;
+  --key-peek: 1.875rem;
+  --key-fade: calc(var(--key-peek) + var(--space-3));
+  --nav-fade: var(--space-8);
+  --channel-rule: 1px;
+  --row-key-width: 6.5rem;
+  --row-key-width-phone: 5.75rem;
+  --slot-width: 18rem;
+
+  --flight-ms: 1400ms;
+  --ease-flight: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}

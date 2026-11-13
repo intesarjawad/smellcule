@@ -1,0 +1,41 @@
+id,name,cas,formula,split,measured,predicted_top10
+0,4-Hydroxybenzaldehyde,123-08-0,C7H6O2,cross_validated,sour;decayed;chemical,chemical:0.31;sour:0.28;edible:0.28;musky:0.28;spices:0.27;warm:0.27;sweet:0.26;acid:0.24;burnt:0.24;cold:0.24
+1,acetic acid,64-19-7,C2H4O2,cross_validated,ammonia/urinous;decayed;flower,sour:0.31;garlic:0.30;chemical:0.30;musky:0.28;edible:0.27;cold:0.25;acid:0.25;burnt:0.25;sweaty:0.25;sweet:0.25
+2,acetaldehyde,75-07-0,C2H4O,cross_validated,sour;grass;flower,musky:0.36;chemical:0.34;sour:0.34;garlic:0.34;sweaty:0.32;burnt:0.29;acid:0.29;spices:0.29;decayed:0.27;ammonia/urinous:0.27
+3,acetone,67-64-1,C3H6O,cross_validated,musky;wood;grass,chemical:0.35;musky:0.32;sour:0.31;garlic:0.30;sweaty:0.30;acid:0.30;spices:0.28;edible:0.28;warm:0.28;sweet:0.28
+4,Adipic acid,124-04-9,C6H10O4,cross_validated,sour;acid;decayed,sour:0.32;chemical:0.30;edible:0.29;musky:0.27;sweet:0.26;garlic:0.26;warm:0.26;cold:0.26;burnt:0.25;sweaty:0.25
+5,beta-Alanine,107-95-9,C3H7NO2,cross_validated,fish;sour;chemical,garlic:0.32;sour:0.32;musky:0.31;chemical:0.30;sweaty:0.30;warm:0.29;edible:0.29;burnt:0.28;decayed:0.28;acid:0.28
+6,benzaldehyde,100-52-7,C7H6O,cross_validated,edible;bakery;chemical,chemical:0.31;sour:0.30;edible:0.30;spices:0.29;sweet:0.29;musky:0.29;warm:0.28;acid:0.27;ammonia/urinous:0.27;burnt:0.27
+7,Benzene,71-43-2,C6H6,cross_validated,edible;garlic;ammonia/urinous,chemical:0.33;edible:0.29;sour:0.28;musky:0.28;ammonia/urinous:0.27;acid:0.26;spices:0.26;sweet:0.26;warm:0.26;garlic:0.25
+8,Benzoic acid,65-85-0,C7H6O2,cross_validated,bakery;spices;flower,chemical:0.32;sour:0.31;sweet:0.28;edible:0.28;musky:0.28;spices:0.27;warm:0.26;burnt:0.25;ammonia/urinous:0.25;wood:0.25
+9,benzyl alcohol,100-51-6,C7H8O,cross_validated,sweet;flower;chemical,chemical:0.32;sour:0.29;edible:0.29;musky:0.28;warm:0.27;burnt:0.27;garlic:0.26;spices:0.26;decayed:0.26;ammonia/urinous:0.26
+10,butyraldehyde,123-72-8,C4H8O,cross_validated,sour;musky;chemical,chemical:0.35;sour:0.32;edible:0.30;sweet:0.28;ammonia/urinous:0.28;musky:0.25;decayed:0.25;spices:0.24;sweaty:0.24;fruit:0.24
+11,butanediol,513-85-9,C4H10O2,cross_validated,edible;warm;decayed,chemical:0.41;sour:0.37;cold:0.32;sweet:0.32;decayed:0.30;ammonia/urinous:0.29;edible:0.29;spices:0.28;flower:0.28;bakery:0.27
+12,butanol,71-36-3,C4H10O,cross_validated,garlic;sour;ammonia/urinous,chemical:0.31;sour:0.31;edible:0.28;musky:0.27;sweaty:0.27;garlic:0.26;decayed:0.26;burnt:0.26;acid:0.25;cold:0.24
+13,butyric acid,107-92-6,C4H8O2,cross_validated,garlic;sour;grass,chemical:0.32;sour:0.31;musky:0.31;garlic:0.28;sweaty:0.28;edible:0.27;spices:0.27;warm:0.27;sweet:0.27;acid:0.26
+14,Citric acid,77-92-9,C6H8O7,cross_validated,spices;cold;sour,sour:0.35;bakery:0.32;cold:0.31;garlic:0.31;edible:0.31;chemical:0.29;sweet:0.29;warm:0.29;musky:0.28;decayed:0.27
+15,coumarin,91-64-5,C9H6O2,cross_validated,sweet;warm;flower,chemical:0.33;edible:0.30;warm:0.29;sweet:0.29;spices:0.29;sour:0.29;acid:0.27;musky:0.27;flower:0.26;ammonia/urinous:0.26
+16,4-Isopropylbenzyl alcohol,536-60-7,C10H14O,cross_validated,edible;spices;acid,chemical:0.31;edible:0.29;spices:0.29;sweet:0.28;sour:0.27;warm:0.27;acid:0.26;musky:0.26;flower:0.25;cold:0.24
+17,cuminaldehyde,122-03-2,C10H12O,cross_validated,edible;warm;wood,chemical:0.30;sweet:0.29;edible:0.29;spices:0.28;sour:0.28;warm:0.27;acid:0.26;musky:0.26;flower:0.25;burnt:0.24
+18,Octane,111-65-9,C8H18,cross_validated,sweet;garlic;chemical,chemical:0.32;sour:0.30;edible:0.30;sweet:0.26;musky:0.26;warm:0.26;acid:0.25;fruit:0.25;sweaty:0.25;cold:0.25
+19,Octanoic acid,124-07-2,C8H16O2,cross_validated,fruit;decayed;chemical,sour:0.31;chemical:0.31;edible:0.30;sweet:0.28;warm:0.27;cold:0.26;musky:0.26;flower:0.25;burnt:0.25;sweaty:0.25
+20,octanal,124-13-0,C8H16O,cross_validated,spices;warm;musky,sour:0.32;chemical:0.31;edible:0.30;sweet:0.27;warm:0.26;musky:0.26;burnt:0.25;sweaty:0.25;cold:0.25;flower:0.25
+21,Guaiacol,90-05-1,C7H8O2,cross_validated,spices;cold;chemical,chemical:0.32;sour:0.28;musky:0.27;edible:0.27;spices:0.27;warm:0.27;sweet:0.26;acid:0.25;ammonia/urinous:0.24;cold:0.24
+22,"2,3-butanedione",431-03-8,C4H6O2,cross_validated,fruit;burnt;warm,chemical:0.32;sour:0.31;sweet:0.30;edible:0.30;warm:0.29;musky:0.29;acid:0.27;spices:0.27;bakery:0.27;sweaty:0.27
+23,Dihydrocoumarin,119-84-6,C9H8O2,cross_validated,sweet;warm;musky,chemical:0.32;warm:0.28;sweet:0.28;edible:0.27;sour:0.26;musky:0.26;spices:0.26;ammonia/urinous:0.25;acid:0.25;flower:0.24
+24,Methyl sulfoxide,67-68-5,C2H6OS,cross_validated,fish;burnt;chemical,chemical:0.33;grass:0.31;acid:0.31;garlic:0.31;sour:0.29;spices:0.29;flower:0.29;musky:0.28;edible:0.28;burnt:0.28
+25,ethanol,64-17-5,C2H6O,cross_validated,garlic;musky;chemical,chemical:0.32;sour:0.28;cold:0.28;edible:0.27;garlic:0.26;musky:0.26;acid:0.25;sweaty:0.25;ammonia/urinous:0.25;sweet:0.25
+26,Glycine,56-40-6,C2H5NO2,cross_validated,sweet;ammonia/urinous;flower,sour:0.34;garlic:0.33;chemical:0.30;musky:0.30;sweaty:0.28;decayed:0.28;burnt:0.28;fish:0.27;acid:0.27;edible:0.26
+27,glycerol,56-81-5,C3H8O3,cross_validated,cold;burnt;decayed,chemical:0.38;cold:0.35;sour:0.34;sweet:0.31;decayed:0.29;edible:0.29;garlic:0.28;ammonia/urinous:0.27;flower:0.27;spices:0.26
+28,Iodine,7553-56-2,I2,cross_validated,garlic;decayed;chemical,chemical:0.32;edible:0.30;sour:0.29;ammonia/urinous:0.28;musky:0.26;garlic:0.26;spices:0.25;bakery:0.25;decayed:0.25;sweet:0.24
+29,DL-Tartaric acid,133-37-9,C4H6O6,cross_validated,garlic;sour;acid,sour:0.35;edible:0.32;garlic:0.31;burnt:0.29;warm:0.29;musky:0.28;decayed:0.28;chemical:0.28;sweaty:0.28;cold:0.27
+30,methanol,67-56-1,CH4O,cross_validated,garlic;burnt;grass,chemical:0.45;ammonia/urinous:0.34;sour:0.34;edible:0.34;cold:0.33;decayed:0.33;garlic:0.33;spices:0.32;musky:0.30;sweet:0.30
+31,octanol,111-87-5,C8H18O,cross_validated,cold;sour;musky,chemical:0.31;sour:0.31;edible:0.31;sweaty:0.27;decayed:0.26;burnt:0.26;warm:0.26;musky:0.26;sweet:0.25;cold:0.25
+32,Water,7732-18-5,H2O,cross_validated,edible;bakery;fruit,decayed:0.45;garlic:0.42;sour:0.40;acid:0.40;fish:0.39;spices:0.39;burnt:0.39;chemical:0.39;sweaty:0.38;warm:0.38
+33,DL-Phenylalanine,150-30-1,C9H11NO2,cross_validated,burnt;musky;wood,chemical:0.32;sour:0.31;warm:0.29;edible:0.29;musky:0.28;bakery:0.27;decayed:0.27;spices:0.27;burnt:0.27;sweet:0.27
+34,Phenethylamine,64-04-0,C8H11N,cross_validated,sour;musky;chemical,chemical:0.32;sour:0.31;musky:0.29;garlic:0.29;decayed:0.28;warm:0.28;burnt:0.28;edible:0.28;acid:0.27;ammonia/urinous:0.27
+35,Propylene glycol,57-55-6,C3H8O2,cross_validated,sweet;spices;cold,chemical:0.41;sour:0.35;cold:0.34;sweet:0.32;decayed:0.30;edible:0.29;ammonia/urinous:0.29;garlic:0.28;spices:0.28;flower:0.27
+36,propanol,71-23-8,C3H8O,cross_validated,edible;cold;chemical,chemical:0.33;sour:0.28;edible:0.27;cold:0.27;ammonia/urinous:0.26;sweet:0.26;acid:0.25;musky:0.25;sweaty:0.24;decayed:0.23
+37,propionic acid,79-09-4,C3H6O2,cross_validated,edible;bakery;sour,sour:0.31;chemical:0.30;edible:0.28;garlic:0.28;musky:0.28;sweet:0.25;cold:0.25;warm:0.25;acid:0.25;sweaty:0.25
+38,vanillin,121-33-5,C8H8O3,cross_validated,edible;sweet;warm,chemical:0.31;sour:0.28;edible:0.28;musky:0.27;spices:0.27;sweet:0.27;warm:0.27;cold:0.25;acid:0.24;burnt:0.24
+39,eugenol,97-53-0,C10H12O2,cross_validated,bakery;spices;cold,chemical:0.32;edible:0.28;sour:0.28;sweet:0.27;spices:0.27;warm:0.27;musky:0.26;cold:0.26;flower:0.25;acid:0.25

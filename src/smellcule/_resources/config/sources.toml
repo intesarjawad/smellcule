@@ -1,0 +1,24 @@
+[leffingwell]
+url = "https://raw.githubusercontent.com/pyrfume/pyrfume-data/8054ea98ed675005ec10e67359902f500e4911b0/leffingwell/leffingwell_data.csv"
+sha256 = "b8ff52ccec8a5a467142525266c0168d9bef5594787b561731addd40a2d9d2e9"
+licence = "CC-BY-NC"
+
+[keller_molecules]
+url = "https://raw.githubusercontent.com/pyrfume/pyrfume-data/8054ea98ed675005ec10e67359902f500e4911b0/keller_2016/molecules.csv"
+sha256 = "5f862b6ea62dd3ee0a15138605ea2567d06a527263284348a5982844f9bec81f"
+licence = "CC BY 4.0"
+
+[keller_stimuli]
+url = "https://raw.githubusercontent.com/pyrfume/pyrfume-data/8054ea98ed675005ec10e67359902f500e4911b0/keller_2016/stimuli.csv"
+sha256 = "49c1a6bfb8c1665a31e13f515add95a95291f29416be1bb0b54d3317efb6665b"
+licence = "CC BY 4.0"
+
+[keller_behavior]
+url = "https://raw.githubusercontent.com/pyrfume/pyrfume-data/8054ea98ed675005ec10e67359902f500e4911b0/keller_2016/behavior.csv"
+sha256 = "ab31c17c475c8b471706822f89aaf9e148bebe5f50f33ff03ebc42b32ac94df8"
+licence = "CC BY 4.0"
+
+[gslf]
+url = "https://raw.githubusercontent.com/BioMachineLearning/openpom/5434c4b7badebca8e7d180aa34d2f787402121ee/openpom/data/curated_datasets/curated_GS_LF_merged_4983.csv"
+sha256 = "0c18b6e9f0f99b772203ba4da30a96b3d60db700349376cbafe23512a9baa704"
+licence = "evaluation only"

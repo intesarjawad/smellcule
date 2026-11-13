@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700" role="img" aria-labelledby="title">
+<title id="title">Reliability: predicted probability versus observed frequency</title>
+<path d="M60 60 V380 H380 M60 380 L380 60" fill="none" stroke="currentColor"/>
+<text x="60" y="420">Predicted probability: zero to one</text>
+<text x="60" y="30">Observed frequency: zero to one</text>
+<circle cx="60.003064" cy="379.963223" r="3" fill="currentColor"><title>p=0.000010, observed=0.000115, n=8701</title></circle>
+<text x="8" y="450">p=0.000010, observed=0.000115, n=8701</text>
+<circle cx="60.021917" cy="379.816113" r="3" fill="currentColor"><title>p=0.000068, observed=0.000575, n=8701</title></circle>
+<text x="8" y="474">p=0.000068, observed=0.000575, n=8701</text>
+<circle cx="60.064606" cy="379.705781" r="3" fill="currentColor"><title>p=0.000202, observed=0.000919, n=8701</title></circle>
+<text x="8" y="498">p=0.000202, observed=0.000919, n=8701</text>
+<circle cx="60.147083" cy="379.374785" r="3" fill="currentColor"><title>p=0.000460, observed=0.001954, n=8701</title></circle>
+<text x="8" y="522">p=0.000460, observed=0.001954, n=8701</text>
+<circle cx="60.321153" cy="378.970233" r="3" fill="currentColor"><title>p=0.001004, observed=0.003218, n=8701</title></circle>
+<text x="8" y="546">p=0.001004, observed=0.003218, n=8701</text>
+<circle cx="60.697200" cy="378.197908" r="3" fill="currentColor"><title>p=0.002179, observed=0.005632, n=8701</title></circle>
+<text x="8" y="570">p=0.002179, observed=0.005632, n=8701</text>
+<circle cx="61.557395" cy="377.499138" r="3" fill="currentColor"><title>p=0.004867, observed=0.007815, n=8701</title></circle>
+<text x="8" y="594">p=0.004867, observed=0.007815, n=8701</text>
+<circle cx="63.644389" cy="374.483393" r="3" fill="currentColor"><title>p=0.011389, observed=0.017239, n=8701</title></circle>
+<text x="8" y="618">p=0.011389, observed=0.017239, n=8701</text>
+<circle cx="70.712949" cy="366.024595" r="3" fill="currentColor"><title>p=0.033478, observed=0.043673, n=8701</title></circle>
+<text x="8" y="642">p=0.033478, observed=0.043673, n=8701</text>
+<circle cx="134.947208" cy="296.368234" r="3" fill="currentColor"><title>p=0.234210, observed=0.261349, n=8701</title></circle>
+<text x="8" y="666">p=0.234210, observed=0.261349, n=8701</text>
+</svg>

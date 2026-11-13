@@ -1,0 +1,92 @@
+name: install-smoke
+on:
+  release:
+    types: [published]
+  schedule:
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  base:
+    if: vars.SMELLCULE_RELEASE_READY == 'true'
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix: {os: [macos-latest, ubuntu-latest, windows-latest]}
+    defaults:
+      run: {shell: bash}
+    steps:
+      - uses: actions/setup-python@v7
+        with: {python-version: '3.12'}
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with: {version: 0.13.7}
+      - name: Resolve published version
+        run: |
+          VERSION="${RELEASE_TAG#v}"
+          if [ -z "$VERSION" ]; then
+            VERSION=$(python -c 'import json, urllib.request; print(json.load(urllib.request.urlopen("https://pypi.org/pypi/smellcule/json"))["info"]["version"])')
+          fi
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+        env: {RELEASE_TAG: "${{ github.event.release.tag_name }}"}
+      - run: pip install 'pipx==1.*' && pipx ensurepath
+      - run: pipx install "smellcule==${VERSION}"
+      - name: Empty-cache lookup
+        run: |
+          START=$(date +%s)
+          smellcule lookup vanillin
+          SECONDS_ELAPSED=$(($(date +%s) - START))
+          echo "Empty-cache lookup: ${SECONDS_ELAPSED}s" >> "$GITHUB_STEP_SUMMARY"
+          test "$SECONDS_ELAPSED" -le 10
+        env:
+          SMELLCULE_CACHE: "${{ runner.temp }}/smellcule-pipx"
+          HF_HOME: "${{ runner.temp }}/hf-pipx"
+      - name: Refuse a structure
+        run: |
+          set +e
+          smellcule lookup CCO 2>err.txt
+          STATUS=$?
+          set -e
+          test "$STATUS" -eq 2
+          grep -q '^next: ' err.txt
+      - name: Empty-cache uvx startup
+        run: |
+          START=$(date +%s)
+          uvx "smellcule@${VERSION}" lookup vanillin
+          SECONDS_ELAPSED=$(($(date +%s) - START))
+          echo "Empty-cache uvx: ${SECONDS_ELAPSED}s" >> "$GITHUB_STEP_SUMMARY"
+          test "$SECONDS_ELAPSED" -le 60
+        env:
+          UV_CACHE_DIR: "${{ runner.temp }}/uvx-cache"
+          SMELLCULE_CACHE: "${{ runner.temp }}/smellcule-uvx"
+          HF_HOME: "${{ runner.temp }}/hf-uvx"
+  research:
+    if: vars.SMELLCULE_RELEASE_READY == 'true'
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix: {os: [macos-latest, ubuntu-latest]}
+    defaults:
+      run: {shell: bash}
+    steps:
+      - uses: actions/setup-python@v7
+        with: {python-version: '3.12'}
+      - name: Resolve published version
+        run: |
+          VERSION="${RELEASE_TAG#v}"
+          if [ -z "$VERSION" ]; then
+            VERSION=$(python -c 'import json, urllib.request; print(json.load(urllib.request.urlopen("https://pypi.org/pypi/smellcule/json"))["info"]["version"])')
+          fi
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+        env: {RELEASE_TAG: "${{ github.event.release.tag_name }}"}
+      - run: pip install 'pipx==1.*' && pipx ensurepath
+      - name: Install research extra
+        run: |
+          if [ "$RUNNER_OS" = Linux ]; then
+            pipx install "smellcule[research]==${VERSION}" --pip-args="--extra-index-url https://download.pytorch.org/whl/cpu"
+          else
+            pipx install "smellcule[research]==${VERSION}"
+          fi
+          pipx runpip smellcule show torch
+          VENV_ROOT=$(pipx environment --value PIPX_LOCAL_VENVS)
+          "$VENV_ROOT/smellcule/bin/python" -c 'from smellcule import DEFAULT_MODEL, load_model; load_model(DEFAULT_MODEL)'
+          if [ "$RUNNER_OS" = Linux ]; then
+            "$VENV_ROOT/smellcule/bin/python" -c 'import torch; assert not torch.version.cuda'
+          fi

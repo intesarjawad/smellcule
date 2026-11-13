@@ -1,0 +1,37 @@
+name: deploy
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+permissions: {contents: read, pages: write, id-token: write}
+concurrency: {group: pages, cancel-in-progress: false}
+jobs:
+  build:
+    if: vars.SMELLCULE_DEPLOY_READY == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with: {node-version: 26, cache: npm, cache-dependency-path: site/package-lock.json}
+      - run: |
+          TAG=$(jq -r .tag site/data.lock.json)
+          SHA=$(jq -r .sha256 site/data.lock.json)
+          gh release download "$TAG" -p "atlas-data-*.tar.gz" -D /tmp/bundle
+          echo "$SHA  $(ls /tmp/bundle/*.tar.gz)" | sha256sum -c -
+          mkdir -p site/public/data
+          tar -xzf /tmp/bundle/*.tar.gz -C site/public/data
+          if [ "${{ github.event_name }}" = release ]; then
+            scripts/check_bundle_age.sh site/public/data/atlas.json
+          fi
+        env: {GH_TOKEN: "${{ github.token }}", GH_REPO: "${{ github.repository }}"}
+      - run: npm --prefix site ci && npm --prefix site run build
+        env: {VITE_DATA_URL: data/}
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with: {path: site/dist}
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: {name: github-pages}
+    steps:
+      - uses: actions/deploy-pages@v5

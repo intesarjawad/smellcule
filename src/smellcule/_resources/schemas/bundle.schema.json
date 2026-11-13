@@ -1,0 +1,568 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$ref": "#/$defs/atlas",
+  "$defs": {
+    "neighbour": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9]+$"
+        },
+        "odour": {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        "structure": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "id",
+        "odour",
+        "structure"
+      ],
+      "additionalProperties": false
+    },
+    "molecule": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9]+$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "cas": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "casCheckDigit": {
+          "enum": [
+            "passes",
+            "fails",
+            "unlisted"
+          ]
+        },
+        "formula": {
+          "type": "string"
+        },
+        "split": {
+          "enum": [
+            "train",
+            "validation",
+            "held_out",
+            "cross_validated"
+          ]
+        },
+        "nearestTrainSimilarity": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "measured": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "uniqueItems": true
+        },
+        "neighbours": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/neighbour"
+          },
+          "minItems": 8,
+          "maxItems": 8
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "cas",
+        "casCheckDigit",
+        "formula",
+        "split",
+        "nearestTrainSimilarity",
+        "measured",
+        "neighbours"
+      ],
+      "additionalProperties": false
+    },
+    "family": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "colour": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "name",
+        "colour",
+        "labels"
+      ],
+      "additionalProperties": false
+    },
+    "noteMolecule": {
+      "type": "object",
+      "properties": {
+        "molecule_id": {
+          "type": "string",
+          "pattern": "^[0-9]+$"
+        },
+        "relation": {
+          "enum": [
+            "character",
+            "constituent"
+          ]
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^https://"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "molecule_id",
+        "relation",
+        "source_url"
+      ],
+      "additionalProperties": false
+    },
+    "note": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "molecules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/noteMolecule"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "name",
+        "aliases",
+        "evidence",
+        "molecules"
+      ],
+      "additionalProperties": false
+    },
+    "archetype": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "top": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "heart": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "base": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "name",
+        "top",
+        "heart",
+        "base"
+      ],
+      "additionalProperties": false
+    },
+    "phrase": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "weights": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "exemplar": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9]+$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^https://"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "aliases",
+        "weights",
+        "exemplar",
+        "source_url"
+      ],
+      "additionalProperties": false
+    },
+    "puzzle": {
+      "type": "object",
+      "properties": {
+        "moleculeId": {
+          "type": "string",
+          "pattern": "^[0-9]+$"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "minItems": 12,
+          "maxItems": 12,
+          "uniqueItems": true
+        },
+        "answer": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "minItems": 3,
+          "uniqueItems": true
+        },
+        "clueId": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "clueSimilarity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "moleculeId",
+        "options",
+        "answer",
+        "clueId",
+        "clueSimilarity"
+      ],
+      "additionalProperties": false
+    },
+    "smellcule": {
+      "type": "object",
+      "properties": {
+        "startDate": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "puzzles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/puzzle"
+          }
+        }
+      },
+      "required": [
+        "startDate",
+        "puzzles"
+      ],
+      "additionalProperties": false
+    },
+    "notes": {
+      "type": "object",
+      "properties": {
+        "notes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/note"
+          }
+        },
+        "archetypes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/archetype"
+          }
+        }
+      },
+      "required": [
+        "notes",
+        "archetypes"
+      ],
+      "additionalProperties": false
+    },
+    "phrases": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/phrase"
+      }
+    },
+    "words": {
+      "type": "object",
+      "properties": {
+        "words": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "carriers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "qualifiers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "words",
+        "carriers",
+        "qualifiers"
+      ],
+      "additionalProperties": false
+    },
+    "atlas": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "exportedOn": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "catalogue": {
+          "enum": [
+            "leffingwell",
+            "keller"
+          ]
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "licence": {
+              "type": "string"
+            },
+            "revision": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "licence",
+            "revision"
+          ],
+          "additionalProperties": false
+        },
+        "attribution": {
+          "type": "string"
+        },
+        "dataLicence": {
+          "enum": [
+            "CC-BY-NC",
+            "CC BY 4.0"
+          ]
+        },
+        "stats": {
+          "type": "object",
+          "required": [
+            "retiredPuzzles"
+          ],
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "families": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/family"
+          }
+        },
+        "molecules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/molecule"
+          },
+          "minItems": 9
+        }
+      },
+      "required": [
+        "version",
+        "exportedOn",
+        "catalogue",
+        "model",
+        "attribution",
+        "dataLicence",
+        "stats",
+        "labels",
+        "families",
+        "molecules"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "catalogue": {
+                "const": "leffingwell"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "labels": {
+                "minItems": 113,
+                "maxItems": 113
+              },
+              "molecules": {
+                "items": {
+                  "properties": {
+                    "split": {
+                      "enum": [
+                        "train",
+                        "validation",
+                        "held_out"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "catalogue": {
+                "const": "keller"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "labels": {
+                "minItems": 20,
+                "maxItems": 20
+              },
+              "molecules": {
+                "items": {
+                  "properties": {
+                    "split": {
+                      "enum": [
+                        "cross_validated"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

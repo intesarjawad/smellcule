@@ -1,0 +1,2369 @@
+{
+  "attribution": "Keller and Vosshall 2016; Pyrfume",
+  "catalogue": "keller",
+  "dataLicence": "CC BY 4.0",
+  "exportedOn": "2000-01-01",
+  "families": [
+    {
+      "colour": "#8DB255",
+      "labels": [
+        "grass"
+      ],
+      "name": "green"
+    },
+    {
+      "colour": "#E58FA0",
+      "labels": [
+        "flower"
+      ],
+      "name": "floral"
+    },
+    {
+      "colour": "#F08A4B",
+      "labels": [
+        "fruit"
+      ],
+      "name": "fruity"
+    },
+    {
+      "colour": "#EAD9B0",
+      "labels": [
+        "sweet",
+        "bakery"
+      ],
+      "name": "sweet"
+    },
+    {
+      "colour": "#B98250",
+      "labels": [
+        "wood"
+      ],
+      "name": "woody"
+    },
+    {
+      "colour": "#B9A3C9",
+      "labels": [
+        "musky",
+        "sweaty"
+      ],
+      "name": "musky"
+    },
+    {
+      "colour": "#E0644A",
+      "labels": [
+        "spices",
+        "warm"
+      ],
+      "name": "spicy"
+    },
+    {
+      "colour": "#A9DCC9",
+      "labels": [
+        "cold"
+      ],
+      "name": "fresh"
+    },
+    {
+      "colour": "#A8714C",
+      "labels": [
+        "burnt"
+      ],
+      "name": "roasted"
+    },
+    {
+      "colour": "#B5B84A",
+      "labels": [
+        "garlic",
+        "fish",
+        "ammonia/urinous",
+        "decayed"
+      ],
+      "name": "savory"
+    },
+    {
+      "colour": "#9AA3AD",
+      "labels": [
+        "sour",
+        "acid",
+        "chemical"
+      ],
+      "name": "waxy"
+    }
+  ],
+  "labels": [
+    "edible",
+    "bakery",
+    "sweet",
+    "fruit",
+    "fish",
+    "garlic",
+    "spices",
+    "cold",
+    "sour",
+    "burnt",
+    "acid",
+    "warm",
+    "musky",
+    "sweaty",
+    "ammonia/urinous",
+    "decayed",
+    "wood",
+    "grass",
+    "flower",
+    "chemical"
+  ],
+  "model": {
+    "id": "smellcule-open",
+    "licence": "CC-BY-4.0",
+    "revision": "a7cb1a8c914e85fcbf3bc6246532b1948bab106f228cc5a7894d7d41dac1d2b4"
+  },
+  "molecules": [
+    {
+      "cas": "123-08-0",
+      "casCheckDigit": "passes",
+      "formula": "C7H6O2",
+      "id": "0",
+      "measured": [
+        8,
+        15,
+        19
+      ],
+      "name": "4-Hydroxybenzaldehyde",
+      "nearestTrainSimilarity": 0.5,
+      "neighbours": [
+        {
+          "id": "8",
+          "odour": 0.995742,
+          "structure": 0.2
+        },
+        {
+          "id": "21",
+          "odour": 0.991695,
+          "structure": 0.172414
+        },
+        {
+          "id": "6",
+          "odour": 0.988621,
+          "structure": 0.5
+        },
+        {
+          "id": "38",
+          "odour": 0.98743,
+          "structure": 0.413793
+        },
+        {
+          "id": "39",
+          "odour": 0.975342,
+          "structure": 0.157895
+        },
+        {
+          "id": "15",
+          "odour": 0.974516,
+          "structure": 0.125
+        },
+        {
+          "id": "17",
+          "odour": 0.971038,
+          "structure": 0.458333
+        },
+        {
+          "id": "9",
+          "odour": 0.966241,
+          "structure": 0.153846
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "64-19-7",
+      "casCheckDigit": "passes",
+      "formula": "C2H4O2",
+      "id": "1",
+      "measured": [
+        14,
+        15,
+        18
+      ],
+      "name": "acetic acid",
+      "nearestTrainSimilarity": 0.625,
+      "neighbours": [
+        {
+          "id": "37",
+          "odour": 0.987404,
+          "structure": 0.416667
+        },
+        {
+          "id": "13",
+          "odour": 0.975135,
+          "structure": 0.333333
+        },
+        {
+          "id": "2",
+          "odour": 0.964101,
+          "structure": 0.181818
+        },
+        {
+          "id": "26",
+          "odour": 0.952759,
+          "structure": 0.307692
+        },
+        {
+          "id": "5",
+          "odour": 0.948313,
+          "structure": 0.25
+        },
+        {
+          "id": "3",
+          "odour": 0.944894,
+          "structure": 0.625
+        },
+        {
+          "id": "22",
+          "odour": 0.942617,
+          "structure": 0.555556
+        },
+        {
+          "id": "10",
+          "odour": 0.94253,
+          "structure": 0.117647
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "75-07-0",
+      "casCheckDigit": "passes",
+      "formula": "C2H4O",
+      "id": "2",
+      "measured": [
+        8,
+        17,
+        18
+      ],
+      "name": "acetaldehyde",
+      "nearestTrainSimilarity": 0.363636,
+      "neighbours": [
+        {
+          "id": "3",
+          "odour": 0.978556,
+          "structure": 0.2
+        },
+        {
+          "id": "10",
+          "odour": 0.972995,
+          "structure": 0.285714
+        },
+        {
+          "id": "37",
+          "odour": 0.967119,
+          "structure": 0.142857
+        },
+        {
+          "id": "1",
+          "odour": 0.964101,
+          "structure": 0.181818
+        },
+        {
+          "id": "13",
+          "odour": 0.954698,
+          "structure": 0.117647
+        },
+        {
+          "id": "25",
+          "odour": 0.950265,
+          "structure": 0.090909
+        },
+        {
+          "id": "36",
+          "odour": 0.949691,
+          "structure": 0.076923
+        },
+        {
+          "id": "12",
+          "odour": 0.938575,
+          "structure": 0.0625
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "67-64-1",
+      "casCheckDigit": "passes",
+      "formula": "C3H6O",
+      "id": "3",
+      "measured": [
+        12,
+        16,
+        17
+      ],
+      "name": "acetone",
+      "nearestTrainSimilarity": 0.5,
+      "neighbours": [
+        {
+          "id": "2",
+          "odour": 0.978556,
+          "structure": 0.2
+        },
+        {
+          "id": "10",
+          "odour": 0.966378,
+          "structure": 0.125
+        },
+        {
+          "id": "22",
+          "odour": 0.961355,
+          "structure": 0.625
+        },
+        {
+          "id": "37",
+          "odour": 0.952195,
+          "structure": 0.333333
+        },
+        {
+          "id": "36",
+          "odour": 0.945129,
+          "structure": 0.166667
+        },
+        {
+          "id": "1",
+          "odour": 0.944894,
+          "structure": 0.625
+        },
+        {
+          "id": "13",
+          "odour": 0.94246,
+          "structure": 0.266667
+        },
+        {
+          "id": "12",
+          "odour": 0.939448,
+          "structure": 0.133333
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "124-04-9",
+      "casCheckDigit": "passes",
+      "formula": "C6H10O4",
+      "id": "4",
+      "measured": [
+        8,
+        10,
+        15
+      ],
+      "name": "Adipic acid",
+      "nearestTrainSimilarity": 0.6875,
+      "neighbours": [
+        {
+          "id": "5",
+          "odour": 0.947242,
+          "structure": 0.5
+        },
+        {
+          "id": "19",
+          "odour": 0.94332,
+          "structure": 0.647059
+        },
+        {
+          "id": "13",
+          "odour": 0.941142,
+          "structure": 0.5
+        },
+        {
+          "id": "14",
+          "odour": 0.941037,
+          "structure": 0.3
+        },
+        {
+          "id": "29",
+          "odour": 0.935094,
+          "structure": 0.235294
+        },
+        {
+          "id": "26",
+          "odour": 0.931799,
+          "structure": 0.4
+        },
+        {
+          "id": "37",
+          "odour": 0.92947,
+          "structure": 0.4
+        },
+        {
+          "id": "33",
+          "odour": 0.925002,
+          "structure": 0.178571
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "107-95-9",
+      "casCheckDigit": "passes",
+      "formula": "C3H7NO2",
+      "id": "5",
+      "measured": [
+        4,
+        8,
+        19
+      ],
+      "name": "beta-Alanine",
+      "nearestTrainSimilarity": 0.5,
+      "neighbours": [
+        {
+          "id": "26",
+          "odour": 0.994174,
+          "structure": 0.533333
+        },
+        {
+          "id": "13",
+          "odour": 0.955396,
+          "structure": 0.444444
+        },
+        {
+          "id": "37",
+          "odour": 0.951631,
+          "structure": 0.352941
+        },
+        {
+          "id": "1",
+          "odour": 0.948313,
+          "structure": 0.25
+        },
+        {
+          "id": "4",
+          "odour": 0.947242,
+          "structure": 0.5
+        },
+        {
+          "id": "19",
+          "odour": 0.92467,
+          "structure": 0.363636
+        },
+        {
+          "id": "33",
+          "odour": 0.915025,
+          "structure": 0.25
+        },
+        {
+          "id": "10",
+          "odour": 0.908192,
+          "structure": 0.086957
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "100-52-7",
+      "casCheckDigit": "passes",
+      "formula": "C7H6O",
+      "id": "6",
+      "measured": [
+        0,
+        1,
+        19
+      ],
+      "name": "benzaldehyde",
+      "nearestTrainSimilarity": 0.5,
+      "neighbours": [
+        {
+          "id": "21",
+          "odour": 0.991171,
+          "structure": 0.185185
+        },
+        {
+          "id": "0",
+          "odour": 0.988621,
+          "structure": 0.5
+        },
+        {
+          "id": "8",
+          "odour": 0.983087,
+          "structure": 0.333333
+        },
+        {
+          "id": "9",
+          "odour": 0.980633,
+          "structure": 0.272727
+        },
+        {
+          "id": "15",
+          "odour": 0.980228,
+          "structure": 0.214286
+        },
+        {
+          "id": "38",
+          "odour": 0.974451,
+          "structure": 0.3
+        },
+        {
+          "id": "17",
+          "odour": 0.974363,
+          "structure": 0.434783
+        },
+        {
+          "id": "23",
+          "odour": 0.972918,
+          "structure": 0.2
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "71-43-2",
+      "casCheckDigit": "passes",
+      "formula": "C6H6",
+      "id": "7",
+      "measured": [
+        0,
+        5,
+        14
+      ],
+      "name": "Benzene",
+      "nearestTrainSimilarity": 0.222222,
+      "neighbours": [
+        {
+          "id": "6",
+          "odour": 0.963706,
+          "structure": 0.214286
+        },
+        {
+          "id": "9",
+          "odour": 0.962744,
+          "structure": 0.214286
+        },
+        {
+          "id": "21",
+          "odour": 0.94925,
+          "structure": 0.105263
+        },
+        {
+          "id": "0",
+          "odour": 0.94027,
+          "structure": 0.055556
+        },
+        {
+          "id": "34",
+          "odour": 0.936827,
+          "structure": 0.1875
+        },
+        {
+          "id": "8",
+          "odour": 0.934025,
+          "structure": 0.214286
+        },
+        {
+          "id": "15",
+          "odour": 0.93395,
+          "structure": 0.095238
+        },
+        {
+          "id": "23",
+          "odour": 0.921592,
+          "structure": 0.086957
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "65-85-0",
+      "casCheckDigit": "passes",
+      "formula": "C7H6O2",
+      "id": "8",
+      "measured": [
+        1,
+        6,
+        18
+      ],
+      "name": "Benzoic acid",
+      "nearestTrainSimilarity": 0.578947,
+      "neighbours": [
+        {
+          "id": "0",
+          "odour": 0.995742,
+          "structure": 0.2
+        },
+        {
+          "id": "21",
+          "odour": 0.983939,
+          "structure": 0.230769
+        },
+        {
+          "id": "6",
+          "odour": 0.983087,
+          "structure": 0.333333
+        },
+        {
+          "id": "38",
+          "odour": 0.981668,
+          "structure": 0.147059
+        },
+        {
+          "id": "15",
+          "odour": 0.967655,
+          "structure": 0.214286
+        },
+        {
+          "id": "39",
+          "odour": 0.966488,
+          "structure": 0.105263
+        },
+        {
+          "id": "17",
+          "odour": 0.962397,
+          "structure": 0.137931
+        },
+        {
+          "id": "9",
+          "odour": 0.958437,
+          "structure": 0.333333
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "100-51-6",
+      "casCheckDigit": "passes",
+      "formula": "C7H8O",
+      "id": "9",
+      "measured": [
+        2,
+        18,
+        19
+      ],
+      "name": "benzyl alcohol",
+      "nearestTrainSimilarity": 0.47619,
+      "neighbours": [
+        {
+          "id": "21",
+          "odour": 0.981257,
+          "structure": 0.230769
+        },
+        {
+          "id": "6",
+          "odour": 0.980633,
+          "structure": 0.272727
+        },
+        {
+          "id": "16",
+          "odour": 0.976818,
+          "structure": 0.434783
+        },
+        {
+          "id": "17",
+          "odour": 0.967523,
+          "structure": 0.1
+        },
+        {
+          "id": "23",
+          "odour": 0.967348,
+          "structure": 0.16129
+        },
+        {
+          "id": "15",
+          "odour": 0.966408,
+          "structure": 0.172414
+        },
+        {
+          "id": "0",
+          "odour": 0.966241,
+          "structure": 0.153846
+        },
+        {
+          "id": "7",
+          "odour": 0.962744,
+          "structure": 0.214286
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "123-72-8",
+      "casCheckDigit": "passes",
+      "formula": "C4H8O",
+      "id": "10",
+      "measured": [
+        8,
+        12,
+        19
+      ],
+      "name": "butyraldehyde",
+      "nearestTrainSimilarity": 0.588235,
+      "neighbours": [
+        {
+          "id": "13",
+          "odour": 0.977471,
+          "structure": 0.25
+        },
+        {
+          "id": "12",
+          "odour": 0.976007,
+          "structure": 0.210526
+        },
+        {
+          "id": "37",
+          "odour": 0.974262,
+          "structure": 0.222222
+        },
+        {
+          "id": "2",
+          "odour": 0.972995,
+          "structure": 0.285714
+        },
+        {
+          "id": "36",
+          "odour": 0.970684,
+          "structure": 0.25
+        },
+        {
+          "id": "3",
+          "odour": 0.966378,
+          "structure": 0.125
+        },
+        {
+          "id": "20",
+          "odour": 0.958732,
+          "structure": 0.555556
+        },
+        {
+          "id": "25",
+          "odour": 0.943438,
+          "structure": 0.2
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "513-85-9",
+      "casCheckDigit": "passes",
+      "formula": "C4H10O2",
+      "id": "11",
+      "measured": [
+        0,
+        11,
+        15
+      ],
+      "name": "butanediol",
+      "nearestTrainSimilarity": 0.545455,
+      "neighbours": [
+        {
+          "id": "35",
+          "odour": 0.98178,
+          "structure": 0.416667
+        },
+        {
+          "id": "27",
+          "odour": 0.976574,
+          "structure": 0.230769
+        },
+        {
+          "id": "12",
+          "odour": 0.916382,
+          "structure": 0.125
+        },
+        {
+          "id": "13",
+          "odour": 0.913947,
+          "structure": 0.111111
+        },
+        {
+          "id": "36",
+          "odour": 0.908939,
+          "structure": 0.153846
+        },
+        {
+          "id": "37",
+          "odour": 0.908237,
+          "structure": 0.133333
+        },
+        {
+          "id": "19",
+          "odour": 0.905296,
+          "structure": 0.090909
+        },
+        {
+          "id": "1",
+          "odour": 0.901564,
+          "structure": 0.166667
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "71-36-3",
+      "casCheckDigit": "passes",
+      "formula": "C4H10O",
+      "id": "12",
+      "measured": [
+        5,
+        8,
+        14
+      ],
+      "name": "butanol",
+      "nearestTrainSimilarity": 0.388889,
+      "neighbours": [
+        {
+          "id": "36",
+          "odour": 0.993027,
+          "structure": 0.583333
+        },
+        {
+          "id": "10",
+          "odour": 0.976007,
+          "structure": 0.210526
+        },
+        {
+          "id": "18",
+          "odour": 0.969396,
+          "structure": 0.461538
+        },
+        {
+          "id": "25",
+          "odour": 0.964381,
+          "structure": 0.416667
+        },
+        {
+          "id": "35",
+          "odour": 0.961814,
+          "structure": 0.235294
+        },
+        {
+          "id": "31",
+          "odour": 0.959224,
+          "structure": 0.714286
+        },
+        {
+          "id": "20",
+          "odour": 0.955006,
+          "structure": 0.285714
+        },
+        {
+          "id": "3",
+          "odour": 0.939448,
+          "structure": 0.133333
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "107-92-6",
+      "casCheckDigit": "passes",
+      "formula": "C4H8O2",
+      "id": "13",
+      "measured": [
+        5,
+        8,
+        17
+      ],
+      "name": "butyric acid",
+      "nearestTrainSimilarity": 0.5,
+      "neighbours": [
+        {
+          "id": "37",
+          "odour": 0.996117,
+          "structure": 0.533333
+        },
+        {
+          "id": "10",
+          "odour": 0.977471,
+          "structure": 0.25
+        },
+        {
+          "id": "1",
+          "odour": 0.975135,
+          "structure": 0.333333
+        },
+        {
+          "id": "19",
+          "odour": 0.960983,
+          "structure": 0.578947
+        },
+        {
+          "id": "5",
+          "odour": 0.955396,
+          "structure": 0.444444
+        },
+        {
+          "id": "2",
+          "odour": 0.954698,
+          "structure": 0.117647
+        },
+        {
+          "id": "22",
+          "odour": 0.950748,
+          "structure": 0.25
+        },
+        {
+          "id": "20",
+          "odour": 0.945071,
+          "structure": 0.208333
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "77-92-9",
+      "casCheckDigit": "passes",
+      "formula": "C6H8O7",
+      "id": "14",
+      "measured": [
+        6,
+        7,
+        8
+      ],
+      "name": "Citric acid",
+      "nearestTrainSimilarity": 0.272727,
+      "neighbours": [
+        {
+          "id": "29",
+          "odour": 0.979803,
+          "structure": 0.190476
+        },
+        {
+          "id": "4",
+          "odour": 0.941037,
+          "structure": 0.3
+        },
+        {
+          "id": "33",
+          "odour": 0.875177,
+          "structure": 0.15625
+        },
+        {
+          "id": "5",
+          "odour": 0.858009,
+          "structure": 0.272727
+        },
+        {
+          "id": "26",
+          "odour": 0.854338,
+          "structure": 0.315789
+        },
+        {
+          "id": "19",
+          "odour": 0.81821,
+          "structure": 0.230769
+        },
+        {
+          "id": "1",
+          "odour": 0.815531,
+          "structure": 0.222222
+        },
+        {
+          "id": "13",
+          "odour": 0.812762,
+          "structure": 0.272727
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "91-64-5",
+      "casCheckDigit": "passes",
+      "formula": "C9H6O2",
+      "id": "15",
+      "measured": [
+        2,
+        11,
+        18
+      ],
+      "name": "coumarin",
+      "nearestTrainSimilarity": 0.258065,
+      "neighbours": [
+        {
+          "id": "23",
+          "odour": 0.991903,
+          "structure": 0.235294
+        },
+        {
+          "id": "21",
+          "odour": 0.981652,
+          "structure": 0.151515
+        },
+        {
+          "id": "6",
+          "odour": 0.980228,
+          "structure": 0.214286
+        },
+        {
+          "id": "0",
+          "odour": 0.974516,
+          "structure": 0.125
+        },
+        {
+          "id": "17",
+          "odour": 0.974031,
+          "structure": 0.114286
+        },
+        {
+          "id": "39",
+          "odour": 0.972254,
+          "structure": 0.090909
+        },
+        {
+          "id": "38",
+          "odour": 0.971471,
+          "structure": 0.097561
+        },
+        {
+          "id": "8",
+          "odour": 0.967655,
+          "structure": 0.214286
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "536-60-7",
+      "casCheckDigit": "passes",
+      "formula": "C10H14O",
+      "id": "16",
+      "measured": [
+        0,
+        6,
+        10
+      ],
+      "name": "4-Isopropylbenzyl alcohol",
+      "nearestTrainSimilarity": 0.37931,
+      "neighbours": [
+        {
+          "id": "17",
+          "odour": 0.985,
+          "structure": 0.407407
+        },
+        {
+          "id": "9",
+          "odour": 0.976818,
+          "structure": 0.434783
+        },
+        {
+          "id": "39",
+          "odour": 0.972254,
+          "structure": 0.205128
+        },
+        {
+          "id": "21",
+          "odour": 0.967372,
+          "structure": 0.15625
+        },
+        {
+          "id": "23",
+          "odour": 0.957836,
+          "structure": 0.078947
+        },
+        {
+          "id": "15",
+          "odour": 0.953241,
+          "structure": 0.083333
+        },
+        {
+          "id": "38",
+          "odour": 0.951209,
+          "structure": 0.128205
+        },
+        {
+          "id": "6",
+          "odour": 0.950902,
+          "structure": 0.1
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "122-03-2",
+      "casCheckDigit": "passes",
+      "formula": "C10H12O",
+      "id": "17",
+      "measured": [
+        0,
+        11,
+        16
+      ],
+      "name": "cuminaldehyde",
+      "nearestTrainSimilarity": 0.461538,
+      "neighbours": [
+        {
+          "id": "39",
+          "odour": 0.990908,
+          "structure": 0.119048
+        },
+        {
+          "id": "16",
+          "odour": 0.985,
+          "structure": 0.407407
+        },
+        {
+          "id": "21",
+          "odour": 0.984025,
+          "structure": 0.121212
+        },
+        {
+          "id": "38",
+          "odour": 0.981973,
+          "structure": 0.333333
+        },
+        {
+          "id": "6",
+          "odour": 0.974363,
+          "structure": 0.434783
+        },
+        {
+          "id": "15",
+          "odour": 0.974031,
+          "structure": 0.114286
+        },
+        {
+          "id": "23",
+          "odour": 0.971476,
+          "structure": 0.108108
+        },
+        {
+          "id": "0",
+          "odour": 0.971038,
+          "structure": 0.458333
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "111-65-9",
+      "casCheckDigit": "passes",
+      "formula": "C8H18",
+      "id": "18",
+      "measured": [
+        2,
+        5,
+        19
+      ],
+      "name": "Octane",
+      "nearestTrainSimilarity": 0.375,
+      "neighbours": [
+        {
+          "id": "31",
+          "odour": 0.986048,
+          "structure": 0.615385
+        },
+        {
+          "id": "20",
+          "odour": 0.976907,
+          "structure": 0.5
+        },
+        {
+          "id": "12",
+          "odour": 0.969396,
+          "structure": 0.461538
+        },
+        {
+          "id": "36",
+          "odour": 0.945648,
+          "structure": 0.333333
+        },
+        {
+          "id": "10",
+          "odour": 0.943368,
+          "structure": 0.25
+        },
+        {
+          "id": "19",
+          "odour": 0.933595,
+          "structure": 0.470588
+        },
+        {
+          "id": "9",
+          "odour": 0.924316,
+          "structure": 0.047619
+        },
+        {
+          "id": "16",
+          "odour": 0.912015,
+          "structure": 0.08
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "124-07-2",
+      "casCheckDigit": "passes",
+      "formula": "C8H16O2",
+      "id": "19",
+      "measured": [
+        3,
+        15,
+        19
+      ],
+      "name": "Octanoic acid",
+      "nearestTrainSimilarity": 0.578947,
+      "neighbours": [
+        {
+          "id": "20",
+          "odour": 0.982182,
+          "structure": 0.375
+        },
+        {
+          "id": "13",
+          "odour": 0.960983,
+          "structure": 0.578947
+        },
+        {
+          "id": "31",
+          "odour": 0.950044,
+          "structure": 0.428571
+        },
+        {
+          "id": "4",
+          "odour": 0.94332,
+          "structure": 0.647059
+        },
+        {
+          "id": "37",
+          "odour": 0.937521,
+          "structure": 0.421053
+        },
+        {
+          "id": "10",
+          "odour": 0.937406,
+          "structure": 0.208333
+        },
+        {
+          "id": "18",
+          "odour": 0.933595,
+          "structure": 0.470588
+        },
+        {
+          "id": "5",
+          "odour": 0.92467,
+          "structure": 0.363636
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "124-13-0",
+      "casCheckDigit": "passes",
+      "formula": "C8H16O",
+      "id": "20",
+      "measured": [
+        6,
+        11,
+        12
+      ],
+      "name": "octanal",
+      "nearestTrainSimilarity": 0.764706,
+      "neighbours": [
+        {
+          "id": "19",
+          "odour": 0.982182,
+          "structure": 0.375
+        },
+        {
+          "id": "31",
+          "odour": 0.980752,
+          "structure": 0.380952
+        },
+        {
+          "id": "18",
+          "odour": 0.976907,
+          "structure": 0.5
+        },
+        {
+          "id": "10",
+          "odour": 0.958732,
+          "structure": 0.555556
+        },
+        {
+          "id": "12",
+          "odour": 0.955006,
+          "structure": 0.285714
+        },
+        {
+          "id": "13",
+          "odour": 0.945071,
+          "structure": 0.208333
+        },
+        {
+          "id": "9",
+          "odour": 0.931824,
+          "structure": 0.034483
+        },
+        {
+          "id": "36",
+          "odour": 0.928627,
+          "structure": 0.2
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "90-05-1",
+      "casCheckDigit": "passes",
+      "formula": "C7H8O2",
+      "id": "21",
+      "measured": [
+        6,
+        7,
+        19
+      ],
+      "name": "Guaiacol",
+      "nearestTrainSimilarity": 0.393939,
+      "neighbours": [
+        {
+          "id": "0",
+          "odour": 0.991695,
+          "structure": 0.172414
+        },
+        {
+          "id": "6",
+          "odour": 0.991171,
+          "structure": 0.185185
+        },
+        {
+          "id": "38",
+          "odour": 0.986676,
+          "structure": 0.433333
+        },
+        {
+          "id": "17",
+          "odour": 0.984025,
+          "structure": 0.121212
+        },
+        {
+          "id": "8",
+          "odour": 0.983939,
+          "structure": 0.230769
+        },
+        {
+          "id": "39",
+          "odour": 0.983715,
+          "structure": 0.393939
+        },
+        {
+          "id": "15",
+          "odour": 0.981652,
+          "structure": 0.151515
+        },
+        {
+          "id": "9",
+          "odour": 0.981257,
+          "structure": 0.230769
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "431-03-8",
+      "casCheckDigit": "passes",
+      "formula": "C4H6O2",
+      "id": "22",
+      "measured": [
+        3,
+        9,
+        11
+      ],
+      "name": "2,3-butanedione",
+      "nearestTrainSimilarity": 0.6,
+      "neighbours": [
+        {
+          "id": "3",
+          "odour": 0.961355,
+          "structure": 0.625
+        },
+        {
+          "id": "37",
+          "odour": 0.956881,
+          "structure": 0.307692
+        },
+        {
+          "id": "13",
+          "odour": 0.950748,
+          "structure": 0.25
+        },
+        {
+          "id": "1",
+          "odour": 0.942617,
+          "structure": 0.555556
+        },
+        {
+          "id": "10",
+          "odour": 0.939168,
+          "structure": 0.117647
+        },
+        {
+          "id": "2",
+          "odour": 0.930008,
+          "structure": 0.181818
+        },
+        {
+          "id": "38",
+          "odour": 0.909517,
+          "structure": 0.103448
+        },
+        {
+          "id": "6",
+          "odour": 0.907964,
+          "structure": 0.05
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "119-84-6",
+      "casCheckDigit": "passes",
+      "formula": "C9H8O2",
+      "id": "23",
+      "measured": [
+        2,
+        11,
+        12
+      ],
+      "name": "Dihydrocoumarin",
+      "nearestTrainSimilarity": 0.235294,
+      "neighbours": [
+        {
+          "id": "15",
+          "odour": 0.991903,
+          "structure": 0.235294
+        },
+        {
+          "id": "21",
+          "odour": 0.976009,
+          "structure": 0.142857
+        },
+        {
+          "id": "6",
+          "odour": 0.972918,
+          "structure": 0.2
+        },
+        {
+          "id": "17",
+          "odour": 0.971476,
+          "structure": 0.108108
+        },
+        {
+          "id": "39",
+          "odour": 0.971436,
+          "structure": 0.06383
+        },
+        {
+          "id": "9",
+          "odour": 0.967348,
+          "structure": 0.16129
+        },
+        {
+          "id": "38",
+          "odour": 0.965108,
+          "structure": 0.093023
+        },
+        {
+          "id": "0",
+          "odour": 0.961862,
+          "structure": 0.117647
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "67-68-5",
+      "casCheckDigit": "passes",
+      "formula": "C2H6OS",
+      "id": "24",
+      "measured": [
+        4,
+        9,
+        19
+      ],
+      "name": "Methyl sulfoxide",
+      "nearestTrainSimilarity": 0.2,
+      "neighbours": [
+        {
+          "id": "26",
+          "odour": 0.849725,
+          "structure": 0.066667
+        },
+        {
+          "id": "5",
+          "odour": 0.835507,
+          "structure": 0.055556
+        },
+        {
+          "id": "11",
+          "odour": 0.815549,
+          "structure": 0.083333
+        },
+        {
+          "id": "1",
+          "odour": 0.807803,
+          "structure": 0.181818
+        },
+        {
+          "id": "35",
+          "odour": 0.79202,
+          "structure": 0.066667
+        },
+        {
+          "id": "27",
+          "odour": 0.790532,
+          "structure": 0.0
+        },
+        {
+          "id": "29",
+          "odour": 0.783213,
+          "structure": 0.066667
+        },
+        {
+          "id": "37",
+          "odour": 0.770883,
+          "structure": 0.142857
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "64-17-5",
+      "casCheckDigit": "passes",
+      "formula": "C2H6O",
+      "id": "25",
+      "measured": [
+        5,
+        12,
+        19
+      ],
+      "name": "ethanol",
+      "nearestTrainSimilarity": 0.416667,
+      "neighbours": [
+        {
+          "id": "36",
+          "odour": 0.986143,
+          "structure": 0.555556
+        },
+        {
+          "id": "12",
+          "odour": 0.964381,
+          "structure": 0.416667
+        },
+        {
+          "id": "2",
+          "odour": 0.950265,
+          "structure": 0.090909
+        },
+        {
+          "id": "30",
+          "odour": 0.949076,
+          "structure": 0.285714
+        },
+        {
+          "id": "35",
+          "odour": 0.946231,
+          "structure": 0.333333
+        },
+        {
+          "id": "10",
+          "odour": 0.943438,
+          "structure": 0.2
+        },
+        {
+          "id": "3",
+          "odour": 0.938827,
+          "structure": 0.2
+        },
+        {
+          "id": "37",
+          "odour": 0.907816,
+          "structure": 0.333333
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "56-40-6",
+      "casCheckDigit": "passes",
+      "formula": "C2H5NO2",
+      "id": "26",
+      "measured": [
+        2,
+        14,
+        18
+      ],
+      "name": "Glycine",
+      "nearestTrainSimilarity": 0.533333,
+      "neighbours": [
+        {
+          "id": "5",
+          "odour": 0.994174,
+          "structure": 0.533333
+        },
+        {
+          "id": "1",
+          "odour": 0.952759,
+          "structure": 0.307692
+        },
+        {
+          "id": "37",
+          "odour": 0.946002,
+          "structure": 0.428571
+        },
+        {
+          "id": "13",
+          "odour": 0.942754,
+          "structure": 0.352941
+        },
+        {
+          "id": "4",
+          "odour": 0.931799,
+          "structure": 0.4
+        },
+        {
+          "id": "2",
+          "odour": 0.899978,
+          "structure": 0.066667
+        },
+        {
+          "id": "33",
+          "odour": 0.895551,
+          "structure": 0.230769
+        },
+        {
+          "id": "19",
+          "odour": 0.894177,
+          "structure": 0.285714
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "56-81-5",
+      "casCheckDigit": "passes",
+      "formula": "C3H8O3",
+      "id": "27",
+      "measured": [
+        7,
+        9,
+        15
+      ],
+      "name": "glycerol",
+      "nearestTrainSimilarity": 0.357143,
+      "neighbours": [
+        {
+          "id": "35",
+          "odour": 0.985245,
+          "structure": 0.461538
+        },
+        {
+          "id": "11",
+          "odour": 0.976574,
+          "structure": 0.230769
+        },
+        {
+          "id": "12",
+          "odour": 0.927463,
+          "structure": 0.176471
+        },
+        {
+          "id": "36",
+          "odour": 0.918953,
+          "structure": 0.214286
+        },
+        {
+          "id": "13",
+          "odour": 0.917873,
+          "structure": 0.1
+        },
+        {
+          "id": "19",
+          "odour": 0.915616,
+          "structure": 0.083333
+        },
+        {
+          "id": "31",
+          "odour": 0.912287,
+          "structure": 0.157895
+        },
+        {
+          "id": "37",
+          "odour": 0.907785,
+          "structure": 0.117647
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "7553-56-2",
+      "casCheckDigit": "passes",
+      "formula": "I2",
+      "id": "28",
+      "measured": [
+        5,
+        15,
+        19
+      ],
+      "name": "Iodine",
+      "nearestTrainSimilarity": 0.2,
+      "neighbours": [
+        {
+          "id": "30",
+          "odour": 0.730193,
+          "structure": 0.0
+        },
+        {
+          "id": "25",
+          "odour": 0.716107,
+          "structure": 0.0
+        },
+        {
+          "id": "2",
+          "odour": 0.708464,
+          "structure": 0.0
+        },
+        {
+          "id": "36",
+          "odour": 0.692883,
+          "structure": 0.0
+        },
+        {
+          "id": "12",
+          "odour": 0.674044,
+          "structure": 0.0
+        },
+        {
+          "id": "10",
+          "odour": 0.673335,
+          "structure": 0.0
+        },
+        {
+          "id": "1",
+          "odour": 0.672924,
+          "structure": 0.0
+        },
+        {
+          "id": "37",
+          "odour": 0.667261,
+          "structure": 0.0
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "133-37-9",
+      "casCheckDigit": "passes",
+      "formula": "C4H6O6",
+      "id": "29",
+      "measured": [
+        5,
+        8,
+        10
+      ],
+      "name": "DL-Tartaric acid",
+      "nearestTrainSimilarity": 0.307692,
+      "neighbours": [
+        {
+          "id": "14",
+          "odour": 0.979803,
+          "structure": 0.190476
+        },
+        {
+          "id": "4",
+          "odour": 0.935094,
+          "structure": 0.235294
+        },
+        {
+          "id": "26",
+          "odour": 0.877728,
+          "structure": 0.25
+        },
+        {
+          "id": "5",
+          "odour": 0.876547,
+          "structure": 0.210526
+        },
+        {
+          "id": "33",
+          "odour": 0.868814,
+          "structure": 0.230769
+        },
+        {
+          "id": "1",
+          "odour": 0.848682,
+          "structure": 0.307692
+        },
+        {
+          "id": "27",
+          "odour": 0.834706,
+          "structure": 0.1875
+        },
+        {
+          "id": "11",
+          "odour": 0.832645,
+          "structure": 0.214286
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "67-56-1",
+      "casCheckDigit": "passes",
+      "formula": "CH4O",
+      "id": "30",
+      "measured": [
+        5,
+        9,
+        17
+      ],
+      "name": "methanol",
+      "nearestTrainSimilarity": 0.285714,
+      "neighbours": [
+        {
+          "id": "25",
+          "odour": 0.949076,
+          "structure": 0.285714
+        },
+        {
+          "id": "36",
+          "odour": 0.893406,
+          "structure": 0.222222
+        },
+        {
+          "id": "2",
+          "odour": 0.888108,
+          "structure": 0.125
+        },
+        {
+          "id": "35",
+          "odour": 0.873499,
+          "structure": 0.181818
+        },
+        {
+          "id": "3",
+          "odour": 0.867177,
+          "structure": 0.285714
+        },
+        {
+          "id": "12",
+          "odour": 0.855453,
+          "structure": 0.166667
+        },
+        {
+          "id": "10",
+          "odour": 0.833986,
+          "structure": 0.071429
+        },
+        {
+          "id": "11",
+          "odour": 0.827355,
+          "structure": 0.25
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "111-87-5",
+      "casCheckDigit": "passes",
+      "formula": "C8H18O",
+      "id": "31",
+      "measured": [
+        7,
+        8,
+        12
+      ],
+      "name": "octanol",
+      "nearestTrainSimilarity": 0.35,
+      "neighbours": [
+        {
+          "id": "18",
+          "odour": 0.986048,
+          "structure": 0.615385
+        },
+        {
+          "id": "20",
+          "odour": 0.980752,
+          "structure": 0.380952
+        },
+        {
+          "id": "12",
+          "odour": 0.959224,
+          "structure": 0.714286
+        },
+        {
+          "id": "19",
+          "odour": 0.950044,
+          "structure": 0.428571
+        },
+        {
+          "id": "36",
+          "odour": 0.930022,
+          "structure": 0.5
+        },
+        {
+          "id": "35",
+          "odour": 0.923131,
+          "structure": 0.210526
+        },
+        {
+          "id": "10",
+          "odour": 0.923127,
+          "structure": 0.190476
+        },
+        {
+          "id": "9",
+          "odour": 0.919744,
+          "structure": 0.125
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "7732-18-5",
+      "casCheckDigit": "passes",
+      "formula": "H2O",
+      "id": "32",
+      "measured": [
+        0,
+        1,
+        3
+      ],
+      "name": "Water",
+      "nearestTrainSimilarity": 0.0,
+      "neighbours": [
+        {
+          "id": "25",
+          "odour": 0.410694,
+          "structure": 0.0
+        },
+        {
+          "id": "30",
+          "odour": 0.410499,
+          "structure": 0.0
+        },
+        {
+          "id": "36",
+          "odour": 0.39717,
+          "structure": 0.0
+        },
+        {
+          "id": "2",
+          "odour": 0.392012,
+          "structure": 0.0
+        },
+        {
+          "id": "3",
+          "odour": 0.387462,
+          "structure": 0.0
+        },
+        {
+          "id": "12",
+          "odour": 0.383295,
+          "structure": 0.0
+        },
+        {
+          "id": "10",
+          "odour": 0.381051,
+          "structure": 0.0
+        },
+        {
+          "id": "35",
+          "odour": 0.378885,
+          "structure": 0.0
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "150-30-1",
+      "casCheckDigit": "passes",
+      "formula": "C9H11NO2",
+      "id": "33",
+      "measured": [
+        9,
+        12,
+        16
+      ],
+      "name": "DL-Phenylalanine",
+      "nearestTrainSimilarity": 0.444444,
+      "neighbours": [
+        {
+          "id": "8",
+          "odour": 0.938601,
+          "structure": 0.333333
+        },
+        {
+          "id": "34",
+          "odour": 0.928487,
+          "structure": 0.357143
+        },
+        {
+          "id": "0",
+          "odour": 0.925987,
+          "structure": 0.151515
+        },
+        {
+          "id": "4",
+          "odour": 0.925002,
+          "structure": 0.178571
+        },
+        {
+          "id": "5",
+          "odour": 0.915025,
+          "structure": 0.25
+        },
+        {
+          "id": "38",
+          "odour": 0.910514,
+          "structure": 0.146341
+        },
+        {
+          "id": "39",
+          "odour": 0.90334,
+          "structure": 0.136364
+        },
+        {
+          "id": "19",
+          "odour": 0.902753,
+          "structure": 0.147059
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "64-04-0",
+      "casCheckDigit": "passes",
+      "formula": "C8H11N",
+      "id": "34",
+      "measured": [
+        8,
+        12,
+        19
+      ],
+      "name": "Phenethylamine",
+      "nearestTrainSimilarity": 0.545455,
+      "neighbours": [
+        {
+          "id": "9",
+          "odour": 0.953513,
+          "structure": 0.428571
+        },
+        {
+          "id": "7",
+          "odour": 0.936827,
+          "structure": 0.1875
+        },
+        {
+          "id": "6",
+          "odour": 0.934684,
+          "structure": 0.25
+        },
+        {
+          "id": "21",
+          "odour": 0.932585,
+          "structure": 0.214286
+        },
+        {
+          "id": "16",
+          "odour": 0.932083,
+          "structure": 0.166667
+        },
+        {
+          "id": "8",
+          "odour": 0.928902,
+          "structure": 0.25
+        },
+        {
+          "id": "0",
+          "odour": 0.928543,
+          "structure": 0.103448
+        },
+        {
+          "id": "33",
+          "odour": 0.928487,
+          "structure": 0.357143
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "57-55-6",
+      "casCheckDigit": "passes",
+      "formula": "C3H8O2",
+      "id": "35",
+      "measured": [
+        2,
+        6,
+        7
+      ],
+      "name": "Propylene glycol",
+      "nearestTrainSimilarity": 0.388889,
+      "neighbours": [
+        {
+          "id": "27",
+          "odour": 0.985245,
+          "structure": 0.461538
+        },
+        {
+          "id": "11",
+          "odour": 0.98178,
+          "structure": 0.416667
+        },
+        {
+          "id": "36",
+          "odour": 0.961848,
+          "structure": 0.285714
+        },
+        {
+          "id": "12",
+          "odour": 0.961814,
+          "structure": 0.235294
+        },
+        {
+          "id": "25",
+          "odour": 0.946231,
+          "structure": 0.333333
+        },
+        {
+          "id": "10",
+          "odour": 0.940856,
+          "structure": 0.1
+        },
+        {
+          "id": "13",
+          "odour": 0.937835,
+          "structure": 0.15
+        },
+        {
+          "id": "37",
+          "odour": 0.93367,
+          "structure": 0.176471
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "71-23-8",
+      "casCheckDigit": "passes",
+      "formula": "C3H8O",
+      "id": "36",
+      "measured": [
+        0,
+        7,
+        19
+      ],
+      "name": "propanol",
+      "nearestTrainSimilarity": 0.583333,
+      "neighbours": [
+        {
+          "id": "12",
+          "odour": 0.993027,
+          "structure": 0.583333
+        },
+        {
+          "id": "25",
+          "odour": 0.986143,
+          "structure": 0.555556
+        },
+        {
+          "id": "10",
+          "odour": 0.970684,
+          "structure": 0.25
+        },
+        {
+          "id": "35",
+          "odour": 0.961848,
+          "structure": 0.285714
+        },
+        {
+          "id": "2",
+          "odour": 0.949691,
+          "structure": 0.076923
+        },
+        {
+          "id": "18",
+          "odour": 0.945648,
+          "structure": 0.333333
+        },
+        {
+          "id": "3",
+          "odour": 0.945129,
+          "structure": 0.166667
+        },
+        {
+          "id": "13",
+          "odour": 0.930199,
+          "structure": 0.3125
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "79-09-4",
+      "casCheckDigit": "passes",
+      "formula": "C3H6O2",
+      "id": "37",
+      "measured": [
+        0,
+        1,
+        8
+      ],
+      "name": "propionic acid",
+      "nearestTrainSimilarity": 0.533333,
+      "neighbours": [
+        {
+          "id": "13",
+          "odour": 0.996117,
+          "structure": 0.533333
+        },
+        {
+          "id": "1",
+          "odour": 0.987404,
+          "structure": 0.416667
+        },
+        {
+          "id": "10",
+          "odour": 0.974262,
+          "structure": 0.222222
+        },
+        {
+          "id": "2",
+          "odour": 0.967119,
+          "structure": 0.142857
+        },
+        {
+          "id": "22",
+          "odour": 0.956881,
+          "structure": 0.307692
+        },
+        {
+          "id": "3",
+          "odour": 0.952195,
+          "structure": 0.333333
+        },
+        {
+          "id": "5",
+          "odour": 0.951631,
+          "structure": 0.352941
+        },
+        {
+          "id": "26",
+          "odour": 0.946002,
+          "structure": 0.428571
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "121-33-5",
+      "casCheckDigit": "passes",
+      "formula": "C8H8O3",
+      "id": "38",
+      "measured": [
+        0,
+        2,
+        11
+      ],
+      "name": "vanillin",
+      "nearestTrainSimilarity": 0.342857,
+      "neighbours": [
+        {
+          "id": "39",
+          "odour": 0.98968,
+          "structure": 0.472222
+        },
+        {
+          "id": "0",
+          "odour": 0.98743,
+          "structure": 0.413793
+        },
+        {
+          "id": "21",
+          "odour": 0.986676,
+          "structure": 0.433333
+        },
+        {
+          "id": "17",
+          "odour": 0.981973,
+          "structure": 0.333333
+        },
+        {
+          "id": "8",
+          "odour": 0.981668,
+          "structure": 0.147059
+        },
+        {
+          "id": "6",
+          "odour": 0.974451,
+          "structure": 0.3
+        },
+        {
+          "id": "15",
+          "odour": 0.971471,
+          "structure": 0.097561
+        },
+        {
+          "id": "23",
+          "odour": 0.965108,
+          "structure": 0.093023
+        }
+      ],
+      "split": "cross_validated"
+    },
+    {
+      "cas": "97-53-0",
+      "casCheckDigit": "passes",
+      "formula": "C10H12O2",
+      "id": "39",
+      "measured": [
+        1,
+        6,
+        7
+      ],
+      "name": "eugenol",
+      "nearestTrainSimilarity": 0.709677,
+      "neighbours": [
+        {
+          "id": "17",
+          "odour": 0.990908,
+          "structure": 0.119048
+        },
+        {
+          "id": "38",
+          "odour": 0.98968,
+          "structure": 0.472222
+        },
+        {
+          "id": "21",
+          "odour": 0.983715,
+          "structure": 0.393939
+        },
+        {
+          "id": "0",
+          "odour": 0.975342,
+          "structure": 0.157895
+        },
+        {
+          "id": "16",
+          "odour": 0.972254,
+          "structure": 0.205128
+        },
+        {
+          "id": "15",
+          "odour": 0.972254,
+          "structure": 0.090909
+        },
+        {
+          "id": "6",
+          "odour": 0.971564,
+          "structure": 0.105263
+        },
+        {
+          "id": "23",
+          "odour": 0.971436,
+          "structure": 0.06383
+        }
+      ],
+      "split": "cross_validated"
+    }
+  ],
+  "stats": {
+    "keller_cv.mean_pearson": 0.10413634704918555,
+    "keller_descriptors": 20,
+    "keller_molecules": 478,
+    "retiredPuzzles": 0
+  },
+  "version": "0.1.0"
+}

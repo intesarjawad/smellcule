@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 484" role="img" aria-labelledby="title">
+<title id="title">Reliability: predicted probability versus observed frequency</title>
+<path d="M60 60 V380 H380 M60 380 L380 60" fill="none" stroke="currentColor"/>
+<text x="60" y="420">Predicted probability: zero to one</text>
+<text x="60" y="30">Observed frequency: zero to one</text>
+<circle cx="92.000000" cy="316.000000" r="3" fill="currentColor"><title>p=0.100000, observed=0.200000, n=20</title></circle>
+<text x="8" y="450">p=0.100000, observed=0.200000, n=20</text>
+</svg>

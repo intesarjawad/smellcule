@@ -1,0 +1,12 @@
+id,name,cas,formula,split,measured,predicted_top10
+133,Ambrettolide,7779-50-2,C16H28O2,train,alcoholic;balsamic;catty;cherry;ethereal;orange;rose,horseradish:0.98;gasoline:0.96;black currant:0.96;tomato:0.95;almond:0.93;lemon:0.93;creamy:0.91;winey:0.89;peach:0.88;vanilla:0.87
+195,Benzaldehyde ethyl methyl acetal,,C10H14O2,train,black currant;fresh;green;mint;peach,gasoline:0.99;melon:0.98;sharp:0.98;popcorn:0.98;lemon:0.96;cheesy:0.94;chicken:0.94;bread:0.93;cinnamon:0.93;oily:0.93
+206,Benzyl acetate,140-11-4,C9H10O2,train,catty;chamomile;chicken;cinnamon;cocoa;onion;pineapple,sweet:0.99;pineapple:0.99;orris:0.99;floral:0.98;fruity:0.98;musty:0.97;balsamic:0.97;coffee:0.96;alcoholic:0.93;peach:0.92
+425,Cinnamyl alcohol,104-54-1,C9H10O,held_out,beefy;citrus;fatty;lemon;melon,cherry:0.98;banana:0.98;woody:0.96;citrus:0.95;creamy:0.95;apricot:0.94;balsamic:0.93;spicy:0.93;ketonic:0.93;cocoa:0.92
+1044,Furfuryl mercaptan,98-02-2,C5H6OS,train,burnt;catty;chamomile;cheesy;floral;hazelnut;jasmine;solvent,alliaceous:0.96;grassy:0.94;alcoholic:0.93;tropical:0.93;oily:0.92;cognac:0.91;brothy:0.89;fresh:0.89;gasoline:0.89;hay:0.88
+1066,Geosmin,19700-21-1,C12H22O,train,buttery;citrus;fishy;melon;mushroom;rum;violet,odorless:0.99;milky:0.99;nutty:0.98;malty:0.98;dairy:0.97;black currant:0.97;caramellic:0.97;winey:0.96;solvent:0.95;almond:0.94
+1106,Guaiacol,90-05-1,C7H8O2,train,berry;fishy;floral;hay;horseradish;popcorn;sharp;vegetable,ethereal:0.97;odorless:0.97;vegetable:0.96;aromatic:0.95;earthy:0.95;citrus:0.95;coumarinic:0.94;sweet:0.93;strawberry:0.93;nutty:0.93
+1557,Limonene,5989-27-5,C10H16,validation,cabbage;cocoa;coumarinic;musk;onion;orange;pungent;violet,fruity:0.99;smoky:0.98;phenolic:0.97;lemon:0.96;peach:0.95;hay:0.95;musk:0.95;savory:0.93;metallic:0.93;chicken:0.91
+2279,Patchouli alcohol,5986-55-0,C15H26O,train,buttery;catty;musty;odorless;orange;pungent;radish,beefy:0.96;vegetable:0.96;almond:0.95;cucumber:0.95;potato:0.94;winey:0.93;musk:0.91;banana:0.90;ripe:0.90;brothy:0.90
+2560,Rose oxide,3033-23-6,C10H18O,train,chamomile;cocoa;hay;odorless;phenolic;popcorn;sour,grape:0.99;fishy:0.99;tobacco:0.98;cucumber:0.97;chicken:0.97;sweet:0.96;oily:0.96;pineapple:0.95;roasted:0.93;ripe:0.90
+2794,Vanillin,121-33-5,C8H8O3,train,chamomile;chicken;dry;honey;nutty;peach;pear;sharp,animal:0.99;tropical:0.99;ethereal:0.99;radish:0.98;mint:0.98;buttery:0.97;ripe:0.97;metallic:0.95;cheesy:0.94;ketonic:0.94

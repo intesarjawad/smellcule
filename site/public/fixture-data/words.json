@@ -1,0 +1,375 @@
+{
+  "carriers": [
+    "chest",
+    "box",
+    "gum",
+    "shavings",
+    "jacket",
+    "juice",
+    "sauce",
+    "pie",
+    "peel",
+    "zest",
+    "rind",
+    "spread",
+    "jar",
+    "bottle"
+  ],
+  "qualifiers": [
+    "fresh",
+    "warm"
+  ],
+  "words": {
+    "alcohol": [
+      "alcoholic"
+    ],
+    "aldehyde": [
+      "aldehydic"
+    ],
+    "allium": [
+      "alliaceous"
+    ],
+    "allspice": [
+      "spicy"
+    ],
+    "anchovy": [
+      "fishy"
+    ],
+    "animalic": [
+      "animal"
+    ],
+    "balsam": [
+      "balsamic"
+    ],
+    "basil": [
+      "herbal"
+    ],
+    "beeswax": [
+      "honey",
+      "waxy"
+    ],
+    "bergamot": [
+      "citrus"
+    ],
+    "blackcurrant": [
+      "black currant"
+    ],
+    "bloom": [
+      "floral"
+    ],
+    "blossom": [
+      "floral"
+    ],
+    "blueberry": [
+      "berry"
+    ],
+    "booze": [
+      "alcoholic"
+    ],
+    "bramble": [
+      "berry"
+    ],
+    "brie": [
+      "cheesy"
+    ],
+    "burn": [
+      "burnt"
+    ],
+    "cacao": [
+      "cocoa"
+    ],
+    "camembert": [
+      "cheesy"
+    ],
+    "camomile": [
+      "chamomile"
+    ],
+    "camphor": [
+      "camphoreous"
+    ],
+    "cantaloupe": [
+      "melon"
+    ],
+    "cappuccino": [
+      "coffee"
+    ],
+    "cardamom": [
+      "spicy"
+    ],
+    "cashew": [
+      "nutty"
+    ],
+    "cassia": [
+      "cinnamon"
+    ],
+    "cassis": [
+      "black currant"
+    ],
+    "cedar": [
+      "woody"
+    ],
+    "cedarwood": [
+      "woody"
+    ],
+    "charred": [
+      "burnt"
+    ],
+    "cheddar": [
+      "cheesy"
+    ],
+    "chive": [
+      "alliaceous"
+    ],
+    "cigar": [
+      "tobacco"
+    ],
+    "cigarette": [
+      "tobacco"
+    ],
+    "citron": [
+      "citrus"
+    ],
+    "clementine": [
+      "orange"
+    ],
+    "conifer": [
+      "pine"
+    ],
+    "copper": [
+      "metallic"
+    ],
+    "coumarin": [
+      "coumarinic"
+    ],
+    "cranberry": [
+      "berry"
+    ],
+    "currant": [
+      "black currant"
+    ],
+    "dank": [
+      "musty"
+    ],
+    "ether": [
+      "ethereal"
+    ],
+    "eucalyptus": [
+      "camphoreous"
+    ],
+    "filbert": [
+      "hazelnut"
+    ],
+    "fir": [
+      "pine"
+    ],
+    "fungi": [
+      "mushroom"
+    ],
+    "fungus": [
+      "mushroom"
+    ],
+    "ginger": [
+      "spicy"
+    ],
+    "grease": [
+      "fatty",
+      "oily"
+    ],
+    "guava": [
+      "tropical"
+    ],
+    "ham": [
+      "meaty"
+    ],
+    "herb": [
+      "herbal"
+    ],
+    "honeycomb": [
+      "honey"
+    ],
+    "honeydew": [
+      "melon"
+    ],
+    "iris": [
+      "orris"
+    ],
+    "iron": [
+      "metallic"
+    ],
+    "ketone": [
+      "ketonic"
+    ],
+    "lamb": [
+      "meaty"
+    ],
+    "lard": [
+      "fatty"
+    ],
+    "latte": [
+      "coffee"
+    ],
+    "leaves": [
+      "leafy"
+    ],
+    "leek": [
+      "alliaceous"
+    ],
+    "loaf": [
+      "bread"
+    ],
+    "lychee": [
+      "tropical"
+    ],
+    "mackerel": [
+      "fishy"
+    ],
+    "mandarin": [
+      "orange"
+    ],
+    "mango": [
+      "tropical"
+    ],
+    "medicine": [
+      "medicinal"
+    ],
+    "metal": [
+      "metallic"
+    ],
+    "moss": [
+      "earthy"
+    ],
+    "mothball": [
+      "camphoreous"
+    ],
+    "mud": [
+      "earthy"
+    ],
+    "nectarine": [
+      "peach"
+    ],
+    "oak": [
+      "woody"
+    ],
+    "oregano": [
+      "herbal"
+    ],
+    "papaya": [
+      "tropical"
+    ],
+    "passionfruit": [
+      "tropical"
+    ],
+    "pecan": [
+      "nutty"
+    ],
+    "peppermint": [
+      "mint"
+    ],
+    "petal": [
+      "floral"
+    ],
+    "phenol": [
+      "phenolic"
+    ],
+    "pistachio": [
+      "nutty"
+    ],
+    "plantain": [
+      "banana"
+    ],
+    "pomelo": [
+      "grapefruit"
+    ],
+    "pork": [
+      "meaty"
+    ],
+    "prune": [
+      "plum"
+    ],
+    "resin": [
+      "balsamic"
+    ],
+    "rosemary": [
+      "herbal"
+    ],
+    "sage": [
+      "herbal"
+    ],
+    "sandalwood": [
+      "woody"
+    ],
+    "sardine": [
+      "fishy"
+    ],
+    "satsuma": [
+      "orange"
+    ],
+    "sausage": [
+      "meaty"
+    ],
+    "savoury": [
+      "savory"
+    ],
+    "scallion": [
+      "onion"
+    ],
+    "scorched": [
+      "burnt"
+    ],
+    "shallot": [
+      "onion"
+    ],
+    "spearmint": [
+      "mint"
+    ],
+    "spruce": [
+      "pine"
+    ],
+    "steak": [
+      "beefy"
+    ],
+    "sulphurous": [
+      "sulfurous"
+    ],
+    "tallow": [
+      "fatty"
+    ],
+    "tangerine": [
+      "orange"
+    ],
+    "thyme": [
+      "herbal"
+    ],
+    "toast": [
+      "bread",
+      "roasted"
+    ],
+    "tonka": [
+      "coumarinic"
+    ],
+    "tuna": [
+      "fishy"
+    ],
+    "umami": [
+      "savory"
+    ],
+    "wasabi": [
+      "horseradish"
+    ],
+    "watermelon": [
+      "melon"
+    ],
+    "wooden": [
+      "woody"
+    ],
+    "yoghurt": [
+      "dairy"
+    ],
+    "yogurt": [
+      "dairy"
+    ],
+    "yuzu": [
+      "citrus"
+    ]
+  }
+}

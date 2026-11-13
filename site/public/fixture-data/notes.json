@@ -1,0 +1,153 @@
+{
+  "archetypes": [
+    {
+      "base": [
+        "patchouli",
+        "musk"
+      ],
+      "heart": [
+        "rose",
+        "jasmine"
+      ],
+      "name": "chypre-style",
+      "top": [
+        "bergamot"
+      ]
+    }
+  ],
+  "notes": [
+    {
+      "aliases": [],
+      "evidence": [
+        "pungent"
+      ],
+      "molecules": [
+        {
+          "molecule_id": "1557",
+          "relation": "character",
+          "source_url": null
+        }
+      ],
+      "name": "bergamot"
+    },
+    {
+      "aliases": [],
+      "evidence": [
+        "cheesy"
+      ],
+      "molecules": [
+        {
+          "molecule_id": "1044",
+          "relation": "character",
+          "source_url": null
+        }
+      ],
+      "name": "coffee"
+    },
+    {
+      "aliases": [],
+      "evidence": [
+        "cocoa"
+      ],
+      "molecules": [
+        {
+          "molecule_id": "206",
+          "relation": "character",
+          "source_url": null
+        }
+      ],
+      "name": "jasmine"
+    },
+    {
+      "aliases": [
+        "white musk"
+      ],
+      "evidence": [
+        "alcoholic"
+      ],
+      "molecules": [
+        {
+          "molecule_id": "133",
+          "relation": "character",
+          "source_url": null
+        }
+      ],
+      "name": "musk"
+    },
+    {
+      "aliases": [
+        "sweet orange",
+        "mandarin"
+      ],
+      "evidence": [
+        "orange"
+      ],
+      "molecules": [
+        {
+          "molecule_id": "1557",
+          "relation": "character",
+          "source_url": null
+        }
+      ],
+      "name": "orange"
+    },
+    {
+      "aliases": [],
+      "evidence": [
+        "radish"
+      ],
+      "molecules": [
+        {
+          "molecule_id": "2279",
+          "relation": "character",
+          "source_url": null
+        }
+      ],
+      "name": "patchouli"
+    },
+    {
+      "aliases": [],
+      "evidence": [
+        "odorless"
+      ],
+      "molecules": [
+        {
+          "molecule_id": "2560",
+          "relation": "character",
+          "source_url": null
+        }
+      ],
+      "name": "rose"
+    },
+    {
+      "aliases": [
+        "birch tar"
+      ],
+      "evidence": [
+        "floral"
+      ],
+      "molecules": [
+        {
+          "molecule_id": "1106",
+          "relation": "character",
+          "source_url": null
+        }
+      ],
+      "name": "smoke"
+    },
+    {
+      "aliases": [],
+      "evidence": [
+        "nutty"
+      ],
+      "molecules": [
+        {
+          "molecule_id": "2794",
+          "relation": "character",
+          "source_url": null
+        }
+      ],
+      "name": "vanilla"
+    }
+  ]
+}
