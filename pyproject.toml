@@ -20,7 +20,7 @@ research = ["rdkit>=2026.9.1,<2027", "torch>=2.15.0,<3", "scikit-learn>=1.9.1,<2
 smellcule = "smellcule.cli:main"
 
 [dependency-groups]
-dev = ["ruff==0.17.4", "pyright==1.1.414", "pytest==9.2.0", "hypothesis==6.170.15", "pre-commit==4.7.0", "types-PyYAML==6.0.12.20261103"]
+dev = ["ruff==0.17.5", "pyright==1.1.414", "pytest==9.2.0", "hypothesis==6.170.15", "pre-commit==4.7.0", "types-PyYAML==6.0.12.20261103"]
 
 [tool.uv.build-backend]
 module-name = "smellcule"
